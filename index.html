@@ -39,6 +39,7 @@ nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:cen
 .nav-r{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
 .icon-btn{background:none;border:1px solid var(--brd2);color:var(--t);width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.95rem;transition:all .2s}
 .icon-btn:hover{border-color:var(--gold);color:var(--gold)}
+#lang-menu .dd-item{font-size:.82rem;gap:6px}
 
 /* DROPDOWN */
 .dropdown{position:relative}
@@ -216,6 +217,18 @@ footer{padding:2.5rem 2rem;border-top:1px solid var(--brd);display:flex;align-it
   </div>
   <div class="nav-r">
     <button class="icon-btn" id="themeBtn">🌙</button>
+    <div class="dropdown" id="lang-dd">
+      <button class="dd-trigger" onclick="toggleLangDD()" id="lang-trigger" style="gap:5px;padding:8px 12px">
+        <span id="lang-flag">🇫🇷</span>
+        <span id="lang-code" style="font-size:.72rem">FR</span>
+        <span class="dd-arr"></span>
+      </button>
+      <div class="dd-menu" id="lang-menu" style="min-width:140px">
+        <div class="dd-item" onclick="setLang('fr')">🇫🇷 <span style="margin-left:8px">Français</span></div>
+        <div class="dd-item" onclick="setLang('en')">🇬🇧 <span style="margin-left:8px">English</span></div>
+        <div class="dd-item" onclick="setLang('es')">🇪🇸 <span style="margin-left:8px">Español</span></div>
+      </div>
+    </div>
     <div class="dropdown" id="dd">
       <button class="dd-trigger" onclick="toggleDD()">
         <span id="dd-label">Marques</span>
@@ -672,7 +685,7 @@ function updateBP(){
   p.style.setProperty('--bc',cur.color);
   document.getElementById('bp-name').textContent=cur.name;
   document.getElementById('bp-fc').textContent=cur.flag+' '+cur.country;
-  document.getElementById('bp-city').textContent=cur.city+' · Fondée en '+cur.yr;
+  document.getElementById('bp-city').textContent=cur.city+' · '+t('founded_lbl')+' '+cur.yr;
   document.getElementById('bp-mod').textContent=cur.cars.length;
   document.getElementById('bp-yr').textContent=cur.yr;
   document.getElementById('bp-fl').textContent=cur.flag;
@@ -690,7 +703,7 @@ function setF(f,btn){
   btn.classList.add('on');
   renderCars();
 }
-function typeLbl(t){return{hypercar:'Hypercar',supercar:'Supercar',gt:'Grand Tourisme',sport:'Sport',classic:'Classique'}[t]||t}
+// typeLbl now handled by translation system below
 
 function getSorted(cars){
   const v=document.getElementById('sortSel').value;
@@ -731,23 +744,23 @@ function renderCars(){
         <div class="car-model">${c.m}</div>
         <div class="car-sub">${cur.name} · ${c.y} · ${c.eng}</div>
         <div class="specs-grid">
-          <div class="sp"><span class="v">${c.hp}</span><span class="l">Chevaux</span></div>
-          <div class="sp"><span class="v">${c.v}s</span><span class="l">0-100</span></div>
-          <div class="sp"><span class="v">${c.vmax}</span><span class="l">Vmax km/h</span></div>
+          <div class="sp"><span class="v">${c.hp}</span><span class="l" data-tk="sp_hp">${t('sp_hp')}</span></div>
+          <div class="sp"><span class="v">${c.v}s</span><span class="l" data-tk="sp_v">${t('sp_v')}</span></div>
+          <div class="sp"><span class="v">${c.vmax}</span><span class="l" data-tk="sp_vmax">${t('sp_vmax')}</span></div>
         </div>
         <div class="specs-grid">
-          <div class="sp"><span class="v">${c.kg}</span><span class="l">Poids kg</span></div>
-          <div class="sp"><span class="v">${c.box.split(' ')[0]}</span><span class="l">Boîte</span></div>
-          <div class="sp"><span class="v">${c.price.split(' ')[0]}</span><span class="l">Prix €</span></div>
+          <div class="sp"><span class="v">${c.kg}</span><span class="l" data-tk="sp_kg">${t('sp_kg')}</span></div>
+          <div class="sp"><span class="v">${c.box.split(' ')[0]}</span><span class="l" data-tk="sp_box">${t('sp_box')}</span></div>
+          <div class="sp"><span class="v">${c.price.split(' ')[0]}</span><span class="l" data-tk="sp_price">${t('sp_price')}</span></div>
         </div>
-        <p class="car-desc">${c.desc}</p>
+        <p class="car-desc">${getDesc(cur.id, c.m, c.desc)}</p>
         <div class="car-footer">
           <div>
             <div class="car-price">${c.price}</div>
-            <div class="car-price-lbl">Prix de départ</div>
+            <div class="car-price-lbl">${t('card_price_lbl')}</div>
           </div>
           <button class="car-btn${inC?' on':''}" onclick="toggleCmp('${cur.id}','${cur.name}','${c.m.replace(/'/g,"\\'")}',${c.hp},${c.v},${c.vmax},${c.kg},'${c.price}','${c.eng}',this)">
-            ${inC?'✓ Comparé':'+ Comparer'}
+            ${inC?t('btn_compared'):t('btn_compare')}
           </button>
         </div>
       </div>
@@ -758,12 +771,12 @@ function renderCars(){
 // COMPARE
 function toggleCmp(bid,bname,model,hp,v,vmax,kg,price,eng,btn){
   const idx=cmp.findIndex(x=>x.bid===bid&&x.m===model);
-  if(idx>-1){cmp.splice(idx,1);btn.textContent='+ Comparer';btn.classList.remove('on')}
+  if(idx>-1){cmp.splice(idx,1);btn.textContent=t('btn_compare');btn.classList.remove('on')}
   else{
-    if(cmp.length>=3){alert('Max 3 voitures à comparer');return}
+    if(cmp.length>=3){alert(t('compare_max'));return}
     cmp.push({bid,bname,m:model,hp,v,vmax,kg,price,eng});
-    btn.textContent='✓ Comparé';btn.classList.add('on');
-    showToast(model+' ajoutée');
+    btn.textContent=t('btn_compared');btn.classList.add('on');
+    showToast(model+' '+t('toast_added'));
   }
   updateCbar();
 }
@@ -795,12 +808,12 @@ srchEl.addEventListener('input',()=>{
     if(c.m.toLowerCase().includes(q)||b.name.toLowerCase().includes(q)||c.eng.toLowerCase().includes(q)||c.t.toLowerCase().includes(q)||b.country.toLowerCase().includes(q)||b.city.toLowerCase().includes(q))
       res.push({b,c});
   }));
-  srHdr.textContent=res.length+' résultat'+(res.length>1?'s':'')+' pour "'+srchEl.value+'"';
+  srHdr.textContent=res.length+' résultat'+(res.length>1?'s':'')+' · "'+srchEl.value+'"';
   srList.innerHTML=res.length?res.slice(0,14).map(r=>`
     <div class="sr-item" onclick="goR('${r.b.id}')">
       <div><div class="sr-model">${r.c.m}</div><div class="sr-brand">${r.b.flag} ${r.b.name} · ${r.b.city} · ${r.c.y}</div></div>
-      <div style="text-align:right"><div class="sr-price">${r.c.price}</div><div class="sr-hp">${r.c.hp} ch · ${r.c.v}s</div></div>
-    </div>`).join(''):'<div class="sr-empty">Aucun résultat trouvé.</div>';
+      <div style="text-align:right"><div class="sr-price">${r.c.price}</div><div class="sr-hp">${r.c.hp} ${t('sp_hp').toLowerCase()} · ${r.c.v}s</div></div>
+    </div>`).join(''):`<div class="sr-empty">${t('sr_empty')}</div>`;
   srDiv.classList.add('vis');
 });
 function goR(id){srchEl.value='';srDiv.classList.remove('vis');selB(id)}
@@ -816,7 +829,205 @@ function showToast(msg){
 // NAV SCROLL
 window.addEventListener('scroll',()=>{document.getElementById('nb').style.height=window.scrollY>50?'54px':'64px'});
 
-buildDD();updateBP();renderCars();
+// ── DESCRIPTIONS JSON ────────────────────────────────
+let descs = {}; // { fr: {...}, en: {...}, es: {...} }
+
+async function loadDescs(l) {
+  if (descs[l]) return; // déjà chargé
+  try {
+    const res = await fetch(`data/${l}.json`);
+    descs[l] = await res.json();
+  } catch(e) {
+    descs[l] = {}; // fallback silencieux si fetch échoue (ex: ouverture locale)
+  }
+}
+
+function getDesc(brandId, model, fallback) {
+  const d = descs[lang];
+  if (d && d[brandId] && d[brandId][model]) return d[brandId][model];
+  return fallback; // description d'origine si traduction manquante
+}
+
+// ── TRANSLATIONS ─────────────────────────────────────
+const T={
+  fr:{
+    title:"AutoElite — 25 Marques · 200+ Modèles",
+    hero_eyebrow:"L'excellence automobile mondiale",
+    hero_h:"L'art de la<br><em>vitesse</em> &amp; du <em>luxe</em>",
+    hero_sub:"25 marques emblématiques de 12 pays. Plus de 200 modèles d'exception répertoriés.",
+    hero_brands:"Marques",hero_models:"Modèles",hero_countries:"Pays",
+    hero_cta:"Explorer la collection",
+    hero_scroll:"DÉFILER",
+    sec_eyebrow:"Collection mondiale",
+    sec_title:"Marques de <strong>Prestige</strong>",
+    bp_models:"Modèles",bp_founded:"Fondée",bp_origin:"Origine",
+    bp_placeholder:"Sélectionnez une marque dans le menu déroulant pour découvrir son histoire et sa collection complète.",
+    filter_lbl:"Filtrer :",
+    f_all:"Tous",f_hypercar:"Hypercar",f_supercar:"Supercar",f_gt:"Grand Tourisme",f_sport:"Sport",f_classic:"Classique",
+    sort_default:"Ordre par défaut",sort_pa:"Prix croissant",sort_pd:"Prix décroissant",sort_hp:"Puissance ↓",sort_v:"0-100 le + rapide",
+    cbar_lbl:"Comparer",cbar_clear:"Effacer",cbar_go:"Comparer →",
+    modal_h:"Comparatif détaillé",
+    footer_brands:"Marques",footer_models:"Modèles",footer_countries:"Pays",
+    footer_copy:"© 2025 AutoElite — Prix indicatifs, varient selon pays et configuration",
+    dd_label:"Marques",
+    sp_hp:"Chevaux",sp_v:"0-100",sp_vmax:"Vmax km/h",sp_kg:"Poids kg",sp_box:"Boîte",sp_price:"Prix €",
+    card_price_lbl:"Prix de départ",
+    btn_compare:"+ Comparer",btn_compared:"✓ Comparé",
+    sr_empty:"Aucun résultat trouvé.",
+    search_placeholder:"Rechercher modèle, marque…",
+    type_hypercar:"Hypercar",type_supercar:"Supercar",type_gt:"Grand Tourisme",type_sport:"Sport",type_classic:"Classique",
+    founded_lbl:"Fondée en",
+    compare_max:"Max 3 voitures à comparer",
+    toast_added:"ajoutée",
+  },
+  en:{
+    title:"AutoElite — 25 Brands · 200+ Models",
+    hero_eyebrow:"Worldwide automotive excellence",
+    hero_h:"The art of<br><em>speed</em> &amp; <em>luxury</em>",
+    hero_sub:"25 iconic brands from 12 countries. Over 200 exceptional models listed.",
+    hero_brands:"Brands",hero_models:"Models",hero_countries:"Countries",
+    hero_cta:"Explore the collection",
+    hero_scroll:"SCROLL",
+    sec_eyebrow:"World collection",
+    sec_title:"<strong>Prestige</strong> Brands",
+    bp_models:"Models",bp_founded:"Founded",bp_origin:"Origin",
+    bp_placeholder:"Select a brand from the dropdown menu to discover its history and full collection.",
+    filter_lbl:"Filter:",
+    f_all:"All",f_hypercar:"Hypercar",f_supercar:"Supercar",f_gt:"Grand Tourer",f_sport:"Sport",f_classic:"Classic",
+    sort_default:"Default order",sort_pa:"Price ascending",sort_pd:"Price descending",sort_hp:"Power ↓",sort_v:"Fastest 0-60",
+    cbar_lbl:"Compare",cbar_clear:"Clear",cbar_go:"Compare →",
+    modal_h:"Detailed comparison",
+    footer_brands:"Brands",footer_models:"Models",footer_countries:"Countries",
+    footer_copy:"© 2025 AutoElite — Indicative prices, may vary by country and configuration",
+    dd_label:"Brands",
+    sp_hp:"Horsepower",sp_v:"0-60 mph",sp_vmax:"Top speed",sp_kg:"Weight kg",sp_box:"Gearbox",sp_price:"Price €",
+    card_price_lbl:"Starting price",
+    btn_compare:"+ Compare",btn_compared:"✓ Added",
+    sr_empty:"No results found.",
+    search_placeholder:"Search model, brand…",
+    type_hypercar:"Hypercar",type_supercar:"Supercar",type_gt:"Grand Tourer",type_sport:"Sport",type_classic:"Classic",
+    founded_lbl:"Founded in",
+    compare_max:"Max 3 cars to compare",
+    toast_added:"added",
+  },
+  es:{
+    title:"AutoElite — 25 Marcas · 200+ Modelos",
+    hero_eyebrow:"La excelencia del automóvil mundial",
+    hero_h:"El arte de la<br><em>velocidad</em> y el <em>lujo</em>",
+    hero_sub:"25 marcas emblemáticas de 12 países. Más de 200 modelos de excepción.",
+    hero_brands:"Marcas",hero_models:"Modelos",hero_countries:"Países",
+    hero_cta:"Explorar la colección",
+    hero_scroll:"DESPLAZAR",
+    sec_eyebrow:"Colección mundial",
+    sec_title:"Marcas de <strong>Prestigio</strong>",
+    bp_models:"Modelos",bp_founded:"Fundada",bp_origin:"Origen",
+    bp_placeholder:"Seleccione una marca en el menú desplegable para descubrir su historia y colección completa.",
+    filter_lbl:"Filtrar:",
+    f_all:"Todos",f_hypercar:"Hypercar",f_supercar:"Supercar",f_gt:"Gran Turismo",f_sport:"Deporte",f_classic:"Clásico",
+    sort_default:"Orden predeterminado",sort_pa:"Precio ascendente",sort_pd:"Precio descendente",sort_hp:"Potencia ↓",sort_v:"0-100 más rápido",
+    cbar_lbl:"Comparar",cbar_clear:"Borrar",cbar_go:"Comparar →",
+    modal_h:"Comparativa detallada",
+    footer_brands:"Marcas",footer_models:"Modelos",footer_countries:"Países",
+    footer_copy:"© 2025 AutoElite — Precios orientativos, pueden variar según país y configuración",
+    dd_label:"Marcas",
+    sp_hp:"Caballos",sp_v:"0-100",sp_vmax:"Vel. máx.",sp_kg:"Peso kg",sp_box:"Caja",sp_price:"Precio €",
+    card_price_lbl:"Precio de salida",
+    btn_compare:"+ Comparar",btn_compared:"✓ Añadido",
+    sr_empty:"No se encontraron resultados.",
+    search_placeholder:"Buscar modelo, marca…",
+    type_hypercar:"Hypercar",type_supercar:"Supercar",type_gt:"Gran Turismo",type_sport:"Deporte",type_classic:"Clásico",
+    founded_lbl:"Fundada en",
+    compare_max:"Máximo 3 coches a comparar",
+    toast_added:"añadido",
+  }
+};
+
+let lang='fr';
+function t(k){return T[lang][k]||T.fr[k]||k}
+
+async function setLang(l) {
+  lang = l;
+  const flags = {fr:'🇫🇷', en:'🇬🇧', es:'🇪🇸'};
+  const codes = {fr:'FR', en:'EN', es:'ES'};
+  document.getElementById('lang-flag').textContent = flags[l];
+  document.getElementById('lang-code').textContent = codes[l];
+  document.getElementById('lang-dd').classList.remove('open');
+  document.documentElement.setAttribute('lang', l);
+  await loadDescs(l);
+  applyTranslations();
+  renderCars();
+  updateBP();
+}
+
+function toggleLangDD(){document.getElementById('lang-dd').classList.toggle('open')}
+document.addEventListener('click',e=>{
+  if(!e.target.closest('#lang-dd'))document.getElementById('lang-dd').classList.remove('open');
+});
+
+function applyTranslations(){
+  // Title
+  document.title=t('title');
+  // Hero
+  document.querySelector('.hero-eyebrow').textContent=t('hero_eyebrow');
+  document.querySelector('.hero-h').innerHTML=t('hero_h');
+  document.querySelector('.hero-sub').textContent=t('hero_sub');
+  document.querySelector('.hero-cta').textContent=t('hero_cta');
+  document.querySelector('.hero-scroll span').textContent=t('hero_scroll');
+  // Hero stats labels
+  const hnLabels=document.querySelectorAll('.hn .l');
+  if(hnLabels[0]) hnLabels[0].textContent=t('hero_brands');
+  if(hnLabels[1]) hnLabels[1].textContent=t('hero_models');
+  if(hnLabels[2]) hnLabels[2].textContent=t('hero_countries');
+  // Section
+  document.querySelector('.sec-eyebrow').textContent=t('sec_eyebrow');
+  document.querySelector('.sec-title').innerHTML=t('sec_title');
+  // Brand panel stat labels
+  const bpsLabels=document.querySelectorAll('.bps .l');
+  if(bpsLabels[0]) bpsLabels[0].textContent=t('bp_models');
+  if(bpsLabels[1]) bpsLabels[1].textContent=t('bp_founded');
+  if(bpsLabels[2]) bpsLabels[2].textContent=t('bp_origin');
+  // Filter bar
+  document.querySelector('.f-lbl').textContent=t('filter_lbl');
+  const fBtns=document.querySelectorAll('.f-btn');
+  const fKeys=['f_all','f_hypercar','f_supercar','f_gt','f_sport','f_classic'];
+  fBtns.forEach((b,i)=>{if(fKeys[i])b.textContent=t(fKeys[i])+(b.classList.contains('on')?'':'')} );
+  // Sort options
+  const sel=document.getElementById('sortSel');
+  const sortKeys=['sort_default','sort_pa','sort_pd','sort_hp','sort_v'];
+  [...sel.options].forEach((o,i)=>{if(sortKeys[i])o.text=t(sortKeys[i])});
+  // Compare bar
+  document.querySelector('.cbar-lbl').textContent=t('cbar_lbl');
+  document.querySelector('.cclear').textContent=t('cbar_clear');
+  document.querySelector('.cgo').textContent=t('cbar_go');
+  // Modal title
+  document.querySelector('.modal-h').textContent=t('modal_h');
+  // Footer
+  const fstLabels=document.querySelectorAll('.fst .l');
+  if(fstLabels[0]) fstLabels[0].textContent=t('footer_brands');
+  if(fstLabels[1]) fstLabels[1].textContent=t('footer_models');
+  if(fstLabels[2]) fstLabels[2].textContent=t('footer_countries');
+  document.querySelector('.f-copy').textContent=t('footer_copy');
+  // Search placeholder
+  document.getElementById('search').placeholder=t('search_placeholder');
+  // DD label
+  document.getElementById('dd-label').textContent=t('dd_label');
+  // BP placeholder if no brand selected
+  if(document.getElementById('bp-desc').textContent===T.fr.bp_placeholder||
+     document.getElementById('bp-desc').textContent===T.en.bp_placeholder||
+     document.getElementById('bp-desc').textContent===T.es.bp_placeholder){
+    document.getElementById('bp-desc').textContent=t('bp_placeholder');
+  }
+}
+
+function typeLbl(tp){
+  const map={hypercar:'type_hypercar',supercar:'type_supercar',gt:'type_gt',sport:'type_sport',classic:'type_classic'};
+  return t(map[tp]||'type_sport');
+}
+
+// ── INIT ──────────────────────────────────────────────
+loadDescs('fr').then(() => {
+  buildDD(); updateBP(); renderCars();
+});
 </script>
 </body>
 </html>

@@ -1,0 +1,220 @@
+{
+  "ferrari": {
+    "SF90 Stradale": "Ferrari's technological pinnacle. Plug-in hybrid with 3 electric motors and 1,000 hp. The most powerful Ferrari ever made for the road.",
+    "SF90 XX Stradale": "The extreme SF90. 1,030 hp and 430 kg of downforce. The ultimate track-focused expression of the SF90.",
+    "LaFerrari Aperta": "The ultimate Ferrari hybrid in open-top form. 210 units, 963 hp, a direct heir to Ferrari's F1 technology.",
+    "812 Superfast": "The last great front-engined naturally aspirated V12 Ferrari. 800 hp of pure, unmatched road symphony.",
+    "812 Competizione": "The 812 taken to its absolute limit. 999 extra rpm, F1-derived aerodynamics, only 999 units produced.",
+    "Roma Spider": "Italian dolce vita in open-top form. Retractable roof in 13.5 seconds, 620 hp V8, absolute Italian elegance.",
+    "296 GTB": "The future of Ferrari. 830 hp hybrid V6 biturbo, the lightest hybrid Ferrari ever built.",
+    "296 GTS": "The 296 GTB in open-top form. Retractable roof, same 830 hp hybrid V6, emotions under the open sky.",
+    "F8 Tributo": "A tribute to Ferrari's V8 biturbo legacy. Refined chassis, F1 aerodynamics, 720 hp of pure ecstasy.",
+    "F8 Spider": "The F8 Tributo in open-top form. Hard retractable roof, same 720 hp V8, sensations multiplied tenfold.",
+    "Purosangue": "Ferrari's first ever SUV. 725 hp naturally aspirated V12, 4 doors. A scandalous and magnificent revolution.",
+    "Daytona SP3": "Icona Series, 599 units. Naturally aspirated V12, homage to Ferrari's 1967 Daytona victory.",
+    "Monza SP2": "Two-seat barchetta without a windshield. 499 units, 810 hp V12, a total and radical sensory experience.",
+    "488 Pista": "The 488 in its purest form. F1 technology, 50 kg shed. The most agile V8 Ferrari of its era.",
+    "458 Speciale": "The 9,000 rpm naturally aspirated V8 in its most extreme form. One of the purest Ferraris ever made.",
+    "F40": "Every child's dream Ferrari. The first production car to break 300 km/h. An absolute icon of automotive history.",
+    "F50": "F1 technology for the road. Adapted Formula 1 V12, 349 units, one of the rarest Ferraris ever built.",
+    "Enzo": "The supercar of the Schumacher era. 399 units, 660 hp V12, direct F1 technology transfer. A pure myth."
+  },
+  "lamborghini": {
+    "Revuelto": "The Aventador's successor. V12 + 3 electric motors, 1,015 hybrid hp. The evolution of the absolute myth.",
+    "Revuelto Opera Unica": "Hand-painted Revuelto by the Ad Personam department. A one-of-a-kind piece, total automotive art.",
+    "Huracán Tecnica": "The most refined naturally aspirated V10. Rear-wheel drive, active aero, the Huracán at its ultimate form.",
+    "Huracán STO": "Super Trofeo Omologata: the race car for the road. 1,339 kg, GT3-homologated aerodynamics for public roads.",
+    "Huracán EVO RWD": "The rear-wheel drive purist. Naturally aspirated V10, rear drive only. The absolute driving pleasure.",
+    "Urus S": "The super-sport SUV. 666 hp, Lamborghini luxury, Nürburgring record for a production SUV.",
+    "Urus Performante": "The sharpened Urus. 47 kg lighter, sportier chassis settings, the most dynamic version of the SUV.",
+    "Sterrato": "The off-road Huracán. Raised ground clearance, the world's only proper off-road supercar.",
+    "Countach LPI 800": "112 units. A tribute to the 1971 Countach — the rebirth of an absolute myth.",
+    "Aventador LP 780-4": "The last non-hybrid Aventador. 780 hp naturally aspirated V12 — an era closing with total panache.",
+    "Aventador SVJ": "SuperVeloce Jota. Nürburgring record at 6m44. 770 hp NA V12, ALA 2.0 active aero, the ultimate Aventador.",
+    "Sián FKP 37": "63 units. Supercapacitor hybrid, 819 hp V12. The first hybrid Lamborghini in history.",
+    "Murciélago LP 670": "The last Murciélago SV. 670 hp V12, manual gearbox, one of the most collectible Lamborghinis ever made.",
+    "Diablo SV": "The Diablo in its purest form. 530 hp V12, rear-wheel drive, the definitive icon of the 90s."
+  },
+  "bugatti": {
+    "Chiron Super Sport": "The world's fastest production hypercar. W16 1,600 hp, 440 km/h. 500 units for the entire planet.",
+    "Chiron Super Sport 300+": "The version that broke 300 mph. Only 30 units. Long tail bodywork engineered for pure top speed.",
+    "Mistral Roadster": "99 units, all sold before the announcement. The last W16 roadster — farewell to a mythical era.",
+    "Tourbillon": "The Chiron's successor. Naturally aspirated V16 + hybrid, 1,800 hp. The absolute future of Bugatti.",
+    "Bolide": "Bugatti's most radical track car. W16 1,850 hp in 1,240 kg. Only 40 units produced worldwide.",
+    "Centodieci": "Only 10 units. A tribute to the legendary EB110. The rarest Bugatti of the modern era.",
+    "Divo": "40 units. Dedicated to handling rather than top speed. The track-focused Bugatti.",
+    "Veyron 16.4": "The revolution. The first production car with 1,000 hp and 400 km/h top speed. The Veyron changed everything.",
+    "Veyron Super Sport": "World record broken at 431 km/h. 175 units, the world's fastest production car for 8 consecutive years."
+  },
+  "mclaren": {
+    "750S": "750 hp, 1,277 kg. Power-to-weight ratio is a McLaren obsession. Absolute precision on every road.",
+    "750S Spider": "The 750S with the roof off. Retractable roof in 11 seconds, same 750 hp V8. Sensations multiplied tenfold.",
+    "Artura": "The first hybrid McLaren. V6 biturbo + electric, 700 hp, 4.7L/100km in pure hybrid mode.",
+    "Artura Spider": "The Artura in open-top form. Hybrid powertrain, retractable roof, the future McLaren under the open sky.",
+    "720S": "McLaren's benchmark supercar. 720 hp V8, carbon MonoCell II chassis, breathtaking road holding.",
+    "720S Spider": "The 720S in convertible form. Retractable hard top, same performance, sensations at their absolute maximum.",
+    "GTS": "The ultimate McLaren GT. More comfort, same lightweight DNA. Built for fast long-distance journeys.",
+    "Solus GT": "25 units. Single-seat cockpit, 25G in corners. The most intense driving experience ever produced.",
+    "Senna": "A tribute to Ayrton Senna. 500 units, 800 hp, 1,198 kg. The most radical road-going McLaren ever built.",
+    "Senna GTR": "75 track-only units. The Senna pushed to the extreme, with 75 additional kg of downforce.",
+    "Elva": "The windshield-free roadster. 149 units, 815 hp, wind in your face. The ultimate open-air experience.",
+    "P1": "The hypercar trinity. V8 + hybrid, 916 hp, 375 units. McLaren reinvented what a supercar could be.",
+    "P1 GTR": "58 track-only units. 1,000 hp, 132 kg of downforce. The pinnacle of McLaren in the modern era.",
+    "F1": "The most iconic car in history. 3 seats, BMW V12, 391 km/h. The absolute masterpiece of automotive engineering."
+  },
+  "porsche": {
+    "911 GT3 RS": "The most extreme 911. Active PDCC aerodynamics, naturally aspirated flat-six screaming to 9,000 rpm.",
+    "911 GT3": "The sporting benchmark. 9,000 rpm NA flat-six, manual gearbox available, absolute purity on the road.",
+    "911 GT2 RS": "The most powerful 911 ever. 700 hp rear-wheel drive — the blonde beast from Stuttgart.",
+    "911 Turbo S": "The ultimate everyday 911. 650 hp, all-wheel drive, usable in any weather and on any road.",
+    "911 Carrera GTS": "The production hybrid 911. T-Hybrid system, 543 hp, efficiency and sportiness perfectly combined.",
+    "911 Dakar": "The off-road 911. Raised ground clearance, Rally mode. A tribute to Porsche's 1984 Dakar victory.",
+    "Taycan Turbo GT": "The fastest electric saloon in the world. 1,092 hp, 0-100 in 2.2s, Nürburgring record at 7m07.",
+    "918 Spyder": "The hypercar trinity. V8 + hybrid, 887 hp. A Porsche that changed the course of automotive history.",
+    "Cayenne Turbo GT": "The fastest SUV coupe at the Nürburgring. 659 hp, active aerodynamics, sports car handling.",
+    "Cayman GT4 RS": "The GT3's naturally aspirated flat-six in the Cayman body. 500 hp, 1,415 kg, the ultimate mid-engine Porsche.",
+    "Panamera Turbo S": "The ultimate sport saloon. 630 hp V8, 5 seats, 315 km/h. The world-reference 4-door grand tourer."
+  },
+  "audi": {
+    "R8 GT RWD": "The R8's final edition. 620 hp naturally aspirated V10, rear-wheel drive only. Audi's farewell to the V10.",
+    "R8 V10 Performance": "The naturally aspirated V10 in its purest form. The last generation before full electrification.",
+    "RS6 Avant Performance": "The world's most desired estate car. 630 hp V8, quattro, 5 seats and a huge boot. Pure perfection.",
+    "RS7 Performance": "The sport fastback. RS6 dressed as a fastback saloon. Same 630 hp V8, sportier roofline.",
+    "RS e-tron GT": "The performance electric saloon. 646 hp, technology shared with the Porsche Taycan platform.",
+    "RS3 Sedan": "The world's only 5-cylinder sports compact. Its unmistakable guttural sound, 400 hp, absolute sports compact.",
+    "RS5 Coupé": "The Audi sport coupe. 450 hp V6 biturbo, quattro, elegant sporty design. An accessible grand tourer.",
+    "TT RS Final Edition": "The TT RS farewell. 5-cylinder, 400 hp. Iconic design since 1998 — the final edition of the coupe.",
+    "Q8 RS e-tron": "Audi's performance electric SUV. 598 hp, 600 km of range, comfort and performance perfectly combined.",
+    "Sport Quattro": "The Group B legend. 214 units, ancestor of all quattro RS models. The ultimate rally myth."
+  },
+  "mercedes": {
+    "GT 63 S E Performance": "4-door hypercar hybrid. V8 AMG + F1-derived electric motor, 843 hp. The ultimate fusion of luxury and performance.",
+    "SL 63 AMG": "The luxury roadster reinvented. 585 hp V8, 4 seats, soft-top. Classic SL DNA combined with AMG brutality.",
+    "GT Black Series": "The AMG holy grail. 730 hp, active aerodynamics, Nürburgring record. The GT in its ultimate expression.",
+    "GT R Pro": "The Green Beast. Circuit settings, active aerodynamics. The ultimate link between AMG and the Nürburgring.",
+    "C63 S E Performance": "Controversy personified. V8 replaced by a hybrid 4-cylinder making 680 hp. Better performance, endless debate.",
+    "E63 S AMG": "The family saloon that plays in supercar territory. 612 hybrid hp, 4 proper doors for everyday usability.",
+    "EQS 53 AMG": "The AMG electric grand saloon. 761 hp, 770 km of range, luxurious fastback silhouette.",
+    "AMG ONE": "Lewis Hamilton's F1 engine for the road. 275 units, direct F1 W08 technology transfer. The absolute.",
+    "GT3 AMG": "The track GT for the road. AMG Customer Racing setup, GT3-homologated aerodynamics."
+  },
+  "bmw": {
+    "M4 CSL": "1,000 units, -100 kg vs the M4. CSL = Coupe Sport Lightweight. The M4 in its purest possible state.",
+    "M4 CSL Competition": "The most radical M4 Competition. M Carbon pack, refined dynamic settings, 530 hp.",
+    "M5 Touring": "The world's fastest estate car. 727 hp hybrid V8, M xDrive, 5 seats and an enormous boot.",
+    "M5 Berline": "The M5 in saloon form. 727 hp hybrid V8, plug-in hybrid capability. 50 km in full electric mode.",
+    "XM Label Red": "The most powerful production BMW M ever made. 748 hp hybrid V8. Polarizing design, undeniable performance.",
+    "M8 Gran Coupé": "The ultimate Bavarian grand tourer. 625 hp V8, 4 luxurious doors, 305 km/h. The best of both worlds.",
+    "M8 Competition Cabriolet": "The M8 with the roof open. Soft-top, 625 hp V8, grand touring under the Bavarian stars.",
+    "M2 CS": "The small M terror. Optional manual gearbox, rear-wheel drive, 480 hp. The purest BMW M ever made.",
+    "iX M60": "The electric M SAV. 619 hp, 0-100 in 3.8s, 566 km of range. The future direction of BMW M.",
+    "M3 CS": "The ultimate M3. 1,000 units, 550 hp, widespread carbon fibre use. BMW's most extreme sports saloon."
+  },
+  "koenigsegg": {
+    "Jesko Absolut": "The fastest car ever designed for production. 531 km/h theoretical top speed, 9-speed LST gearbox.",
+    "Jesko Attack": "Track-focused Jesko. 1,400 kg of downforce at 275 km/h. The ultimate expression of absolute handling.",
+    "Gemera": "The 4-seat mega GT. 2,300 hybrid hp, 4 proper seats. The most insane power-to-weight ratio ever seen.",
+    "CC850": "50 units for the 50th anniversary. Manual or intelligent automatic gearbox. The absolute art of Koenigsegg.",
+    "Regera": "No conventional gearbox. V8 + 3 electric motors, unique hydraulic coupling system. 80 units built.",
+    "One:1": "Megacar. 1 hp per kilogram. Only 7 units ever built. Achieved 444 km/h — an unofficial record."
+  },
+  "pagani": {
+    "Utopia": "Pagani's road car. Carbon-titanium construction, mechanical watchmaking-inspired interior fully on display.",
+    "Utopia Roadster": "The open-top Utopia. Only 100 units. Carbon-titanium build, the elements directly on your skin.",
+    "Huayra R Evo": "30 units. Naturally aspirated AMG V12, 900 hp, 1,050 kg. The circuit through Pagani's eyes — absolute.",
+    "Huayra BC": "20 units. A tribute to Benny Caiola, Horacio's lifelong friend. The most aerodynamic Huayra ever built.",
+    "Zonda F": "The Zonda that changed everything. 650 hp V12, the Pagani myth in its most legendary state.",
+    "Zonda Barchetta": "3 units. The rarest Pagani ever made. 17.6M€ — the most expensive production car in the world."
+  },
+  "aston": {
+    "DB12": "The new super tourer. 680 hp AMG V8, completely redesigned interior. The absolute sporting grand tourer.",
+    "DB12 Volante": "The DB12 open-top. A refined GT convertible, 680 hp V8, British elegance enjoyed under the sun.",
+    "DBS 770 Ultimate": "The swan song of Aston's V12. 770 hp, 499 units. The end of an era, delivered with total panache.",
+    "Valkyrie": "Born with Red Bull Racing F1. Cosworth V12 at 11,000 rpm, 1,155 hp, pure circuit-level downforce.",
+    "Valhalla": "Aston's hybrid hypercar. V8 + 3 electric motors, 1,079 hp, a direct descendant of the Valkyrie.",
+    "Vantage": "Aston Martin's pure sports car. 665 hp V8, rear-wheel drive, sharpened design, the most aggressive.",
+    "DBX 707": "Aston's most powerful SUV. 707 hp, sport chassis, the agility of a sports car in SUV packaging."
+  },
+  "bentley": {
+    "Continental GT Speed": "The ultimate grand tourer. 659 hp W12, 100 km of wood veneer inside the cabin. Absolute luxury.",
+    "Continental GT Speed Convertible": "The open-top grand tourer. 659 hp W12, open sky, absolute luxury in an unforgettable GT convertible.",
+    "Mulliner Batur": "18 units. The pinnacle of Bentley Mulliner craftsmanship. Each car entirely customised to absolute bespoke.",
+    "Bentayga Speed": "Bentley's fastest SUV. 626 hp W12. Speed without any sacrifice of luxury or comfort.",
+    "Flying Spur Speed": "The GT saloon. 626 hp W12, 5 seats, absolute interior luxury. 333 km/h in a luxury limousine."
+  },
+  "rollsroyce": {
+    "Spectre": "The first fully electric Rolls-Royce. 577 hp, cathedral silence, luxury without the slightest concession.",
+    "Phantom VIII": "The absolute icon. V12 in 5.76m of pure serenity. Architecture of Luxury: stars integrated in the headliner.",
+    "Cullinan Black Badge": "The world's most luxurious SUV in its dark alter ego form. Black Badge: Rolls-Royce with zero compromise.",
+    "Wraith Black Badge": "The dark grand tourer. 632 hp V12, Starlight headliner with 1,340 hand-stitched illuminated stars.",
+    "Dawn": "The Rolls-Royce convertible. 571 hp V12, silent open sky. Absolute luxury enjoyed under the stars."
+  },
+  "rimac": {
+    "Nevera R": "The fastest production car in human history. 2,107 hp, 0-100 in 1.7s. 150 units for the world.",
+    "Nevera": "23 world records broken in a single day. The original Nevera, Croatia's first electric hypercar."
+  },
+  "maserati": {
+    "MC20": "Maserati's mid-engine coupe. Nettuno V6 biturbo with F1 pre-chamber combustion, 630 hp, clean design.",
+    "MC20 Cielo": "Maserati's renaissance. Nettuno V6 630 hp with F1 pre-chamber, unique retractable glass roof.",
+    "Granturismo Trofeo": "Maserati's grand tourer. Nettuno V6, sculptural lines, the brand's characteristically exceptional exhaust note.",
+    "Grecale Trofeo": "Maserati's compact SUV. 530 hp Nettuno V6, sculptural design, the trident badge in a modern SUV.",
+    "GranCabrio Trofeo": "Maserati's GT convertible. Nettuno V6, soft-top, 4 seats, Italian elegance enjoyed under the open sky."
+  },
+  "alpine": {
+    "A110 R": "The A110 in its purest state. 1,082 kg, sport chassis, circuit-oriented settings for pure driving pleasure.",
+    "A110 R Turini": "The A110 R Turini edition. 1,082 kg, carbon elements, circuit settings. Lightness as a philosophy.",
+    "A110 GT": "The Alpine for long journeys. More comfort, same iconic lightness. Fast and precise long-distance travel.",
+    "A290 GTS": "The small electric Alpine. Heir to the Clio Williams legacy, agile and fully electric without compromise.",
+    "A110 S": "The sporty version of the A110. Stiffer springs, firmer anti-roll bars, 300 precise and eager horsepower."
+  },
+  "lotus": {
+    "Emira V6 First Edition": "The last thermal Lotus. Supercharged Toyota V6, 1,405 kg. The Lotus philosophy in its purest state.",
+    "Emira I4": "The Emira powered by the AMG 4-cylinder engine. 360 hp, more accessible entry point, same Lotus purism.",
+    "Eletre R": "The hyper-performance electric SUV. 918 hp, active aerodynamics inspired directly from Formula 1.",
+    "Emeya R": "The Lotus electric saloon. 905 hp, clean modern design, circuit-derived aerodynamic technology.",
+    "Evija": "130 units. The Lotus electric hypercar. 2,000 hp, Lotus's entry into the megacar era."
+  },
+  "toyota": {
+    "GR Yaris": "Japan's compact pocket rocket. 280 hp 3-cylinder, GR-Four AWD, rally technology on public roads.",
+    "GR Yaris Morizo RR": "The ultimate GR Yaris. 304 hp, 20 kg saved, Morizo-tuned settings. The hot hatch of every driver's dreams.",
+    "GR86": "The pure driving pleasure sports car. Naturally aspirated boxer engine, rear-wheel drive, perfect balance.",
+    "GR Supra": "The return of the myth. BMW I6 biturbo, rear-wheel drive, Japan's most legendary sports car bloodline reborn.",
+    "GR Corolla Morizo": "The road-legal race Corolla. GR Yaris engine, Morizo edition personally signed by Toyota's CEO."
+  },
+  "honda": {
+    "NSX Type S": "The NSX farewell. 600 hybrid hp, only 350 units. The swan song of Honda's legendary supercar.",
+    "Civic Type R": "The front-wheel drive sports compact benchmark. 329 hp, manual gearbox, Nürburgring FWD lap record holder.",
+    "Integra Type S": "The return of the Integra. 320 hp, manual, front-wheel drive. Type R DNA in a more elegant saloon body.",
+    "S2000": "The Honda icon. Naturally aspirated 4-cylinder to 9,000 rpm, rear-wheel drive. The purest engine ever made."
+  },
+  "nissan": {
+    "GT-R Nismo 2024": "Godzilla in its ultimate form. 600 hp V6 biturbo, Nismo gearbox, carbon brakes. The terror of the circuit.",
+    "GT-R R35 Premium": "The accessible monster. 570 hp V6 biturbo, intelligent AWD. Beats Ferraris at half their price.",
+    "Z Nismo": "The Z's return in Nismo form. 445 hp V6 biturbo, rear-wheel drive. A tribute to the legendary Z lineage.",
+    "GT-R R34 V-Spec": "The legendary Fast & Furious GT-R. Officially limited to 280 hp I6 RB26DETT. The stuff of pure legend."
+  },
+  "hennessey": {
+    "Venom F5 Revolution": "The Texan hypercar that challenges Europeans. 1,817 hp, 484 km/h, full carbon body. America at full throttle.",
+    "Venom F5 Roadster": "The F5 roadster. 30 units, roof removed, 1,817 hp in the open air. The ultimate Texan experience.",
+    "Venom GT": "Hennessey's first world record. 435 km/h on a NASA runway in Florida. The original Texan legend."
+  },
+  "dodge": {
+    "Challenger SRT Demon 170": "The most powerful production muscle car ever. 1,025 hp, 0-100 in 1.66s on E85 fuel. Road legal.",
+    "Challenger SRT Hellcat": "The original Hellcat. 717 hp supercharged V8, pure American muscle car. The accessible one of the clan.",
+    "Charger Daytona SRT": "The electric muscle car. Fratzonic sound system at 126 dB, iconic Charger look. The future has character.",
+    "Viper ACR": "The last Viper. Naturally aspirated 8.4L V10, 645 hp, manual only. The magnificent dinosaur."
+  },
+  "corvette": {
+    "Z06": "Naturally aspirated flat-plane V8 to 8,500 rpm. The American car that sounds like a Ferrari at GT prices.",
+    "ZR1": "The ultimate Corvette. Flat-plane V8 + 2 turbos, 1,064 hp, 346 km/h. The absolute American supercar.",
+    "E-Ray": "The hybrid all-wheel drive Corvette. LT2 V8 + front electric motor. All weather, all season capability.",
+    "Stingray": "The accessible Corvette. 6.2L LT2 V8, 490 hp, revolutionary mid-engine C8 design for everyone.",
+    "C7 Z06": "The C7 generation at its peak. 659 hp supercharged V8, the ultimate purist American Corvette."
+  },
+  "brabus": {
+    "Brabus 900 Rocket": "900 hp in a Mercedes-Maybach. The most powerful limousine ever built anywhere on Earth.",
+    "G V12 900": "The most brutal G-Wagen ever made. 900 hp V12 biturbo in the legendary square body. Pure extravagance.",
+    "Brabus Supercar": "The Brabus supercar. AMG GT base transformed into a 789 hp missile. German engineering on the race track.",
+    "Brabus 800": "Based on the GT 63 AMG. 800 hp, Brabus Monoblock wheels, Masterpiece interior. Discreet power."
+  }
+}
