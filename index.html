@@ -3,7 +3,7 @@
 <head>
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width,initial-scale=1.0">
-<title>AutoElite — 25 Marques · 100+ Modèles</title>
+<title>AutoElite — 25 Marques · 200+ Modèles</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,600;1,300&family=Rajdhani:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 <style>
@@ -11,197 +11,196 @@
 :root{
   --gold:#C9A84C;--gold-l:#E8C97A;--gold-d:#7A5E1A;
   --bg:#080808;--bg2:#111;--bg3:#1a1a1a;--bg4:#222;
-  --t:#f0ede8;--tm:#8a8680;--td:#555;--tb:#333;
-  --brd:rgba(201,168,76,.12);--brd2:rgba(201,168,76,.25);
+  --t:#f0ede8;--tm:#8a8680;--td:#555;
+  --brd:rgba(201,168,76,.12);--brd2:rgba(201,168,76,.28);
   --fd:'Cormorant Garamond',serif;--fu:'Rajdhani',sans-serif;
-  --tr:.2s ease;
 }
 [data-theme="light"]{
-  --bg:#f5f3ef;--bg2:#fff;--bg3:#ece9e4;--bg4:#e5e2dc;
-  --t:#1a1a1a;--tm:#555;--td:#999;--tb:#ddd;
-  --brd:rgba(100,80,20,.12);--brd2:rgba(100,80,20,.25);
+  --bg:#f4f2ee;--bg2:#fff;--bg3:#ece9e3;--bg4:#e2dfd8;
+  --t:#1a1a1a;--tm:#555;--td:#999;
+  --brd:rgba(100,80,20,.1);--brd2:rgba(100,80,20,.22);
 }
 html{scroll-behavior:smooth}
-body{background:var(--bg);color:var(--t);font-family:var(--fu);font-weight:400;overflow-x:hidden;transition:background var(--tr),color var(--tr)}
+body{background:var(--bg);color:var(--t);font-family:var(--fu);overflow-x:hidden;transition:background .3s,color .3s}
 ::selection{background:var(--gold);color:#000}
 ::-webkit-scrollbar{width:4px}::-webkit-scrollbar-track{background:var(--bg)}::-webkit-scrollbar-thumb{background:var(--gold-d)}
 
 /* NAV */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(8,8,8,.96);backdrop-filter:blur(14px);border-bottom:1px solid var(--brd);transition:height var(--tr),background var(--tr)}
-[data-theme="light"] nav{background:rgba(245,243,239,.96)}
+nav{position:fixed;top:0;left:0;right:0;z-index:100;display:flex;align-items:center;justify-content:space-between;padding:0 2rem;height:64px;background:rgba(8,8,8,.97);backdrop-filter:blur(14px);border-bottom:1px solid var(--brd);transition:height .3s,background .3s}
+[data-theme="light"] nav{background:rgba(244,242,238,.97)}
 .logo{font-family:var(--fd);font-size:1.6rem;font-weight:600;color:var(--gold);letter-spacing:.06em;text-decoration:none;flex-shrink:0}
 .logo span{color:var(--t);font-weight:300}
-.nav-c{display:flex;align-items:center;gap:.75rem;flex:1;margin:0 1.5rem}
-.search-wrap{flex:1;max-width:360px;position:relative}
-.search-ico{position:absolute;left:12px;top:50%;transform:translateY(-50%);width:15px;height:15px;opacity:.5;pointer-events:none}
-#search{width:100%;background:var(--bg3);border:1px solid var(--brd);color:var(--t);font-family:var(--fu);font-size:.85rem;padding:8px 12px 8px 34px;outline:none;transition:border var(--tr),background var(--tr)}
+.nav-mid{flex:1;margin:0 1.5rem;max-width:380px}
+.search-wrap{position:relative}
+.search-ico{position:absolute;left:11px;top:50%;transform:translateY(-50%);opacity:.4;pointer-events:none;font-size:.85rem}
+#search{width:100%;background:var(--bg3);border:1px solid var(--brd);color:var(--t);font-family:var(--fu);font-size:.85rem;padding:8px 12px 8px 32px;outline:none;transition:border .2s,background .2s;border-radius:0}
 #search:focus{border-color:var(--gold);background:var(--bg2)}
 #search::placeholder{color:var(--td)}
-.nav-r{display:flex;align-items:center;gap:.75rem;flex-shrink:0}
-
-/* THEME TOGGLE */
-.theme-btn{background:none;border:1px solid var(--brd2);color:var(--t);width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:1rem;transition:all var(--tr)}
-.theme-btn:hover{border-color:var(--gold);color:var(--gold)}
+.nav-r{display:flex;align-items:center;gap:.6rem;flex-shrink:0}
+.icon-btn{background:none;border:1px solid var(--brd2);color:var(--t);width:36px;height:36px;cursor:pointer;display:flex;align-items:center;justify-content:center;font-size:.95rem;transition:all .2s}
+.icon-btn:hover{border-color:var(--gold);color:var(--gold)}
 
 /* DROPDOWN */
 .dropdown{position:relative}
-.dd-trigger{display:flex;align-items:center;gap:7px;background:none;border:1px solid var(--brd2);color:var(--t);font-family:var(--fu);font-size:.8rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 16px;cursor:pointer;transition:all var(--tr);white-space:nowrap}
+.dd-trigger{display:flex;align-items:center;gap:7px;background:none;border:1px solid var(--brd2);color:var(--t);font-family:var(--fu);font-size:.78rem;font-weight:500;letter-spacing:.08em;text-transform:uppercase;padding:8px 15px;cursor:pointer;transition:all .2s;white-space:nowrap}
 .dd-trigger:hover{border-color:var(--gold);color:var(--gold)}
-.dd-arrow{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
-.dropdown.open .dd-arrow{transform:rotate(-135deg) translateY(-2px)}
-.dd-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:280px;background:var(--bg2);border:1px solid var(--brd2);max-height:420px;overflow-y:auto;opacity:0;transform:translateY(-8px) scaleY(.95);pointer-events:none;transition:all .2s cubic-bezier(.16,1,.3,1);transform-origin:top right;z-index:200}
+.dd-arr{width:8px;height:8px;border-right:1.5px solid currentColor;border-bottom:1.5px solid currentColor;transform:rotate(45deg) translateY(-2px);transition:transform .2s}
+.dropdown.open .dd-arr{transform:rotate(-135deg) translateY(-2px)}
+.dd-menu{position:absolute;top:calc(100% + 6px);right:0;min-width:270px;background:var(--bg2);border:1px solid var(--brd2);max-height:430px;overflow-y:auto;opacity:0;transform:translateY(-8px) scaleY(.95);pointer-events:none;transition:all .2s cubic-bezier(.16,1,.3,1);transform-origin:top right;z-index:200}
 .dd-menu::-webkit-scrollbar{width:3px}.dd-menu::-webkit-scrollbar-thumb{background:var(--gold-d)}
 .dropdown.open .dd-menu{opacity:1;transform:none;pointer-events:all}
-.dd-cat{padding:7px 16px 4px;font-size:.62rem;letter-spacing:.22em;color:var(--td);text-transform:uppercase;border-top:1px solid var(--brd)}
+.dd-cat{padding:7px 15px 3px;font-size:.6rem;letter-spacing:.22em;color:var(--td);text-transform:uppercase;border-top:1px solid var(--brd)}
 .dd-cat:first-child{border-top:none}
-.dd-item{display:flex;align-items:center;justify-content:space-between;padding:10px 16px;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;font-size:.85rem;transition:background var(--tr)}
-[data-theme="light"] .dd-item{border-bottom-color:rgba(0,0,0,.05)}
+.dd-item{display:flex;align-items:center;justify-content:space-between;padding:9px 15px;border-bottom:1px solid rgba(255,255,255,.04);cursor:pointer;font-size:.83rem;transition:background .15s}
+[data-theme="light"] .dd-item{border-bottom-color:rgba(0,0,0,.04)}
 .dd-item:hover{background:rgba(201,168,76,.07)}
 .dd-item.active{background:rgba(201,168,76,.12);color:var(--gold)}
-.dd-item-r{display:flex;align-items:center;gap:8px}
-.dd-cnt{font-size:.68rem;color:var(--td)}
-
-/* HERO */
-#hero{height:100vh;position:relative;display:flex;flex-direction:column;align-items:center;justify-content:center;overflow:hidden}
-.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--brd) 1px,transparent 1px),linear-gradient(90deg,var(--brd) 1px,transparent 1px);background-size:80px 80px;animation:gm 20s linear infinite}
-@keyframes gm{to{transform:translateY(80px)}}
-.hero-bg{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 60%,rgba(201,168,76,.04) 0%,transparent 65%),linear-gradient(180deg,rgba(8,8,8,.05) 0%,rgba(8,8,8,.88) 100%)}
-[data-theme="light"] .hero-bg{background:radial-gradient(ellipse at 50% 60%,rgba(201,168,76,.06) 0%,transparent 65%),linear-gradient(180deg,rgba(245,243,239,.05) 0%,rgba(245,243,239,.9) 100%)}
-.hero-c{position:relative;z-index:2;text-align:center;padding:0 2rem}
-.hero-lbl{font-size:.7rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;animation:fu .8s ease both}
-.hero-h{font-family:var(--fd);font-size:clamp(3rem,8vw,7.5rem);font-weight:300;line-height:.95;margin-bottom:1.5rem;animation:fu .8s .15s ease both}
-.hero-h em{font-style:italic;color:var(--gold)}
-.hero-sub{font-size:.9rem;color:var(--tm);letter-spacing:.07em;max-width:440px;margin:0 auto 2.5rem;animation:fu .8s .3s ease both}
-.hero-stats{display:flex;gap:2.5rem;justify-content:center;margin-bottom:2.5rem;animation:fu .8s .45s ease both}
-.hstat .v{font-family:var(--fd);font-size:2.5rem;font-weight:300;color:var(--gold);display:block;line-height:1}
-.hstat .l{font-size:.65rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase}
-.hero-btn{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;font-family:var(--fu);font-size:.78rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:14px 32px;border:none;cursor:pointer;transition:all .2s;animation:fu .8s .6s ease both}
-.hero-btn:hover{background:var(--gold-l);transform:translateY(-2px)}
-.hero-scroll{position:absolute;bottom:2.5rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--td);font-size:.65rem;letter-spacing:.2em;animation:fu 1s .7s ease both}
-.scrl-ln{width:1px;height:48px;background:linear-gradient(transparent,var(--gold));animation:sp 2s ease-in-out infinite}
-@keyframes sp{0%,100%{opacity:.3}50%{opacity:1}}
-@keyframes fu{from{opacity:0;transform:translateY(20px)}to{opacity:1;transform:translateY(0)}}
+.dd-cnt{font-size:.65rem;color:var(--td)}
 
 /* SEARCH RESULTS */
-#search-results{position:fixed;top:64px;left:0;right:0;z-index:99;background:var(--bg2);border-bottom:1px solid var(--brd2);max-height:60vh;overflow-y:auto;display:none}
-#search-results.vis{display:block}
-.sr-header{padding:10px 2rem;font-size:.7rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase;border-bottom:1px solid var(--brd)}
-.sr-item{display:flex;align-items:center;justify-content:space-between;padding:12px 2rem;border-bottom:1px solid var(--brd);cursor:pointer;transition:background var(--tr)}
-.sr-item:hover{background:rgba(201,168,76,.06)}
-.sr-left{}
-.sr-model{font-size:.95rem;font-weight:500;color:var(--t)}
-.sr-brand{font-size:.75rem;color:var(--td);margin-top:2px}
-.sr-right{text-align:right}
-.sr-price{font-family:var(--fd);font-size:1.1rem;color:var(--gold)}
-.sr-hp{font-size:.72rem;color:var(--td)}
-.sr-none{padding:2rem;text-align:center;color:var(--td)}
+#sr{position:fixed;top:64px;left:0;right:0;z-index:99;background:var(--bg2);border-bottom:1px solid var(--brd2);max-height:55vh;overflow-y:auto;display:none}
+#sr.vis{display:block}
+.sr-hdr{padding:8px 2rem;font-size:.65rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase;border-bottom:1px solid var(--brd);background:var(--bg3)}
+.sr-item{display:flex;align-items:center;justify-content:space-between;padding:11px 2rem;border-bottom:1px solid var(--brd);cursor:pointer;transition:background .15s;gap:1rem}
+.sr-item:hover{background:rgba(201,168,76,.05)}
+.sr-model{font-size:.92rem;font-weight:500;color:var(--t)}
+.sr-brand{font-size:.72rem;color:var(--td);margin-top:1px}
+.sr-price{font-family:var(--fd);font-size:1.1rem;color:var(--gold);white-space:nowrap}
+.sr-hp{font-size:.68rem;color:var(--td)}
+.sr-empty{padding:2rem;text-align:center;color:var(--td);font-size:.9rem}
+
+/* HERO */
+#hero{height:100vh;position:relative;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(var(--brd) 1px,transparent 1px),linear-gradient(90deg,var(--brd) 1px,transparent 1px);background-size:80px 80px;animation:gm 20s linear infinite}
+@keyframes gm{to{transform:translateY(80px)}}
+.hero-ovl{position:absolute;inset:0;background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,.05) 0%,transparent 65%),linear-gradient(180deg,rgba(8,8,8,.05) 0%,rgba(8,8,8,.9) 100%)}
+[data-theme="light"] .hero-ovl{background:radial-gradient(ellipse at 50% 50%,rgba(201,168,76,.07) 0%,transparent 65%),linear-gradient(180deg,transparent 0%,rgba(244,242,238,.92) 100%)}
+.hero-c{position:relative;z-index:2;text-align:center;padding:0 2rem}
+.hero-eyebrow{font-size:.68rem;letter-spacing:.32em;text-transform:uppercase;color:var(--gold);margin-bottom:1.5rem;animation:fu .8s ease both}
+.hero-h{font-family:var(--fd);font-size:clamp(3rem,8vw,7.5rem);font-weight:300;line-height:.93;margin-bottom:1.5rem;animation:fu .8s .12s ease both}
+.hero-h em{font-style:italic;color:var(--gold)}
+.hero-sub{font-size:.88rem;color:var(--tm);letter-spacing:.07em;max-width:460px;margin:0 auto 2.5rem;line-height:1.6;animation:fu .8s .25s ease both}
+.hero-nums{display:flex;gap:3rem;justify-content:center;margin-bottom:2.5rem;animation:fu .8s .38s ease both}
+.hn .v{font-family:var(--fd);font-size:2.8rem;font-weight:300;color:var(--gold);display:block;line-height:1}
+.hn .l{font-size:.62rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase}
+.hero-cta{display:inline-flex;align-items:center;gap:10px;background:var(--gold);color:#000;font-family:var(--fu);font-size:.76rem;font-weight:700;letter-spacing:.18em;text-transform:uppercase;padding:14px 34px;border:none;cursor:pointer;transition:all .2s;animation:fu .8s .5s ease both}
+.hero-cta:hover{background:var(--gold-l);transform:translateY(-2px)}
+.hero-scroll{position:absolute;bottom:2rem;left:50%;transform:translateX(-50%);z-index:2;display:flex;flex-direction:column;align-items:center;gap:8px;color:var(--td);font-size:.63rem;letter-spacing:.2em}
+.scrl-ln{width:1px;height:46px;background:linear-gradient(transparent,var(--gold));animation:pulse 2s ease-in-out infinite}
+@keyframes pulse{0%,100%{opacity:.25}50%{opacity:1}}
+@keyframes fu{from{opacity:0;transform:translateY(18px)}to{opacity:1;transform:translateY(0)}}
 
 /* MAIN */
 #main{padding:5rem 2rem;max-width:1440px;margin:0 auto}
-.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.25rem;border-bottom:1px solid var(--brd)}
-.sec-lbl{font-size:.65rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
-.sec-title{font-family:var(--fd);font-size:clamp(2rem,4vw,3.5rem);font-weight:300;line-height:1}
+.sec-head{display:flex;align-items:flex-end;justify-content:space-between;margin-bottom:2.5rem;padding-bottom:1.2rem;border-bottom:1px solid var(--brd)}
+.sec-eyebrow{font-size:.63rem;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:.5rem}
+.sec-title{font-family:var(--fd);font-size:clamp(1.8rem,3.5vw,3.2rem);font-weight:300;line-height:1}
 .sec-title strong{font-weight:600}
-.sec-meta{font-size:.72rem;letter-spacing:.12em;color:var(--td);text-align:right}
+.sec-right{text-align:right}
+.sec-meta{font-size:.72rem;color:var(--td);letter-spacing:.1em}
 
-/* BRAND CARD */
-.brand-card{display:grid;grid-template-columns:260px 1fr;background:var(--bg2);border:1px solid var(--brd);margin-bottom:3rem;position:relative;overflow:hidden;transition:background var(--tr)}
-.brand-card::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bcolor,var(--gold)) 0%,transparent 60%)}
-.brand-l{padding:2rem;border-right:1px solid var(--brd);display:flex;flex-direction:column;justify-content:center}
-.brand-name{font-family:var(--fd);font-size:2.4rem;font-weight:300;color:var(--gold);line-height:1;margin-bottom:.25rem;letter-spacing:.03em}
-.brand-where{font-size:.68rem;letter-spacing:.15em;color:var(--td);text-transform:uppercase;margin-bottom:.2rem;display:flex;align-items:center;gap:6px}
-.brand-country-tag{display:inline-flex;align-items:center;gap:5px;background:rgba(201,168,76,.08);border:1px solid var(--brd2);padding:3px 10px;font-size:.65rem;letter-spacing:.1em;color:var(--gold);margin-bottom:1.2rem;width:fit-content}
-.brand-stats{display:flex;gap:1.25rem}
-.bstat .v{font-family:var(--fd);font-size:1.7rem;color:var(--gold);font-weight:300;display:block;line-height:1}
-.bstat .l{font-size:.6rem;color:var(--td);letter-spacing:.1em;text-transform:uppercase}
-.brand-r{padding:2rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
-.brand-ghost{position:absolute;right:1rem;top:50%;transform:translateY(-50%);font-family:var(--fd);font-size:7rem;font-weight:600;color:rgba(201,168,76,.05);line-height:1;pointer-events:none;user-select:none}
-.brand-desc{font-size:.92rem;line-height:1.75;color:var(--tm);margin-bottom:1rem}
-.brand-tags{display:flex;flex-wrap:wrap;gap:6px}
-.btag{font-size:.62rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--brd2);color:var(--gold);padding:3px 9px}
+/* BRAND PANEL */
+.brand-panel{display:grid;grid-template-columns:240px 1fr;background:var(--bg2);border:1px solid var(--brd);margin-bottom:2.5rem;position:relative;overflow:hidden}
+.brand-panel::before{content:'';position:absolute;top:0;left:0;right:0;height:2px;background:linear-gradient(90deg,var(--bc,var(--gold)) 0%,transparent 55%)}
+.bp-left{padding:2rem 1.75rem;border-right:1px solid var(--brd);display:flex;flex-direction:column;justify-content:center;gap:.75rem}
+.bp-name{font-family:var(--fd);font-size:2.2rem;font-weight:300;color:var(--gold);line-height:1}
+.bp-flag-country{display:inline-flex;align-items:center;gap:6px;font-size:.68rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(201,168,76,.08);border:1px solid var(--brd2);padding:4px 10px;color:var(--gold);width:fit-content}
+.bp-city{font-size:.68rem;color:var(--td);letter-spacing:.1em}
+.bp-stats{display:flex;gap:1.25rem;margin-top:.25rem}
+.bps .v{font-family:var(--fd);font-size:1.6rem;color:var(--gold);font-weight:300;display:block;line-height:1}
+.bps .l{font-size:.58rem;color:var(--td);letter-spacing:.1em;text-transform:uppercase}
+.bp-right{padding:2rem;display:flex;flex-direction:column;justify-content:center;position:relative;overflow:hidden}
+.bp-ghost{position:absolute;right:.5rem;top:50%;transform:translateY(-50%);font-family:var(--fd);font-size:7rem;font-weight:600;color:rgba(201,168,76,.04);line-height:1;pointer-events:none;user-select:none;letter-spacing:-.02em}
+.bp-desc{font-size:.88rem;line-height:1.8;color:var(--tm);margin-bottom:1rem;position:relative;z-index:1}
+.bp-tags{display:flex;flex-wrap:wrap;gap:6px;position:relative;z-index:1}
+.bptag{font-size:.6rem;letter-spacing:.12em;text-transform:uppercase;border:1px solid var(--brd2);color:var(--gold);padding:3px 9px}
 
-/* FILTERS */
-.filter-bar{display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
-.f-lbl{font-size:.65rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase;margin-right:.25rem}
-.f-btn{font-size:.68rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--brd);color:var(--tm);padding:6px 13px;cursor:pointer;transition:all var(--tr);font-family:var(--fu)}
-.f-btn:hover,.f-btn.active{border-color:var(--gold);color:var(--gold)}
-.sort-select{margin-left:auto;background:var(--bg3);border:1px solid var(--brd);color:var(--t);font-family:var(--fu);font-size:.75rem;padding:6px 28px 6px 10px;cursor:pointer;outline:none;appearance:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23C9A84C'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
+/* FILTER + SORT BAR */
+.toolbar{display:flex;align-items:center;gap:.6rem;margin-bottom:1.5rem;flex-wrap:wrap}
+.f-lbl{font-size:.63rem;letter-spacing:.2em;color:var(--td);text-transform:uppercase;margin-right:.2rem}
+.f-btn{font-size:.67rem;letter-spacing:.1em;text-transform:uppercase;background:none;border:1px solid var(--brd);color:var(--tm);padding:6px 12px;cursor:pointer;transition:all .18s;font-family:var(--fu)}
+.f-btn:hover,.f-btn.on{border-color:var(--gold);color:var(--gold)}
+.sort-sel{margin-left:auto;background:var(--bg3);border:1px solid var(--brd);color:var(--t);font-family:var(--fu);font-size:.72rem;padding:6px 26px 6px 10px;cursor:pointer;outline:none;-webkit-appearance:none;background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='%23C9A84C'/%3E%3C/svg%3E");background-repeat:no-repeat;background-position:right 8px center}
 
-/* CARS GRID */
-.cars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(320px,1fr));gap:1px;background:var(--brd);margin-bottom:1px}
-.car-card{background:var(--bg2);cursor:default;transition:background var(--tr);position:relative;overflow:hidden}
+/* CARS GRID — NO IMAGES */
+.cars-grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(300px,1fr));gap:1px;background:var(--brd)}
+.car-card{background:var(--bg2);transition:background .2s;display:flex;flex-direction:column}
 .car-card:hover{background:var(--bg3)}
-.car-img-wrap{height:200px;overflow:hidden;position:relative;background:var(--bg3)}
-.car-img{width:100%;height:100%;object-fit:cover;transition:transform .5s cubic-bezier(.16,1,.3,1),filter .3s;filter:grayscale(.25) brightness(.9)}
-.car-card:hover .car-img{transform:scale(1.07);filter:grayscale(0) brightness(1)}
-.car-img-ovl{position:absolute;inset:0;background:linear-gradient(to top,rgba(8,8,8,.7) 0%,rgba(8,8,8,.1) 55%,transparent 100%)}
-[data-theme="light"] .car-img-ovl{background:linear-gradient(to top,rgba(245,243,239,.7) 0%,transparent 55%)}
-.car-num{position:absolute;top:10px;left:12px;font-size:.6rem;letter-spacing:.22em;color:rgba(240,237,232,.45)}
-.car-badge{position:absolute;top:10px;right:12px;font-size:.58rem;letter-spacing:.12em;text-transform:uppercase;background:rgba(8,8,8,.75);border:1px solid var(--brd2);color:var(--gold);padding:3px 8px;backdrop-filter:blur(4px)}
-.car-body{padding:1.25rem}
-.car-model{font-family:var(--fd);font-size:1.65rem;font-weight:300;color:var(--t);margin-bottom:.18rem;line-height:1}
-.car-sub{font-size:.7rem;color:var(--td);letter-spacing:.1em;margin-bottom:1rem}
-.car-specs{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--brd);margin-bottom:1rem}
-.sp{background:var(--bg2);padding:9px 7px;text-align:center;transition:background var(--tr)}
+
+/* VISUAL BAND — replaces image */
+.car-visual{height:130px;position:relative;overflow:hidden;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.4rem}
+.cv-bg{position:absolute;inset:0;opacity:.06}
+.cv-pattern{position:absolute;inset:0;background-image:repeating-linear-gradient(45deg,transparent,transparent 8px,rgba(255,255,255,.03) 8px,rgba(255,255,255,.03) 9px)}
+.car-letter{font-family:var(--fd);font-size:4.5rem;font-weight:600;color:rgba(255,255,255,.08);line-height:1;position:absolute;right:.75rem;bottom:-.5rem;letter-spacing:-.03em;user-select:none}
+.cv-type{font-size:.58rem;letter-spacing:.22em;text-transform:uppercase;color:rgba(255,255,255,.35);position:absolute;top:.75rem;left:.85rem;z-index:1}
+.cv-num{font-size:.58rem;letter-spacing:.18em;color:rgba(255,255,255,.25);position:absolute;top:.75rem;right:.85rem;z-index:1}
+.cv-model-big{font-family:var(--fd);font-size:1.4rem;font-weight:300;color:rgba(255,255,255,.7);position:relative;z-index:1;line-height:1;text-align:center;padding:0 1rem}
+.cv-brand-small{font-size:.65rem;letter-spacing:.2em;color:rgba(255,255,255,.3);position:relative;z-index:1;text-transform:uppercase}
+.cv-bar{position:absolute;bottom:0;left:0;right:0;height:2px;opacity:.6}
+
+/* CARD BODY */
+.car-body{padding:1.1rem;flex:1;display:flex;flex-direction:column}
+.car-model{font-family:var(--fd);font-size:1.5rem;font-weight:300;color:var(--t);margin-bottom:.15rem;line-height:1}
+.car-sub{font-size:.67rem;color:var(--td);letter-spacing:.1em;margin-bottom:.9rem}
+.specs-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:1px;background:var(--brd);margin-bottom:.9rem}
+.sp{background:var(--bg2);padding:8px 6px;text-align:center;transition:background .2s}
 .car-card:hover .sp{background:var(--bg3)}
-.sp .v{font-family:var(--fd);font-size:1.25rem;font-weight:400;color:var(--gold);display:block;line-height:1}
-.sp .l{font-size:.56rem;color:var(--td);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;display:block}
-.car-desc{font-size:.8rem;color:var(--tm);line-height:1.6;margin-bottom:1rem}
-.car-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.85rem;border-top:1px solid var(--brd)}
-.car-price{font-family:var(--fd);font-size:1.35rem;color:var(--gold);font-weight:300}
-.car-price-lbl{font-size:.6rem;color:var(--td);letter-spacing:.08em}
-.car-btn{font-size:.65rem;letter-spacing:.15em;text-transform:uppercase;border:1px solid var(--brd2);color:var(--gold);background:none;padding:8px 14px;cursor:pointer;transition:all var(--tr);font-family:var(--fu);font-weight:500}
-.car-btn:hover,.car-btn.cmp{background:var(--gold);color:#000;border-color:var(--gold)}
+.sp .v{font-family:var(--fd);font-size:1.15rem;font-weight:400;color:var(--gold);display:block;line-height:1}
+.sp .l{font-size:.53rem;color:var(--td);letter-spacing:.1em;text-transform:uppercase;margin-top:2px;display:block}
+.car-desc{font-size:.78rem;color:var(--tm);line-height:1.6;margin-bottom:.9rem;flex:1}
+.car-footer{display:flex;align-items:center;justify-content:space-between;padding-top:.8rem;border-top:1px solid var(--brd);margin-top:auto}
+.car-price{font-family:var(--fd);font-size:1.25rem;color:var(--gold);font-weight:300;line-height:1}
+.car-price-lbl{font-size:.58rem;color:var(--td);letter-spacing:.08em;margin-top:1px}
+.car-btn{font-size:.63rem;letter-spacing:.14em;text-transform:uppercase;border:1px solid var(--brd2);color:var(--gold);background:none;padding:7px 13px;cursor:pointer;transition:all .18s;font-family:var(--fu);font-weight:500;white-space:nowrap}
+.car-btn:hover,.car-btn.on{background:var(--gold);color:#000;border-color:var(--gold)}
 .no-res{grid-column:1/-1;text-align:center;padding:5rem 2rem;color:var(--td);font-family:var(--fd);font-size:2rem;font-weight:300}
 
 /* COMPARE BAR */
-#cbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--bg2);border-top:1px solid var(--brd2);padding:.8rem 2rem;display:flex;align-items:center;gap:1rem;transform:translateY(100%);transition:transform .3s;flex-wrap:wrap}
+#cbar{position:fixed;bottom:0;left:0;right:0;z-index:90;background:var(--bg2);border-top:1px solid var(--brd2);padding:.75rem 2rem;display:flex;align-items:center;gap:.75rem;transform:translateY(100%);transition:transform .3s;flex-wrap:wrap}
 #cbar.vis{transform:none}
-.cbar-lbl{font-size:.7rem;letter-spacing:.18em;color:var(--td);text-transform:uppercase;white-space:nowrap;flex-shrink:0}
-.cbar-items{display:flex;gap:.6rem;flex:1;flex-wrap:wrap}
-.cchip{display:flex;align-items:center;gap:6px;background:var(--bg3);border:1px solid var(--brd2);padding:4px 10px;font-size:.75rem}
-.cchip button{background:none;border:none;color:var(--gold);cursor:pointer;font-size:.95rem;line-height:1;padding:0}
-.cbar-acts{display:flex;gap:.6rem;flex-shrink:0}
-.cgo{background:var(--gold);color:#000;border:none;padding:8px 20px;font-family:var(--fu);font-size:.75rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .2s}
+.cbar-lbl{font-size:.67rem;letter-spacing:.18em;color:var(--td);text-transform:uppercase;white-space:nowrap;flex-shrink:0}
+.cbar-chips{display:flex;gap:.5rem;flex:1;flex-wrap:wrap}
+.chip{display:flex;align-items:center;gap:5px;background:var(--bg3);border:1px solid var(--brd2);padding:4px 9px;font-size:.72rem}
+.chip button{background:none;border:none;color:var(--gold);cursor:pointer;font-size:.9rem;line-height:1;padding:0}
+.cbar-acts{display:flex;gap:.5rem;flex-shrink:0}
+.cgo{background:var(--gold);color:#000;border:none;padding:8px 18px;font-family:var(--fu);font-size:.72rem;font-weight:700;letter-spacing:.14em;text-transform:uppercase;cursor:pointer;transition:background .2s}
 .cgo:hover{background:var(--gold-l)}
-.cclear{background:none;border:1px solid var(--brd);color:var(--tm);padding:8px 14px;font-family:var(--fu);font-size:.75rem;cursor:pointer}
+.cclear{background:none;border:1px solid var(--brd);color:var(--tm);padding:8px 12px;font-family:var(--fu);font-size:.72rem;cursor:pointer}
 
 /* MODAL */
 #cmodal{position:fixed;inset:0;z-index:200;background:rgba(0,0,0,.9);display:flex;align-items:center;justify-content:center;opacity:0;pointer-events:none;transition:opacity .25s}
-[data-theme="light"] #cmodal{background:rgba(0,0,0,.7)}
 #cmodal.open{opacity:1;pointer-events:all}
-.modal-inner{background:var(--bg2);border:1px solid var(--brd2);max-width:940px;width:93vw;max-height:88vh;overflow-y:auto;padding:2.5rem;position:relative;animation:fu .3s ease}
-.modal-inner::-webkit-scrollbar{width:3px}.modal-inner::-webkit-scrollbar-thumb{background:var(--gold-d)}
-.modal-h{font-family:var(--fd);font-size:2rem;font-weight:300;color:var(--gold);margin-bottom:1.8rem}
-.ctable{width:100%;border-collapse:collapse}
-.ctable th{font-family:var(--fd);font-size:1.1rem;font-weight:400;color:var(--gold);padding:.85rem;text-align:left;border-bottom:1px solid var(--brd2)}
-.ctable td{padding:.7rem .85rem;border-bottom:1px solid var(--brd);font-size:.83rem;color:var(--tm)}
-.ctable td:first-child{color:var(--td);font-size:.65rem;letter-spacing:.1em;text-transform:uppercase}
-.ctable tr:hover td{background:rgba(201,168,76,.03)}
-.modal-x{position:absolute;top:1.5rem;right:1.5rem;background:none;border:1px solid var(--brd);color:var(--tm);width:32px;height:32px;cursor:pointer;font-size:1rem;display:flex;align-items:center;justify-content:center;transition:all var(--tr)}
+.modal-box{background:var(--bg2);border:1px solid var(--brd2);max-width:960px;width:93vw;max-height:88vh;overflow-y:auto;padding:2.5rem;position:relative;animation:fu .3s ease}
+.modal-box::-webkit-scrollbar{width:3px}.modal-box::-webkit-scrollbar-thumb{background:var(--gold-d)}
+.modal-h{font-family:var(--fd);font-size:1.9rem;font-weight:300;color:var(--gold);margin-bottom:1.75rem}
+.ctab{width:100%;border-collapse:collapse}
+.ctab th{font-family:var(--fd);font-size:1rem;font-weight:400;color:var(--gold);padding:.8rem;text-align:left;border-bottom:1px solid var(--brd2)}
+.ctab td{padding:.65rem .8rem;border-bottom:1px solid var(--brd);font-size:.82rem;color:var(--tm)}
+.ctab td:first-child{color:var(--td);font-size:.63rem;letter-spacing:.1em;text-transform:uppercase}
+.ctab tr:hover td{background:rgba(201,168,76,.025)}
+.modal-x{position:absolute;top:1.25rem;right:1.25rem;background:none;border:1px solid var(--brd);color:var(--tm);width:30px;height:30px;cursor:pointer;font-size:.9rem;display:flex;align-items:center;justify-content:center;transition:all .2s}
 .modal-x:hover{border-color:var(--gold);color:var(--gold)}
 
 /* FOOTER */
-footer{padding:3rem 2rem;border-top:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
-.f-logo{font-family:var(--fd);font-size:1.5rem;color:var(--gold);font-weight:600}
-.f-grid{display:flex;gap:3rem}
-.fstat .v{font-family:var(--fd);font-size:2rem;color:var(--gold);font-weight:300;display:block}
-.fstat .l{font-size:.6rem;color:var(--td);letter-spacing:.12em;text-transform:uppercase}
-.f-copy{font-size:.68rem;color:var(--td);letter-spacing:.08em}
-#toast{position:fixed;top:76px;right:1.5rem;background:var(--gold);color:#000;padding:7px 15px;font-size:.75rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .25s;pointer-events:none;z-index:300}
+footer{padding:2.5rem 2rem;border-top:1px solid var(--brd);display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:1.5rem}
+.f-logo{font-family:var(--fd);font-size:1.4rem;color:var(--gold);font-weight:600}
+.f-grid{display:flex;gap:2.5rem}
+.fst .v{font-family:var(--fd);font-size:1.8rem;color:var(--gold);font-weight:300;display:block}
+.fst .l{font-size:.58rem;color:var(--td);letter-spacing:.12em;text-transform:uppercase}
+.f-copy{font-size:.65rem;color:var(--td);letter-spacing:.07em}
+#toast{position:fixed;top:76px;right:1.5rem;background:var(--gold);color:#000;padding:6px 14px;font-size:.72rem;font-weight:700;letter-spacing:.1em;text-transform:uppercase;opacity:0;transition:opacity .25s;pointer-events:none;z-index:300}
 
-@media(max-width:900px){
+@media(max-width:860px){
   nav{padding:0 1rem}
-  .nav-c{margin:0 .75rem}
-  .search-wrap{max-width:200px}
+  .nav-mid{margin:0 .6rem;max-width:180px}
   #main{padding:4rem 1rem}
-  .brand-card{grid-template-columns:1fr}
-  .brand-l{border-right:none;border-bottom:1px solid var(--brd)}
+  .brand-panel{grid-template-columns:1fr}
+  .bp-left{border-right:none;border-bottom:1px solid var(--brd)}
   .cars-grid{grid-template-columns:1fr}
-  #cbar{padding:.75rem 1rem}
-  .f-grid{gap:1.5rem}
+  #cbar{padding:.7rem 1rem}
   footer{flex-direction:column;align-items:flex-start}
   .sec-head{flex-direction:column;align-items:flex-start;gap:.5rem}
+  .hero-nums{gap:1.5rem}
 }
 </style>
 </head>
@@ -209,42 +208,42 @@ footer{padding:3rem 2rem;border-top:1px solid var(--brd);display:flex;align-item
 
 <nav id="nb">
   <a class="logo" href="#">Auto<span>Elite</span></a>
-  <div class="nav-c">
+  <div class="nav-mid">
     <div class="search-wrap">
-      <svg class="search-ico" viewBox="0 0 20 20" fill="none" stroke="currentColor" stroke-width="2"><circle cx="9" cy="9" r="6"/><path d="m15 15 4 4"/></svg>
-      <input id="search" type="text" placeholder="Rechercher un modèle, marque…" autocomplete="off">
+      <span class="search-ico">🔍</span>
+      <input id="search" type="text" placeholder="Rechercher modèle, marque…" autocomplete="off">
     </div>
   </div>
   <div class="nav-r">
-    <button class="theme-btn" id="themeBtn" title="Mode jour/nuit">🌙</button>
+    <button class="icon-btn" id="themeBtn">🌙</button>
     <div class="dropdown" id="dd">
       <button class="dd-trigger" onclick="toggleDD()">
         <span id="dd-label">Marques</span>
-        <span class="dd-arrow"></span>
+        <span class="dd-arr"></span>
       </button>
       <div class="dd-menu" id="dd-menu"></div>
     </div>
   </div>
 </nav>
 
-<div id="search-results">
-  <div class="sr-header" id="sr-header">Résultats</div>
+<div id="sr">
+  <div class="sr-hdr" id="sr-hdr">Résultats</div>
   <div id="sr-list"></div>
 </div>
 
 <section id="hero">
   <div class="hero-grid"></div>
-  <div class="hero-bg"></div>
+  <div class="hero-ovl"></div>
   <div class="hero-c">
-    <p class="hero-lbl">L'excellence automobile mondiale</p>
+    <p class="hero-eyebrow">L'excellence automobile mondiale</p>
     <h1 class="hero-h">L'art de la<br><em>vitesse</em> &amp; du <em>luxe</em></h1>
-    <p class="hero-sub">25 marques emblématiques de 12 pays. Plus de 100 modèles d'exception.</p>
-    <div class="hero-stats">
-      <div class="hstat"><span class="v">25</span><span class="l">Marques</span></div>
-      <div class="hstat"><span class="v" id="total-cars">—</span><span class="l">Modèles</span></div>
-      <div class="hstat"><span class="v">12</span><span class="l">Pays</span></div>
+    <p class="hero-sub">25 marques emblématiques de 12 pays. Plus de 200 modèles d'exception répertoriés.</p>
+    <div class="hero-nums">
+      <div class="hn"><span class="v">25</span><span class="l">Marques</span></div>
+      <div class="hn"><span class="v" id="hero-total">—</span><span class="l">Modèles</span></div>
+      <div class="hn"><span class="v">12</span><span class="l">Pays</span></div>
     </div>
-    <button class="hero-btn" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">Explorer la collection</button>
+    <button class="hero-cta" onclick="document.getElementById('main').scrollIntoView({behavior:'smooth'})">Explorer la collection</button>
   </div>
   <div class="hero-scroll"><span>DÉFILER</span><div class="scrl-ln"></div></div>
 </section>
@@ -252,59 +251,65 @@ footer{padding:3rem 2rem;border-top:1px solid var(--brd);display:flex;align-item
 <section id="main">
   <div class="sec-head">
     <div>
-      <p class="sec-lbl">Collection mondiale</p>
+      <p class="sec-eyebrow">Collection mondiale</p>
       <h2 class="sec-title">Marques de <strong>Prestige</strong></h2>
     </div>
-    <div class="sec-meta" id="sec-meta">Sélectionnez une marque</div>
+    <div class="sec-right">
+      <div class="sec-meta" id="sec-meta">Sélectionnez une marque</div>
+    </div>
   </div>
-  <div class="brand-card" id="bcard">
-    <div class="brand-l">
-      <div class="brand-name" id="bi-name">—</div>
-      <div class="brand-country-tag" id="bi-ctag">—</div>
-      <div class="brand-where" id="bi-where">—</div>
-      <div class="brand-stats">
-        <div class="bstat"><span class="v" id="bi-models">—</span><span class="l">Modèles</span></div>
-        <div class="bstat"><span class="v" id="bi-founded">—</span><span class="l">Fondée</span></div>
-        <div class="bstat"><span class="v" id="bi-flag">—</span><span class="l">Origine</span></div>
+
+  <div class="brand-panel" id="bpanel">
+    <div class="bp-left">
+      <div class="bp-name" id="bp-name">—</div>
+      <div class="bp-flag-country" id="bp-fc">—</div>
+      <div class="bp-city" id="bp-city">—</div>
+      <div class="bp-stats">
+        <div class="bps"><span class="v" id="bp-mod">—</span><span class="l">Modèles</span></div>
+        <div class="bps"><span class="v" id="bp-yr">—</span><span class="l">Fondée</span></div>
+        <div class="bps"><span class="v" id="bp-fl">—</span><span class="l">Origine</span></div>
       </div>
     </div>
-    <div class="brand-r">
-      <div class="brand-ghost" id="bi-ghost">—</div>
-      <p class="brand-desc" id="bi-desc">Sélectionnez une marque dans le menu déroulant pour découvrir sa collection et son histoire.</p>
-      <div class="brand-tags" id="bi-tags"></div>
+    <div class="bp-right">
+      <div class="bp-ghost" id="bp-ghost">—</div>
+      <p class="bp-desc" id="bp-desc">Sélectionnez une marque dans le menu déroulant pour découvrir son histoire et sa collection complète.</p>
+      <div class="bp-tags" id="bp-tags"></div>
     </div>
   </div>
-  <div class="filter-bar">
+
+  <div class="toolbar">
     <span class="f-lbl">Filtrer :</span>
-    <button class="f-btn active" onclick="setF('all',this)">Tous</button>
+    <button class="f-btn on" onclick="setF('all',this)">Tous</button>
     <button class="f-btn" onclick="setF('hypercar',this)">Hypercar</button>
     <button class="f-btn" onclick="setF('supercar',this)">Supercar</button>
     <button class="f-btn" onclick="setF('gt',this)">Grand Tourisme</button>
     <button class="f-btn" onclick="setF('sport',this)">Sport</button>
-    <select class="sort-select" id="sort-sel" onchange="renderCars()">
-      <option value="default">Ordre par défaut</option>
-      <option value="price-asc">Prix croissant</option>
-      <option value="price-desc">Prix décroissant</option>
-      <option value="hp-desc">Puissance ↓</option>
-      <option value="v-asc">0-100 le + rapide</option>
+    <button class="f-btn" onclick="setF('classic',this)">Classique</button>
+    <select class="sort-sel" id="sortSel" onchange="renderCars()">
+      <option value="">Ordre par défaut</option>
+      <option value="pa">Prix croissant</option>
+      <option value="pd">Prix décroissant</option>
+      <option value="hp">Puissance ↓</option>
+      <option value="v">0-100 le + rapide</option>
     </select>
   </div>
+
   <div class="cars-grid" id="cars-grid"></div>
 </section>
 
 <div id="cbar">
   <span class="cbar-lbl">Comparer</span>
-  <div class="cbar-items" id="cbar-items"></div>
+  <div class="cbar-chips" id="cbar-chips"></div>
   <div class="cbar-acts">
     <button class="cclear" onclick="clearCmp()">Effacer</button>
-    <button class="cgo" onclick="openModal()">Voir le comparatif →</button>
+    <button class="cgo" onclick="openModal()">Comparer →</button>
   </div>
 </div>
 
 <div id="cmodal" onclick="if(event.target===this)closeModal()">
-  <div class="modal-inner">
+  <div class="modal-box">
     <button class="modal-x" onclick="closeModal()">✕</button>
-    <div class="modal-h">Comparatif</div>
+    <div class="modal-h">Comparatif détaillé</div>
     <div id="modal-body"></div>
   </div>
 </div>
@@ -312,188 +317,324 @@ footer{padding:3rem 2rem;border-top:1px solid var(--brd);display:flex;align-item
 <footer>
   <div class="f-logo">AutoElite</div>
   <div class="f-grid">
-    <div class="fstat"><span class="v">25</span><span class="l">Marques</span></div>
-    <div class="fstat"><span class="v" id="f-total">—</span><span class="l">Modèles</span></div>
-    <div class="fstat"><span class="v">12</span><span class="l">Pays</span></div>
+    <div class="fst"><span class="v">25</span><span class="l">Marques</span></div>
+    <div class="fst"><span class="v" id="f-tot">—</span><span class="l">Modèles</span></div>
+    <div class="fst"><span class="v">12</span><span class="l">Pays</span></div>
   </div>
-  <div class="f-copy">© 2025 AutoElite — Prix indicatifs, peuvent varier selon pays et configuration</div>
+  <div class="f-copy">© 2025 AutoElite — Prix indicatifs, varient selon pays et configuration</div>
 </footer>
 <div id="toast"></div>
 
 <script>
 const B=[
- {id:"ferrari",name:"Ferrari",country:"Italie",city:"Maranello, Émilie-Romagne",founded:"1947",flag:"🇮🇹",color:"#DC143C",desc:"Ferrari est le symbole absolu de la passion italienne. Fondée par Enzo Ferrari, ancienne gloire de la Scuderia Alfa Romeo, la marque au cheval cabré a conquis les circuits de F1 avant d'imposer ses bolides comme les plus désirables au monde. Façonnée à la main à Maranello.",tags:["F1","Supercar","V12","Artisanat"],cars:[
-  {model:"SF90 Stradale",y:"2024",type:"hypercar",hp:1000,v:2.5,vmax:340,kg:1570,eng:"V8 3.9L Hybride",box:"8-DCT AWD",price:"690 000 €",pn:690000,desc:"L'aboutissement technologique Ferrari. 3 moteurs électriques + V8, hybride rechargeable, 1000 ch.",img:"https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=700&q=75"},
-  {model:"812 Superfast",y:"2023",type:"supercar",hp:800,v:2.9,vmax:340,kg:1630,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"380 000 €",pn:380000,desc:"Dernière grande Ferrari V12 atmosphérique avant-moteur. 800 ch de symphonie pure et inégalée.",img:"https://images.unsplash.com/photo-1592198084033-aade902d1aae?w=700&q=75"},
-  {model:"Roma Spider",y:"2024",type:"gt",hp:620,v:3.4,vmax:320,kg:1640,eng:"V8 3.9L Bi-Turbo",box:"8-DCT RWD",price:"245 000 €",pn:245000,desc:"La dolce vita en cabriolet. Toit rétractable 13.5s, V8 620 ch, élégance absolue à l'italienne.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"296 GTB",y:"2024",type:"supercar",hp:830,v:2.9,vmax:330,kg:1470,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"295 000 €",pn:295000,desc:"Le futur de Ferrari. V6 biturbo hybride 830 ch, la plus légère des Ferrari hybrides jamais produite.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"F8 Tributo",y:"2022",type:"supercar",hp:720,v:2.9,vmax:340,kg:1435,eng:"V8 3.9L Bi-Turbo",box:"7-DCT RWD",price:"235 000 €",pn:235000,desc:"Hommage aux V8 biturbo Ferrari. Châssis affiné, aérodynamique F1, 720 ch d'extase pure.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"Purosangue",y:"2024",type:"sport",hp:725,v:3.3,vmax:310,kg:2033,eng:"V12 6.5L NA",box:"8-DCT AWD",price:"395 000 €",pn:395000,desc:"Le premier SUV Ferrari. V12 atmosphérique 725 ch, 4 portes. Une révolution scandaleuse et magnifique.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Daytona SP3",y:"2023",type:"hypercar",hp:840,v:2.85,vmax:340,kg:1485,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"2 250 000 €",pn:2250000,desc:"Icona Series, 599 ex. V12 NA atmosphérique, hommage à la victoire Daytona 1967.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"488 Pista",y:"2021",type:"supercar",hp:720,v:2.85,vmax:340,kg:1385,eng:"V8 3.9L Bi-Turbo",box:"7-DCT RWD",price:"315 000 €",pn:315000,desc:"La 488 à l'état pur. Technologie F1, 50 kg perdus, la more agile Ferrari V8 de son époque.",img:"https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=700&q=75"},
- ]},
- {id:"lamborghini",name:"Lamborghini",country:"Italie",city:"Sant'Agata Bolognese, Émilie",founded:"1963",flag:"🇮🇹",color:"#CA8A04",desc:"Fondée pour surpasser Ferrari, la marque au taureau est le symbole de l'excès automobile. Lignes angulaires provocatrices, V12 hurlants, couleurs criantes — Lamborghini fait tout dans la démesure et la provocation depuis 1963.",tags:["Taureau","V12","Design Extrême","Italie"],cars:[
-  {model:"Revuelto",y:"2024",type:"hypercar",hp:1015,v:2.5,vmax:350,kg:1772,eng:"V12 6.5L + 3 Moteurs E",box:"8-DCT AWD",price:"520 000 €",pn:520000,desc:"Successeur de l'Aventador. V12 légendaire + 3 moteurs électriques, 1015 ch hybrides totaux.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Huracán Tecnica",y:"2024",type:"supercar",hp:640,v:3.2,vmax:325,kg:1379,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"250 000 €",pn:250000,desc:"Le V10 NA le plus abouti. Propulsion pure, aéro active, l'Huracán dans son expression ultime.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Urus S",y:"2024",type:"sport",hp:666,v:3.5,vmax:305,kg:2197,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"235 000 €",pn:235000,desc:"Le SUV super-sport. 666 ch, luxe Lamborghini, record Nürburgring pour un SUV de production.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"Countach LPI 800",y:"2022",type:"hypercar",hp:814,v:2.8,vmax:355,kg:1595,eng:"V12 6.5L Hybride",box:"7-DCT AWD",price:"2 100 000 €",pn:2100000,desc:"112 exemplaires. Hommage au Countach original de 1971 — renaissance du mythe absolu.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"Sterrato",y:"2024",type:"sport",hp:610,v:3.4,vmax:260,kg:1585,eng:"V10 5.2L NA",box:"7-DCT AWD",price:"275 000 €",pn:275000,desc:"L'Huracán tout-terrain. Garde au sol rehaussée, protections tout-terrain, supercar sur terre unique.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Huracán EVO RWD",y:"2023",type:"supercar",hp:610,v:3.5,vmax:324,kg:1389,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"205 000 €",pn:205000,desc:"La puriste propulsion. V10 NA, traction arrière uniquement. Le plaisir de pilotage absolu.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Aventador LP 780-4",y:"2022",type:"supercar",hp:780,v:2.8,vmax:355,kg:1575,eng:"V12 6.5L NA",box:"7-ISR AWD",price:"480 000 €",pn:480000,desc:"Dernière Aventador non-hybride. V12 NA 780 ch — une ère qui se ferme avec panache total.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
- ]},
- {id:"bugatti",name:"Bugatti",country:"France",city:"Molsheim, Alsace",founded:"1909",flag:"🇫🇷",color:"#1E40AF",desc:"La marque la plus exclusive au monde. Chaque Bugatti est assemblée à la main en 9 mois à Molsheim en Alsace. Son W16 quad-turbo est une prouesse d'ingénierie sans égal : 16 cylindres, 4 turbos, une mécanique transcendante.",tags:["W16","Record Mondial","Alsace","Artisanat"],cars:[
-  {model:"Chiron Super Sport",y:"2024",type:"hypercar",hp:1600,v:2.4,vmax:440,kg:1978,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"3 800 000 €",pn:3800000,desc:"L'hypercar la plus rapide du monde. W16 1600 ch, 440 km/h. 500 exemplaires pour la planète.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Mistral Roadster",y:"2024",type:"hypercar",hp:1600,v:2.5,vmax:420,kg:1995,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"5 000 000 €",pn:5000000,desc:"99 ex, tous vendus avant l'annonce. Dernier roadster W16 — adieu à une époque mythique.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
-  {model:"Tourbillon",y:"2026",type:"hypercar",hp:1800,v:2.0,vmax:445,kg:1995,eng:"V16 8.3L + Hybride",box:"8-DCT AWD",price:"3 800 000 €",pn:3800000,desc:"Successeur de la Chiron. V16 atmosphérique + hybride, 1800 ch. L'avenir absolu de Bugatti.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Bolide",y:"2024",type:"hypercar",hp:1850,v:2.2,vmax:500,kg:1240,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"4 700 000 €",pn:4700000,desc:"La Bugatti de piste la plus radicale. W16 1850 ch dans 1240 kg seulement. 40 exemplaires.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
- ]},
- {id:"mclaren",name:"McLaren",country:"Angleterre",city:"Woking, Surrey",founded:"1963",flag:"🇬🇧",color:"#EA580C",desc:"Née en Formule 1 avec Bruce McLaren, McLaren Automotive construit des supercars d'une légèreté chirurgicale. Carbone, technologie de pointe — chaque gramme inutile est banni. La philosophie : moins de poids pour plus de sensations pures.",tags:["Carbone","F1","Légèreté","Surrey"],cars:[
-  {model:"750S",y:"2024",type:"supercar",hp:750,v:2.8,vmax:332,kg:1277,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"315 000 €",pn:315000,desc:"750 ch, 1277 kg. Le rapport poids/puissance est une obsession McLaren. Précision absolue.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Artura",y:"2024",type:"supercar",hp:700,v:3.0,vmax:330,kg:1395,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"248 000 €",pn:248000,desc:"Première McLaren hybride. V6 biturbo + électrique, 700 ch, 4.7L/100 en mode hybride.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"Solus GT",y:"2023",type:"hypercar",hp:829,v:2.5,vmax:320,kg:994,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"3 500 000 €",pn:3500000,desc:"25 exemplaires. Cockpit monoplaces, 25G en courbe. L'expérience de conduite la plus intense jamais produite.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Senna",y:"2022",type:"hypercar",hp:800,v:2.8,vmax:340,kg:1198,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"1 100 000 €",pn:1100000,desc:"Hommage à Ayrton Senna. 500 ex, 800 ch, 1198 kg. La plus radicale des McLaren de route.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"720S",y:"2022",type:"supercar",hp:720,v:2.9,vmax:341,kg:1283,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"255 000 €",pn:255000,desc:"La supercar de référence McLaren. V8 720 ch, carbone MonoCell II, tenue de route époustouflante.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"GTS",y:"2024",type:"gt",hp:635,v:3.2,vmax:326,kg:1530,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"268 000 €",pn:268000,desc:"La McLaren GT ultime. Plus de confort, même ADN de légèreté. Pour les longs trajets rapides.",img:"https://images.unsplash.com/photo-1583121274602-3e2820c69888?w=700&q=75"},
- ]},
- {id:"porsche",name:"Porsche",country:"Allemagne",city:"Stuttgart, Bade-Wurtemberg",founded:"1948",flag:"🇩🇪",color:"#DC2626",desc:"Porsche prouve que sportivité et quotidien ne s'opposent pas. L'ingénierie Porsche recherche la perfection dans chaque détail depuis 1948. La 911, inchangée dans l'âme depuis 1963, est la référence absolue de la conduite sportive mondiale.",tags:["911","Nürburgring","Flat-Six","Stuttgart"],cars:[
-  {model:"911 GT3 RS",y:"2024",type:"supercar",hp:525,v:3.2,vmax:296,kg:1450,eng:"Flat-6 4.0L NA",box:"7-PDK RWD",price:"229 000 €",pn:229000,desc:"La 911 la plus extrême. Aérodynamique active PDCC, flat-six NA hurlant à 9000 tr/min. Circuit pur.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Taycan Turbo GT",y:"2024",type:"sport",hp:1092,v:2.2,vmax:305,kg:2295,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"250 000 €",pn:250000,desc:"Berline électrique la plus rapide. 1092 ch, 0-100 en 2.2s, record Nürburgring en 7m07.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"918 Spyder",y:"2015",type:"hypercar",hp:887,v:2.6,vmax:345,kg:1674,eng:"V8 4.6L + 2 Moteurs E",box:"7-PDK AWD",price:"1 200 000 €",pn:1200000,desc:"La trinité hypercar. V8 + hybride, 887 ch. Une Porsche qui a changé l'histoire de l'automobile.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
-  {model:"911 Turbo S",y:"2024",type:"supercar",hp:650,v:2.7,vmax:330,kg:1640,eng:"Flat-6 3.8L Bi-Turbo",box:"8-PDK AWD",price:"238 000 €",pn:238000,desc:"La 911 ultime pour tous les jours. 650 ch, 4 roues motrices, utilisable par tous les temps.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Cayenne Turbo GT",y:"2024",type:"sport",hp:659,v:3.3,vmax:305,kg:2005,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"195 000 €",pn:195000,desc:"Le SUV coupé le plus rapide au Ring. 659 ch, aérodynamique active, comportement de sportive.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"911 GT2 RS",y:"2022",type:"supercar",hp:700,v:2.8,vmax:340,kg:1470,eng:"Flat-6 3.8L Bi-Turbo",box:"7-PDK RWD",price:"335 000 €",pn:335000,desc:"La 911 la plus puissante de l'histoire. 700 ch en propulsion — la bête blonde de Stuttgart.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"911 Dakar",y:"2024",type:"sport",hp:480,v:3.4,vmax:240,kg:1605,eng:"Flat-6 3.0L Bi-Turbo",box:"8-PDK AWD",price:"222 000 €",pn:222000,desc:"La 911 tout-terrain. Garde au sol réhaussée, mode Rally. Hommage à la victoire Dakar 1984.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
- ]},
- {id:"audi",name:"Audi",country:"Allemagne",city:"Ingolstadt, Bavière",founded:"1909",flag:"🇩🇪",color:"#C0392B",desc:"Audi, fondée à Ingolstadt en Bavière, incarne le progrès technique allemand. Quattro, Vorsprung durch Technik — l'avance par la technique est leur devise depuis la révolution quattro en rallye dans les années 80. Innovation permanente.",tags:["Quattro","RS","Ingolstadt","Technik"],cars:[
-  {model:"R8 GT RWD",y:"2023",type:"supercar",hp:620,v:3.1,vmax:328,kg:1595,eng:"V10 5.2L NA",box:"7-S tronic RWD",price:"185 000 €",pn:185000,desc:"Édition finale du R8. V10 atmosphérique 620 ch en propulsion pure. L'adieu au V10 Audi.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"RS6 Avant Performance",y:"2024",type:"sport",hp:630,v:3.4,vmax:305,kg:2100,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"165 000 €",pn:165000,desc:"Le break le plus désiré du monde. V8 630 ch, quattro, 5 places et coffre immense. La perfection.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"RS e-tron GT",y:"2024",type:"sport",hp:646,v:3.3,vmax:250,kg:2350,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"138 000 €",pn:138000,desc:"La berline électrique premium. 646 ch, design signature Audi, technologie Porsche Taycan.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"RS3 Sedan",y:"2024",type:"sport",hp:400,v:3.8,vmax:290,kg:1570,eng:"5cyl 2.5L Turbo",box:"7-S tronic AWD",price:"72 000 €",pn:72000,desc:"Le 5 cylindres unique au monde. Son guttural inimitable, 400 ch, compact sport absolu.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"TT RS Final Edition",y:"2023",type:"sport",hp:400,v:3.7,vmax:280,kg:1495,eng:"5cyl 2.5L Turbo",box:"7-S tronic AWD",price:"82 000 €",pn:82000,desc:"L'adieu du TT RS. 5cyl, 400 ch, design iconique depuis 1998. L'édition finale du coupé Audi.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Q8 RS e-tron",y:"2024",type:"sport",hp:598,v:3.6,vmax:250,kg:2730,eng:"Électrique Tri-Motor",box:"Réducteur AWD",price:"135 000 €",pn:135000,desc:"Le SUV électrique performance Audi. 598 ch, 600 km d'autonomie, confort et performance réunis.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
- ]},
- {id:"mercedes",name:"Mercedes-AMG",country:"Allemagne",city:"Affalterbach, Bade-Wurtemberg",founded:"1967",flag:"🇩🇪",color:"#374151",desc:"AMG, fondé dans un vieux moulin d'Affalterbach par Hans Werner Aufrecht et Erhard Melcher, est la division performance de Mercedes. One Man, One Engine : chaque moteur est assemblé par un seul artisan qui signe son bloc à la main.",tags:["One Man One Engine","V8","Affalterbach","F1"],cars:[
-  {model:"GT 63 S E Performance",y:"2024",type:"hypercar",hp:843,v:2.9,vmax:316,kg:2385,eng:"V8 4.0L + Moteur E",box:"9-AT AWD",price:"220 000 €",pn:220000,desc:"Hybride hypercar 4 portes. V8 AMG + moteur électrique F1, 843 ch. La fusion ultime.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"SL 63 AMG",y:"2024",type:"gt",hp:585,v:3.5,vmax:315,kg:1990,eng:"V8 4.0L Bi-Turbo",box:"9-AT AWD",price:"195 000 €",pn:195000,desc:"Le roadster de luxe réinventé. V8 585 ch, 4 places, soft-top. ADN SL + brutalité AMG.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"GT Black Series",y:"2022",type:"supercar",hp:730,v:3.2,vmax:325,kg:1700,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"340 000 €",pn:340000,desc:"Le graal AMG. 730 ch, aéro active, record Nürburgring catégorie. La GT dans son expression ultime.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"C63 S E Performance",y:"2024",type:"sport",hp:680,v:3.4,vmax:280,kg:2110,eng:"4cyl 2.0L + Moteur E",box:"9-AT AWD",price:"107 000 €",pn:107000,desc:"La polémique incarnée. V8 remplacé par 4cyl hybride 680 ch. Performances supérieures, débat vif.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"EQS 53 AMG",y:"2024",type:"sport",hp:761,v:3.4,vmax:250,kg:2655,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"163 000 €",pn:163000,desc:"La grande berline électrique de luxe AMG. 761 ch, 770 km d'autonomie, silhouette fastback.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"GT R Pro",y:"2023",type:"supercar",hp:585,v:3.6,vmax:318,kg:1630,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"210 000 €",pn:210000,desc:"La Bête Verte. Réglages circuit, aérodynamique active. Le lien entre AMG et le Nürburgring.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
- ]},
- {id:"bmw",name:"BMW M",country:"Allemagne",city:"Munich, Bavière",founded:"1916",flag:"🇩🇪",color:"#1D4ED8",desc:"BMW M GmbH, division haute performance bavaroise, développe chaque modèle sur le Nürburgring. Sheer Driving Pleasure — le plaisir de conduire avant tout, sans compromis sur l'utilisabilité quotidienne. L'ingénierie sportive bavaroise.",tags:["Nürburgring","I6 Biturbo","Munich","Bavaria"],cars:[
-  {model:"M4 CSL",y:"2024",type:"sport",hp:550,v:3.7,vmax:307,kg:1625,eng:"I6 3.0L Bi-Turbo",box:"8-AT RWD",price:"165 000 €",pn:165000,desc:"1000 ex, -100 kg vs M4 standard. CSL = Coupé Sport Leichtbau. La M4 dans son état le plus pur.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"M5 Touring",y:"2024",type:"sport",hp:727,v:3.5,vmax:305,kg:2345,eng:"V8 4.4L Hybride",box:"8-AT AWD",price:"175 000 €",pn:175000,desc:"Le break le plus rapide du monde. V8 hybride 727 ch, M xDrive, 5 places, coffre immense.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"XM Label Red",y:"2024",type:"sport",hp:748,v:3.8,vmax:290,kg:2535,eng:"V8 4.4L Hybride",box:"8-AT AWD",price:"195 000 €",pn:195000,desc:"La BMW M la plus puissante de série. V8 hybride 748 ch. Design clivant, performances indiscutables.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"M8 Gran Coupé",y:"2024",type:"gt",hp:625,v:3.2,vmax:305,kg:1950,eng:"V8 4.4L Bi-Turbo",box:"8-AT AWD",price:"175 000 €",pn:175000,desc:"L'ultime GT bavaroise. V8 625 ch, 4 portes luxueuses, 305 km/h. Meilleure des deux mondes.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"M2 CS",y:"2024",type:"sport",hp:480,v:4.0,vmax:302,kg:1625,eng:"I6 3.0L Bi-Turbo",box:"6-Man RWD",price:"105 000 €",pn:105000,desc:"La petite terreur M. Boîte manuelle optionnelle, propulsion, 480 ch. La plus pure des BMW M.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"iX M60",y:"2024",type:"sport",hp:619,v:3.8,vmax:250,kg:2585,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"140 000 €",pn:140000,desc:"Le SAV électrique M. 619 ch, 0-100 en 3.8s, 566 km d'autonomie. L'avenir de BMW M.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
- ]},
- {id:"koenigsegg",name:"Koenigsegg",country:"Suède",city:"Ängelholm, Scanie",founded:"1994",flag:"🇸🇪",color:"#7C3AED",desc:"Koenigsegg est le laboratoire de l'impossible. Fondée par Christian von Koenigsegg à 22 ans dans son garage, la marque suédoise détient plus de records du monde que tout autre constructeur. Chaque voiture repousse les lois de la physique.",tags:["Record Mondial","Megacar","Suède","Innovation"],cars:[
-  {model:"Jesko Absolut",y:"2024",type:"hypercar",hp:1600,v:2.5,vmax:531,kg:1420,eng:"V8 5.0L Bi-Turbo",box:"9-LST RWD",price:"4 500 000 €",pn:4500000,desc:"La voiture la plus rapide jamais conçue pour la production série. 531 km/h théorique.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Gemera",y:"2024",type:"hypercar",hp:2300,v:1.9,vmax:400,kg:1850,eng:"3cyl 2.0L + 3 Moteurs E",box:"Direct AWD",price:"1 900 000 €",pn:1900000,desc:"La méga-GT 4 places. 2300 ch hybrides, 4 vraies places. Le rapport poids/puissance le plus fou.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"CC850",y:"2023",type:"hypercar",hp:1385,v:3.0,vmax:300,kg:1385,eng:"V8 5.0L Bi-Turbo",box:"6-ESC RWD",price:"3 650 000 €",pn:3650000,desc:"50 ex pour les 50 ans. Boîte manuelle ou automatique intelligente. L'art absolu Koenigsegg.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
-  {model:"Regera",y:"2022",type:"hypercar",hp:1500,v:2.7,vmax:410,kg:1628,eng:"V8 5.0L + 3 Moteurs E",box:"Hydrocoupler AWD",price:"1 900 000 €",pn:1900000,desc:"Sans boîte de vitesses conventionnelle. V8 + 3 moteurs E, hydrocoupler unique. 80 exemplaires.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
- ]},
- {id:"pagani",name:"Pagani",country:"Italie",city:"San Cesario sul Panaro, Émilie",founded:"1992",flag:"🇮🇹",color:"#92400E",desc:"Pagani est l'artiste fou de l'automobile. Horacio Pagani, obsédé par le carbone et la beauté mécanique visible, crée des œuvres d'art roulantes à très petit tirage. Chaque voiture représente 40 000 heures de travail artisanal irremplaçable.",tags:["Artisanal","Carbone-Titane","AMG V12","Émilie"],cars:[
-  {model:"Huayra R Evo",y:"2024",type:"hypercar",hp:900,v:2.7,vmax:370,kg:1050,eng:"V12 6.0L NA AMG",box:"6-Seq RWD",price:"3 400 000 €",pn:3400000,desc:"30 ex. V12 AMG atmosphérique, 900 ch, 1050 kg. Le circuit selon la philosophie Pagani.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Utopia",y:"2024",type:"hypercar",hp:852,v:2.9,vmax:360,kg:1280,eng:"V12 6.0L Bi-Turbo AMG",box:"7-Seq RWD",price:"2 700 000 €",pn:2700000,desc:"La voiture de route Pagani. Carbone-titane, habitacle d'horlogerie mécanique entièrement visible.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Zonda Barchetta",y:"2018",type:"hypercar",hp:800,v:3.0,vmax:350,kg:1050,eng:"V12 6.0L NA AMG",box:"6-Man RWD",price:"17 600 000 €",pn:17600000,desc:"3 exemplaires seulement. La Pagani la plus rare. 17.6M€ — la voiture de production la plus chère.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
- ]},
- {id:"aston",name:"Aston Martin",country:"Angleterre",city:"Gaydon, Warwickshire",founded:"1913",flag:"🇬🇧",color:"#065F46",desc:"L'élégance britannique intemporelle. Voiture officielle de James Bond depuis 1964, Aston Martin incarne le raffinement du gentleman sportif anglais. Assemblage artisanal à Gaydon dans le Warwickshire, matériaux nobles, lignes sculpturales.",tags:["James Bond","GT","Artisanat","Warwickshire"],cars:[
-  {model:"DB12",y:"2024",type:"gt",hp:680,v:3.5,vmax:325,kg:1760,eng:"V8 4.0L Bi-Turbo",box:"8-AT RWD",price:"228 000 €",pn:228000,desc:"Le nouveau super tourer. V8 AMG 680 ch, intérieur entièrement repensé. GT sportive absolue.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"DBS 770 Ultimate",y:"2023",type:"gt",hp:770,v:3.2,vmax:340,kg:1795,eng:"V12 5.2L Bi-Turbo",box:"8-AT RWD",price:"380 000 €",pn:380000,desc:"Chant du cygne du V12 Aston. 770 ch, 499 ex. La fin d'une époque avec le panache qu'elle méritait.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"Valkyrie",y:"2024",type:"hypercar",hp:1155,v:2.5,vmax:402,kg:1030,eng:"V12 6.5L + Hybride",box:"7-DCT RWD",price:"3 200 000 €",pn:3200000,desc:"Né avec Red Bull Racing F1. V12 Cosworth 11000 tr/min, 1155 ch, downforce de circuit pur.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Vantage",y:"2024",type:"sport",hp:665,v:3.5,vmax:325,kg:1605,eng:"V8 4.0L Bi-Turbo",box:"8-AT RWD",price:"165 000 €",pn:165000,desc:"La sportive pure Aston Martin. V8 665 ch propulsion, design affûté, la plus agressive.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Valhalla",y:"2025",type:"hypercar",hp:1079,v:2.5,vmax:330,kg:1550,eng:"V8 4.0L + 3 Moteurs E",box:"8-AT AWD",price:"768 000 €",pn:768000,desc:"L'hypercar hybride d'Aston. V8 + 3 moteurs électriques, 1079 ch, descendante de la Valkyrie.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
- ]},
- {id:"bentley",name:"Bentley",country:"Angleterre",city:"Crewe, Cheshire",founded:"1919",flag:"🇬🇧",color:"#14532D",desc:"Bentley définit le luxe automobile britannique depuis 1919. Les Bentley combinent cuir Nappa, placages de bois précieux et moteurs W12 de 600+ ch. Le raffinement ne proscrit pas la performance. La perfection pour le nombre rare de privilégiés.",tags:["Luxe","W12","Cuir Nappa","Crewe"],cars:[
-  {model:"Continental GT Speed",y:"2024",type:"gt",hp:659,v:3.5,vmax:335,kg:2244,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"295 000 €",pn:295000,desc:"Le grand tourer ultime. W12 659 ch, 100 km de fibre de bois dans l'habitacle. Luxe absolu.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"Mulliner Batur",y:"2023",type:"hypercar",hp:740,v:3.2,vmax:320,kg:2195,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"2 000 000 €",pn:2000000,desc:"18 exemplaires. Le summum Bentley Mulliner. Chaque voiture entièrement personnalisée sur mesure.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"Bentayga Speed",y:"2024",type:"sport",hp:626,v:3.8,vmax:306,kg:2395,eng:"W12 6.0L Bi-Turbo",box:"8-AT AWD",price:"270 000 €",pn:270000,desc:"Le SUV le plus rapide de Bentley. W12 626 ch. Vitesse sans sacrifice du luxe ou du confort.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Flying Spur Speed",y:"2024",type:"gt",hp:626,v:4.0,vmax:333,kg:2435,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"265 000 €",pn:265000,desc:"La berline GT. W12 626 ch, 5 places, luxe intérieur absolu. 333 km/h dans une berline.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
- ]},
- {id:"rollsroyce",name:"Rolls-Royce",country:"Angleterre",city:"Goodwood, West Sussex",founded:"1906",flag:"🇬🇧",color:"#4C1D95",desc:"La meilleure voiture du monde selon son propre slogan historique. Rolls-Royce ne construit pas des voitures mais des expériences. Spirit of Ecstasy en proue, silence absolu, cuir pleine peau : la perfection a un prix mais aucune limite.",tags:["Bespoke","Spirit of Ecstasy","Silence","Goodwood"],cars:[
-  {model:"Spectre",y:"2024",type:"gt",hp:577,v:4.5,vmax:250,kg:2975,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"350 000 €",pn:350000,desc:"Première Rolls 100% électrique. 577 ch, silence de cathédrale, luxe sans la moindre concession.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Phantom VIII",y:"2024",type:"gt",hp:571,v:5.1,vmax:250,kg:2560,eng:"V12 6.75L Bi-Turbo",box:"8-AT AWD",price:"420 000 €",pn:420000,desc:"L'icône absolue. V12 en 5.76m de sérénité. Architecture of Luxury : étoiles au plafond intégral.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
-  {model:"Cullinan Black Badge",y:"2024",type:"sport",hp:600,v:4.9,vmax:250,kg:2660,eng:"V12 6.75L Bi-Turbo",box:"8-AT AWD",price:"395 000 €",pn:395000,desc:"Le SUV le plus luxueux en version alter ego sombre. Black Badge : Rolls-Royce sans compromis.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"Wraith Black Badge",y:"2023",type:"gt",hp:632,v:4.4,vmax:250,kg:2360,eng:"V12 6.6L Bi-Turbo",box:"8-AT AWD",price:"380 000 €",pn:380000,desc:"Le grand tourer sombre. V12 632 ch, toit Starlight 1340 étoiles cousues à la main.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
- ]},
- {id:"rimac",name:"Rimac",country:"Croatie",city:"Sveta Nedelja, Zagreb",founded:"2009",flag:"🇭🇷",color:"#0E7490",desc:"Rimac Automobili est la révolution électrique de l'hypercar. Fondé par Mate Rimac dans son garage à 18 ans, le constructeur croate détient tous les records de performance électrique et fournit sa technologie à Porsche, Bugatti et Aston Martin.",tags:["Électrique","Record Mondial","Zagreb","Technologie"],cars:[
-  {model:"Nevera R",y:"2024",type:"hypercar",hp:2107,v:1.7,vmax:412,kg:2300,eng:"Électrique Quad Motor",box:"Direct AWD",price:"2 400 000 €",pn:2400000,desc:"La voiture de série la plus rapide de l'histoire humaine. 2107 ch, 0-100 en 1.7s, 150 ex.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Nevera",y:"2023",type:"hypercar",hp:1914,v:1.97,vmax:412,kg:2150,eng:"Électrique Quad Motor",box:"Direct AWD",price:"2 000 000 €",pn:2000000,desc:"23 records du monde battus en une journée. La Nevera originale, hypercar électrique croate.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
- ]},
- {id:"maserati",name:"Maserati",country:"Italie",city:"Modène, Émilie-Romagne",founded:"1914",flag:"🇮🇹",color:"#0369A1",desc:"Maserati, la marque au trident de Modène, est la GT italienne par excellence. Plus accessible que Ferrari mais tout aussi passionnée, Maserati propose l'alliance du luxe, du confort longue distance et d'un son d'échappement absolument inoubliable.",tags:["Trident","GT","Modène","Son"],cars:[
-  {model:"MC20 Cielo",y:"2024",type:"supercar",hp:630,v:2.9,vmax:325,kg:1520,eng:"V6 3.0L Nettuno",box:"8-DCT RWD",price:"275 000 €",pn:275000,desc:"Renaissance Maserati. Nettuno V6 630 ch à pré-chambre F1, toit vitré rétractable.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"Granturismo Trofeo",y:"2024",type:"gt",hp:550,v:3.5,vmax:310,kg:1822,eng:"V6 3.0L Nettuno",box:"8-AT RWD",price:"198 000 €",pn:198000,desc:"Le grand tourisme Maserati. Nettuno V6, lignes sculpturales, son d'exception caractéristique.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Grecale Trofeo",y:"2024",type:"sport",hp:530,v:3.8,vmax:285,kg:1930,eng:"V6 3.0L Nettuno",box:"8-AT AWD",price:"118 000 €",pn:118000,desc:"Le SUV Maserati compact. Nettuno V6 530 ch, design sculptural, le trident dans un SUV.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"MC20",y:"2024",type:"supercar",hp:630,v:2.9,vmax:325,kg:1470,eng:"V6 3.0L Nettuno",box:"8-DCT RWD",price:"242 000 €",pn:242000,desc:"Le coupé mid-engine Maserati. V6 Nettuno bi-turbo pré-chambre F1, 630 ch, design épuré.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
- ]},
- {id:"alpine",name:"Alpine",country:"France",city:"Dieppe, Normandie",founded:"1955",flag:"🇫🇷",color:"#2563EB",desc:"Alpine est la sportive française par excellence. De Jean Rédélé à l'A110 moderne, Dieppe privilégie la légèreté sur la puissance brute. La France a sa propre philosophie sportive : l'agilité et la précision comme dogmes absolus inébranlables.",tags:["Légèreté","Agilité","Dieppe","Normandie"],cars:[
-  {model:"A110 R Turini",y:"2024",type:"sport",hp:320,v:3.9,vmax:280,kg:1082,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"105 000 €",pn:105000,desc:"L'A110 la plus pure. 1082 kg, éléments carbone, réglages circuit. La légèreté comme philosophie.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"A110 GT",y:"2024",type:"gt",hp:300,v:4.2,vmax:285,kg:1125,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"75 000 €",pn:75000,desc:"L'Alpine des longs trajets. Plus confortable, même légèreté iconique. Voyage rapide et précis.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"A290 GTS",y:"2024",type:"sport",hp:220,v:6.4,vmax:250,kg:1490,eng:"Électrique Mono-Motor",box:"Réducteur FWD",price:"42 000 €",pn:42000,desc:"La petite Alpine électrique. Héritière de la Clio Williams, agile, électrique sans compromis.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
- ]},
- {id:"lotus",name:"Lotus",country:"Angleterre",city:"Hethel, Norfolk",founded:"1952",flag:"🇬🇧",color:"#15803D",desc:"Colin Chapman disait simplement ajouter de la légèreté. Cette philosophie guide encore chaque Lotus 70 ans plus tard. La marque de Norfolk, maintenant sous direction Geely-Chine, allie l'héritage F1 de Chapman à la technologie électrique de pointe.",tags:["Légèreté","Chapman","F1","Norfolk"],cars:[
-  {model:"Emira V6 First Edition",y:"2024",type:"sport",hp:400,v:4.3,vmax:290,kg:1405,eng:"V6 3.5L Superchargé",box:"6-AT RWD",price:"92 000 €",pn:92000,desc:"Dernière Lotus thermique. V6 superchargé Toyota, 1405 kg. Philosophie Lotus à l'état pur.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"Eletre R",y:"2024",type:"sport",hp:918,v:2.8,vmax:265,kg:2580,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"185 000 €",pn:185000,desc:"Le SUV électrique hyperperformant. 918 ch, aérodynamique active inspirée directement de la F1.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"Emeya R",y:"2024",type:"sport",hp:905,v:2.8,vmax:256,kg:2580,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"145 000 €",pn:145000,desc:"La berline électrique Lotus. 905 ch, design moderne épuré, technologie aérodynamique de circuit.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
- ]},
- {id:"toyota",name:"Toyota GR",country:"Japon",city:"Toyota, Aichi",founded:"1937",flag:"🇯🇵",color:"#DC2626",desc:"Toyota Gazoo Racing (GR) est la division performance du géant japonais. Née sur les circuits du Nürburgring et du Mans, GR développe des voitures sportives accessibles mais véritablement capables. La philosophie : des ingénieurs qui conduisent pour concevoir.",tags:["Gazoo Racing","Nürburgring","Japon","Accessibilité"],cars:[
-  {model:"GR Yaris",y:"2024",type:"sport",hp:280,v:5.5,vmax:230,kg:1280,eng:"3cyl 1.6L Turbo",box:"6-Man AWD",price:"38 000 €",pn:38000,desc:"La bombe compacte japonaise. 3 cylindres 280 ch, GR-Four AWD, le rallye en version route.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"GR86",y:"2024",type:"sport",hp:234,v:6.3,vmax:226,kg:1270,eng:"Flat-4 2.4L NA",box:"6-Man RWD",price:"34 000 €",pn:34000,desc:"La sportive de pur plaisir. Boxer 2.4L atmosphérique, propulsion. Légèreté et équilibre parfaits.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"GR Supra",y:"2024",type:"sport",hp:387,v:3.9,vmax:250,kg:1520,eng:"I6 3.0L Bi-Turbo",box:"8-AT RWD",price:"65 000 €",pn:65000,desc:"Le retour du mythe. I6 BMW biturbo, propulsion, ligne de sport japonaise légendaire enfin revenue.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"GR Corolla Morizo",y:"2024",type:"sport",hp:304,v:5.0,vmax:270,kg:1350,eng:"3cyl 1.6L Turbo",box:"6-Man AWD",price:"52 000 €",pn:52000,desc:"La Corolla de course homologuée route. Moteur GR Yaris, édition Morizo signée du PDG Toyota.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
- ]},
- {id:"honda",name:"Honda",country:"Japon",city:"Tochigi, Honshu",founded:"1948",flag:"🇯🇵",color:"#B91C1C",desc:"Honda a redéfini la supercar accessible avec la NSX originale en 1990, dessinée avec Ayrton Senna. La philosophie Honda : des moteurs qui repoussent les limites physiques, des révisses à 9000 tr/min, une connexion humain-machine parfaite.",tags:["NSX","Hybride","Senna","Japon"],cars:[
-  {model:"NSX Type S",y:"2022",type:"supercar",hp:600,v:3.0,vmax:308,kg:1794,eng:"V6 3.5L + 3 Moteurs E",box:"9-DCT AWD",price:"195 000 €",pn:195000,desc:"L'adieu de la NSX. 600 ch hybrides, 350 ex seulement. Le chant du cygne de la supercar Honda.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"Civic Type R",y:"2024",type:"sport",hp:329,v:5.4,vmax:275,kg:1428,eng:"4cyl 2.0L Turbo",box:"6-Man FWD",price:"48 000 €",pn:48000,desc:"La référence compacte sportive. 329 ch, traction, manuelle, record Nürburgring en compact.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"S2000",y:"2009",type:"sport",hp:240,v:5.9,vmax:241,kg:1260,eng:"4cyl 2.0L NA",box:"6-Man RWD",price:"45 000 €",pn:45000,desc:"L'icône Honda. 4cyl NA 9000 tr/min, 240 ch, propulsion. La mécanique la plus pure jamais faite.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
- ]},
- {id:"nissan",name:"Nissan / Nismo",country:"Japon",city:"Yokohama, Kanagawa",founded:"1933",flag:"🇯🇵",color:"#C2410C",desc:"Nissan Nismo est la division haute performance de Nissan. La GT-R, surnommée Godzilla depuis les années 90, est la supercar japonaise la plus redoutée sur circuit. Née à Yokohama, capable de battre des Ferrari au double de son prix.",tags:["Godzilla","GT-R","Nismo","Yokohama"],cars:[
-  {model:"GT-R Nismo 2024",y:"2024",type:"supercar",hp:600,v:2.6,vmax:315,kg:1725,eng:"V6 3.8L Bi-Turbo",box:"6-DCT AWD",price:"215 000 €",pn:215000,desc:"Godzilla version ultime. V6 biturbo 600 ch, boîte Nismo, freins carbone. La terreur de circuit.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
-  {model:"GT-R R35 Premium",y:"2023",type:"supercar",hp:570,v:2.7,vmax:315,kg:1750,eng:"V6 3.8L Bi-Turbo",box:"6-DCT AWD",price:"120 000 €",pn:120000,desc:"Le monstre accessible. V6 biturbo 570 ch, AWD intelligent. Bat des Ferrari à la moitié du prix.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Z Nismo",y:"2024",type:"sport",hp:445,v:3.7,vmax:250,kg:1476,eng:"V6 3.0L Bi-Turbo",box:"6-Man RWD",price:"62 000 €",pn:62000,desc:"Le retour du Z en version Nismo. V6 biturbo 445 ch, propulsion. Hommage aux Z légendaires.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
- ]},
- {id:"hennessey",name:"Hennessey",country:"USA",city:"Sealy, Texas",founded:"1991",flag:"🇺🇸",color:"#991B1B",desc:"Hennessey Performance Engineering, basé au Texas, est le roi de l'hypercar américaine artisanale. John Hennessey transforme des voitures ordinaires en monstres et construit ses propres hypercars qui défient les européens les plus exclusifs au monde.",tags:["Texas","V8 Bi-Turbo","Record USA","Hypercar"],cars:[
-  {model:"Venom F5 Revolution",y:"2024",type:"hypercar",hp:1817,v:2.4,vmax:484,kg:1360,eng:"V8 6.6L Bi-Turbo",box:"7-Seq RWD",price:"3 000 000 €",pn:3000000,desc:"L'hypercar texane qui défie les européens. 1817 ch, 484 km/h, carbone intégral. L'Amérique à fond.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Venom GT",y:"2014",type:"hypercar",hp:1244,v:2.7,vmax:435,kg:1244,eng:"V8 7.0L Bi-Turbo",box:"6-Man RWD",price:"1 200 000 €",pn:1200000,desc:"Le premier record Hennessey. 435 km/h sur piste NASA en Floride. La légende texane originale.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
- ]},
- {id:"dodge",name:"Dodge",country:"USA",city:"Auburn Hills, Michigan",founded:"1900",flag:"🇺🇸",color:"#B91C1C",desc:"Dodge est la muscle car américaine dans toute sa démesure. Gros V8 Hellcat suralimenté, puissance brute, look agressif, prix accessibles — Dodge ne s'embarrasse pas de subtilité. Le Challenger et ses dérivés incarnent l'Amérique sans complexes.",tags:["Muscle Car","Hellcat","V8 Superchargé","Michigan"],cars:[
-  {model:"Challenger SRT Demon 170",y:"2023",type:"supercar",hp:1025,v:1.66,vmax:354,kg:1960,eng:"V8 6.2L Superchargé",box:"8-AT RWD",price:"98 000 €",pn:98000,desc:"La muscle car la plus puissante en série. 1025 ch, 0-100 en 1.66s sur E85. Homologuée route.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
-  {model:"Viper ACR",y:"2017",type:"supercar",hp:645,v:3.5,vmax:330,kg:1521,eng:"V10 8.4L NA",box:"6-Man RWD",price:"145 000 €",pn:145000,desc:"Dernière Viper. V10 8.4L atmosphérique, 645 ch, manuelle uniquement. Le dinosaure magnifique.",img:"https://images.unsplash.com/photo-1503376780353-7e6692767b70?w=700&q=75"},
-  {model:"Charger Daytona SRT",y:"2024",type:"sport",hp:670,v:3.3,vmax:248,kg:2150,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"75 000 €",pn:75000,desc:"La muscle car électrique. Son Fratzonic 126 dB, look Charger iconique. L'avenir a du caractère.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
- ]},
- {id:"corvette",name:"Corvette",country:"USA",city:"Bowling Green, Kentucky",founded:"1953",flag:"🇺🇸",color:"#C2410C",desc:"La Corvette est la supercar américaine par excellence depuis 1953. La C8 mid-engine a révolutionné la formule et humilié de nombreuses européennes deux fois plus chères. La preuve vivante que l'Amérique peut créer une vraie supercar accessible à tous.",tags:["Mid-Engine","V8","Kentucky","Stingray"],cars:[
-  {model:"Z06",y:"2024",type:"supercar",hp:670,v:2.6,vmax:311,kg:1550,eng:"V8 5.5L NA Flat-Plane",box:"8-DCT RWD",price:"130 000 €",pn:130000,desc:"V8 flat-plane NA 8500 tr/min. L'américaine qui chante comme une Ferrari au prix d'une GT.",img:"https://images.unsplash.com/photo-1558618666-fcd25c85cd64?w=700&q=75"},
-  {model:"ZR1",y:"2025",type:"hypercar",hp:1064,v:2.4,vmax:346,kg:1590,eng:"V8 5.5L Bi-Turbo",box:"8-DCT RWD",price:"215 000 €",pn:215000,desc:"La Corvette ultime. V8 flat-plane + 2 turbos, 1064 ch, 346 km/h. La supercar américaine absolue.",img:"https://images.unsplash.com/photo-1544636331-e26879cd4d9b?w=700&q=75"},
-  {model:"E-Ray",y:"2024",type:"sport",hp:655,v:2.6,vmax:290,kg:1764,eng:"V8 6.2L + Moteur E",box:"8-DCT AWD",price:"115 000 €",pn:115000,desc:"La Corvette hybride 4 roues motrices. V8 LT2 + électrique à l'avant. Tout temps, toute saison.",img:"https://images.unsplash.com/photo-1532581140115-3e355d1ed1de?w=700&q=75"},
-  {model:"Stingray Convertible",y:"2024",type:"sport",hp:490,v:3.0,vmax:298,kg:1615,eng:"V8 6.2L NA",box:"8-DCT RWD",price:"72 000 €",pn:72000,desc:"La Corvette accessible. V8 6.2L LT2, 490 ch, design révolutionnaire C8, ciel ouvert.",img:"https://images.unsplash.com/photo-1580414057403-c5f451f30e1c?w=700&q=75"},
- ]},
- {id:"brabus",name:"Brabus",country:"Allemagne",city:"Bottrop, Rhénanie du Nord",founded:"1977",flag:"🇩🇪",color:"#1F2937",desc:"Brabus est le plus célèbre préparateur automobile au monde. Fondé à Bottrop en 1977, il transforme des Mercedes et Maybach en monstres de puissance absolue. 900 ch dans une berline de luxe ? Brabus l'a inventé avant que ce soit une tendance mondiale.",tags:["Préparateur","900ch","Mercedes","Bottrop"],cars:[
-  {model:"Brabus 900 Rocket",y:"2024",type:"hypercar",hp:900,v:3.0,vmax:350,kg:2450,eng:"V8 4.5L Bi-Turbo",box:"9-AT AWD",price:"680 000 €",pn:680000,desc:"900 ch dans une Mercedes-Maybach. La limousine la plus puissante jamais construite sur Terre.",img:"https://images.unsplash.com/photo-1492144534655-ae79c964c9d7?w=700&q=75"},
-  {model:"G V12 900",y:"2024",type:"sport",hp:900,v:4.2,vmax:240,kg:2700,eng:"V12 6.0L Bi-Turbo",box:"7-AT AWD",price:"750 000 €",pn:750000,desc:"Le G-Wagen le plus brutal. V12 Biturbo 900 ch dans le carré légendaire. Extravagance pure.",img:"https://images.unsplash.com/photo-1556800572-1b8aeef2c54f?w=700&q=75"},
-  {model:"Brabus Supercar",y:"2024",type:"supercar",hp:789,v:2.8,vmax:320,kg:1485,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"420 000 €",pn:420000,desc:"La supercar Brabus. Base AMG GT transformée en missile 789 ch. L'allemand sur la piste de circuit.",img:"https://images.unsplash.com/photo-1579991136533-ef9e59f59568?w=700&q=75"},
- ]},
+{id:"ferrari",name:"Ferrari",country:"Italie",city:"Maranello, Émilie-Romagne",yr:"1947",flag:"🇮🇹",color:"#DC143C",
+desc:"Ferrari est le symbole absolu de la passion italienne. Fondée par Enzo Ferrari à Maranello, la Scuderia a conquis la F1 avant d'imposer ses bolides comme les plus désirables au monde. Chaque Ferrari est façonnée à la main.",
+tags:["F1","Supercar","V12","Artisanat"],
+cars:[
+{m:"SF90 Stradale",y:"2024",t:"hypercar",hp:1000,v:2.5,vmax:340,kg:1570,eng:"V8 3.9L Hybride",box:"8-DCT AWD",price:"690 000 €",pn:690000,desc:"L'aboutissement technologique Ferrari. Hybride rechargeable, 3 moteurs électriques, 1000 ch."},
+{m:"SF90 XX Stradale",y:"2024",t:"hypercar",hp:1030,v:2.3,vmax:320,kg:1560,eng:"V8 3.9L Hybride",box:"8-DCT AWD",price:"790 000 €",pn:790000,desc:"Version extrême de la SF90. 1030 ch, 430 kg d'appui aérodynamique. Seulement pour la piste."},
+{m:"LaFerrari Aperta",y:"2016",t:"hypercar",hp:963,v:2.9,vmax:350,kg:1255,eng:"V12 6.3L + Moteur E",box:"7-DCT RWD",price:"2 200 000 €",pn:2200000,desc:"La Ferrari hybride ultime en version spider. 210 ex, 963 ch, héritière de toute la F1 Ferrari."},
+{m:"812 Superfast",y:"2023",t:"supercar",hp:800,v:2.9,vmax:340,kg:1630,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"380 000 €",pn:380000,desc:"Dernière grande Ferrari V12 atmosphérique avant-moteur. 800 ch de symphonie pure."},
+{m:"812 Competizione",y:"2022",t:"supercar",hp:830,v:2.85,vmax:340,kg:1520,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"550 000 €",pn:550000,desc:"La 812 portée à son paroxysme. 999 tr/min de plus, aéro de F1, 999 exemplaires seulement."},
+{m:"Roma Spider",y:"2024",t:"gt",hp:620,v:3.4,vmax:320,kg:1640,eng:"V8 3.9L Bi-Turbo",box:"8-DCT RWD",price:"245 000 €",pn:245000,desc:"La dolce vita en cabriolet. Toit rétractable 13.5s, V8 620 ch, élégance absolue."},
+{m:"296 GTB",y:"2024",t:"supercar",hp:830,v:2.9,vmax:330,kg:1470,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"295 000 €",pn:295000,desc:"Le futur de Ferrari. V6 biturbo hybride 830 ch, la plus légère des Ferrari hybrides."},
+{m:"296 GTS",y:"2024",t:"supercar",hp:830,v:2.9,vmax:327,kg:1540,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"330 000 €",pn:330000,desc:"La 296 GTB en version spider. Toit rétractable, même V6 hybride 830 ch, ciel ouvert."},
+{m:"F8 Tributo",y:"2022",t:"supercar",hp:720,v:2.9,vmax:340,kg:1435,eng:"V8 3.9L Bi-Turbo",box:"7-DCT RWD",price:"235 000 €",pn:235000,desc:"Hommage aux V8 biturbo Ferrari. Châssis affiné, aérodynamique F1, 720 ch d'extase."},
+{m:"F8 Spider",y:"2022",t:"supercar",hp:720,v:2.9,vmax:340,kg:1475,eng:"V8 3.9L Bi-Turbo",box:"7-DCT RWD",price:"255 000 €",pn:255000,desc:"La F8 Tributo à ciel ouvert. Toit rétractable rigide, même V8 720 ch, sensations décuplées."},
+{m:"Purosangue",y:"2024",t:"sport",hp:725,v:3.3,vmax:310,kg:2033,eng:"V12 6.5L NA",box:"8-DCT AWD",price:"395 000 €",pn:395000,desc:"Le premier SUV Ferrari. V12 atmosphérique 725 ch, 4 portes. Révolution scandaleuse."},
+{m:"Daytona SP3",y:"2023",t:"hypercar",hp:840,v:2.85,vmax:340,kg:1485,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"2 250 000 €",pn:2250000,desc:"Icona Series, 599 ex. V12 NA, hommage à la victoire Daytona 1967."},
+{m:"Monza SP2",y:"2020",t:"hypercar",hp:810,v:2.9,vmax:300,kg:1500,eng:"V12 6.5L NA",box:"7-DCT RWD",price:"1 600 000 €",pn:1600000,desc:"Barchetta biplace sans pare-brise. 499 ex, V12 810 ch, expérience sensorielle totale."},
+{m:"488 Pista",y:"2021",t:"supercar",hp:720,v:2.85,vmax:340,kg:1385,eng:"V8 3.9L Bi-Turbo",box:"7-DCT RWD",price:"315 000 €",pn:315000,desc:"La 488 à l'état pur. Technologie F1, 50 kg perdus. La plus agile Ferrari V8 de son époque."},
+{m:"458 Speciale",y:"2015",t:"supercar",hp:605,v:3.0,vmax:325,kg:1395,eng:"V8 4.5L NA",box:"7-DCT RWD",price:"280 000 €",pn:280000,desc:"Le V8 atmosphérique 9000 tr/min dans sa version extrême. L'une des Ferrari les plus pures."},
+{m:"F40",y:"1992",t:"classic",hp:478,v:4.1,vmax:324,kg:1100,eng:"V8 2.9L Bi-Turbo",box:"5-Man RWD",price:"2 500 000 €",pn:2500000,desc:"La Ferrari de tous les rêves d'enfant. Première voiture de série à 300 km/h. Icône absolue."},
+{m:"F50",y:"1997",t:"classic",hp:520,v:3.87,vmax:325,kg:1230,eng:"V12 4.7L NA",box:"6-Man RWD",price:"5 000 000 €",pn:5000000,desc:"La F1 pour la route. V12 de Formule 1 adapté, 349 ex, l'une des Ferrari les plus rares."},
+{m:"Enzo",y:"2004",t:"classic",hp:660,v:3.65,vmax:350,kg:1365,eng:"V12 6.0L NA",box:"6-Seq RWD",price:"3 800 000 €",pn:3800000,desc:"La supercar de l'ère Schumacher. 399 ex, V12 660 ch, technologie F1 directe. Le mythe."},
+]},
+{id:"lamborghini",name:"Lamborghini",country:"Italie",city:"Sant'Agata Bolognese, Émilie",yr:"1963",flag:"🇮🇹",color:"#CA8A04",
+desc:"Fondée pour surpasser Ferrari, la marque au taureau est le symbole de l'excès automobile. Lignes angulaires provocatrices, V12 hurlants, couleurs criantes — Lamborghini fait tout dans la démesure depuis 1963.",
+tags:["Taureau","V12","Design Extrême","Italie"],
+cars:[
+{m:"Revuelto",y:"2024",t:"hypercar",hp:1015,v:2.5,vmax:350,kg:1772,eng:"V12 6.5L + 3 Moteurs E",box:"8-DCT AWD",price:"520 000 €",pn:520000,desc:"Successeur de l'Aventador. V12 + 3 moteurs électriques, 1015 ch hybrides. L'évolution du mythe."},
+{m:"Revuelto Opera Unica",y:"2024",t:"hypercar",hp:1015,v:2.5,vmax:350,kg:1772,eng:"V12 6.5L + 3 Moteurs E",box:"8-DCT AWD",price:"1 200 000 €",pn:1200000,desc:"Revuelto peint à la main par le département Ad Personam. Pièce unique, art automobile total."},
+{m:"Huracán Tecnica",y:"2024",t:"supercar",hp:640,v:3.2,vmax:325,kg:1379,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"250 000 €",pn:250000,desc:"Le V10 NA le plus abouti. Propulsion pure, aéro active, l'Huracán dans son état ultime."},
+{m:"Huracán STO",y:"2023",t:"supercar",hp:640,v:3.0,vmax:310,kg:1339,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"330 000 €",pn:330000,desc:"Super Trofeo Omologata : la voiture de course pour la route. 1339 kg, aéro GT3 homologuée."},
+{m:"Huracán EVO RWD",y:"2023",t:"supercar",hp:610,v:3.5,vmax:324,kg:1389,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"205 000 €",pn:205000,desc:"La puriste propulsion. V10 NA, traction arrière uniquement. Le plaisir de pilotage absolu."},
+{m:"Urus S",y:"2024",t:"sport",hp:666,v:3.5,vmax:305,kg:2197,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"235 000 €",pn:235000,desc:"Le SUV super-sport. 666 ch, luxe Lamborghini, record Nürburgring pour un SUV."},
+{m:"Urus Performante",y:"2023",t:"sport",hp:666,v:3.3,vmax:306,kg:2150,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"285 000 €",pn:285000,desc:"L'Urus affûté. 47 kg de moins, réglages châssis sportifs, la version la plus dynamique."},
+{m:"Sterrato",y:"2024",t:"sport",hp:610,v:3.4,vmax:260,kg:1585,eng:"V10 5.2L NA",box:"7-DCT AWD",price:"275 000 €",pn:275000,desc:"L'Huracán tout-terrain. Garde au sol rehaussée, supercar sur terre unique au monde."},
+{m:"Countach LPI 800",y:"2022",t:"hypercar",hp:814,v:2.8,vmax:355,kg:1595,eng:"V12 6.5L Hybride",box:"7-DCT AWD",price:"2 100 000 €",pn:2100000,desc:"112 exemplaires. Hommage au Countach 1971 — renaissance du mythe absolu."},
+{m:"Aventador LP 780-4",y:"2022",t:"supercar",hp:780,v:2.8,vmax:355,kg:1575,eng:"V12 6.5L NA",box:"7-ISR AWD",price:"480 000 €",pn:480000,desc:"Dernière Aventador non-hybride. V12 NA 780 ch — une ère qui se ferme avec panache."},
+{m:"Aventador SVJ",y:"2021",t:"supercar",hp:770,v:2.8,vmax:350,kg:1525,eng:"V12 6.5L NA",box:"7-ISR AWD",price:"520 000 €",pn:520000,desc:"SuperVeloce Jota. Record Nürburgring 6m44. V12 NA 770 ch, ALA 2.0, l'Aventador ultime."},
+{m:"Sián FKP 37",y:"2021",t:"hypercar",hp:819,v:2.8,vmax:350,kg:1595,eng:"V12 6.5L + Supercap",box:"7-ISR AWD",price:"3 600 000 €",pn:3600000,desc:"63 ex. Hybride supercondensateur, V12 819 ch. La première Lamborghini hybride de l'histoire."},
+{m:"Murciélago LP 670",y:"2010",t:"classic",hp:670,v:3.2,vmax:342,kg:1665,eng:"V12 6.5L NA",box:"6-Man AWD",price:"700 000 €",pn:700000,desc:"La dernière Murciélago SV. V12 670 ch, boîte manuelle, l'une des Lamborghini les plus collectionnées."},
+{m:"Diablo SV",y:"1999",t:"classic",hp:530,v:3.9,vmax:338,kg:1576,eng:"V12 5.7L NA",box:"5-Man RWD",price:"550 000 €",pn:550000,desc:"La Diablo dans son état le plus pur. V12 530 ch, propulsion, l'icône des années 90."},
+]},
+{id:"bugatti",name:"Bugatti",country:"France",city:"Molsheim, Alsace",yr:"1909",flag:"🇫🇷",color:"#1E40AF",
+desc:"La marque la plus exclusive au monde. Chaque Bugatti est assemblée à la main en 9 mois à Molsheim. Son W16 quad-turbo est une prouesse d'ingénierie sans égal : 16 cylindres, 4 turbos.",
+tags:["W16","Record Mondial","Alsace","Artisanat"],
+cars:[
+{m:"Chiron Super Sport",y:"2024",t:"hypercar",hp:1600,v:2.4,vmax:440,kg:1978,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"3 800 000 €",pn:3800000,desc:"L'hypercar la plus rapide du monde. W16 1600 ch, 440 km/h. 500 ex pour la planète."},
+{m:"Chiron Super Sport 300+",y:"2021",t:"hypercar",hp:1578,v:2.4,vmax:440,kg:1978,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"3 500 000 €",pn:3500000,desc:"La version qui a battu 300 mph. Seule 30 ex. Queue longue aérodynamique pour la vitesse pure."},
+{m:"Mistral Roadster",y:"2024",t:"hypercar",hp:1600,v:2.5,vmax:420,kg:1995,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"5 000 000 €",pn:5000000,desc:"99 ex, tous vendus avant l'annonce. Dernier roadster W16 — adieu à une époque mythique."},
+{m:"Tourbillon",y:"2026",t:"hypercar",hp:1800,v:2.0,vmax:445,kg:1995,eng:"V16 8.3L + Hybride",box:"8-DCT AWD",price:"3 800 000 €",pn:3800000,desc:"Successeur de la Chiron. V16 atmosphérique + hybride, 1800 ch. L'avenir absolu de Bugatti."},
+{m:"Bolide",y:"2024",t:"hypercar",hp:1850,v:2.2,vmax:500,kg:1240,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"4 700 000 €",pn:4700000,desc:"La Bugatti de piste la plus radicale. W16 1850 ch dans 1240 kg. 40 exemplaires seulement."},
+{m:"Centodieci",y:"2022",t:"hypercar",hp:1600,v:2.4,vmax:380,kg:1733,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"9 000 000 €",pn:9000000,desc:"10 exemplaires seulement. Hommage à la légendaire EB110. La Bugatti la plus rare de l'ère moderne."},
+{m:"Divo",y:"2021",t:"hypercar",hp:1500,v:2.4,vmax:380,kg:1995,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"5 800 000 €",pn:5800000,desc:"40 ex. Dédiée à la tenue de route plutôt qu'à la vitesse max. La Bugatti de circuit."},
+{m:"Veyron 16.4",y:"2011",t:"classic",hp:1001,v:2.5,vmax:407,kg:1888,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"1 800 000 €",pn:1800000,desc:"La révolution. Première voiture de série à 1000 ch et 400 km/h. La Veyron a tout changé."},
+{m:"Veyron Super Sport",y:"2011",t:"classic",hp:1200,v:2.5,vmax:431,kg:1838,eng:"W16 8.0L Quad-Turbo",box:"7-DCT AWD",price:"2 500 000 €",pn:2500000,desc:"Record du monde battu : 431 km/h. 175 ex, la voiture la plus rapide du monde pendant 8 ans."},
+]},
+{id:"mclaren",name:"McLaren",country:"Angleterre",city:"Woking, Surrey",yr:"1963",flag:"🇬🇧",color:"#EA580C",
+desc:"Née en Formule 1, McLaren Automotive construit des supercars d'une légèreté chirurgicale. Carbone, technologie de pointe — chaque gramme inutile est banni. La philosophie : moins de poids pour plus de sensations.",
+tags:["Carbone","F1","Légèreté","Surrey"],
+cars:[
+{m:"750S",y:"2024",t:"supercar",hp:750,v:2.8,vmax:332,kg:1277,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"315 000 €",pn:315000,desc:"750 ch, 1277 kg. Le rapport poids/puissance est une obsession McLaren. Précision absolue."},
+{m:"750S Spider",y:"2024",t:"supercar",hp:750,v:2.8,vmax:332,kg:1332,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"360 000 €",pn:360000,desc:"La 750S à ciel ouvert. Toit rétractable en 11s, même V8 750 ch. Sensations décuplées."},
+{m:"Artura",y:"2024",t:"supercar",hp:700,v:3.0,vmax:330,kg:1395,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"248 000 €",pn:248000,desc:"Première McLaren hybride. V6 biturbo + électrique, 700 ch, 4.7L/100 en mode hybride."},
+{m:"Artura Spider",y:"2024",t:"supercar",hp:700,v:3.0,vmax:330,kg:1457,eng:"V6 3.0L Hybride",box:"8-DCT RWD",price:"295 000 €",pn:295000,desc:"L'Artura en version spider. Hybride, toit rétractable, le futur McLaren à ciel ouvert."},
+{m:"720S",y:"2022",t:"supercar",hp:720,v:2.9,vmax:341,kg:1283,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"255 000 €",pn:255000,desc:"La supercar de référence McLaren. V8 720 ch, carbone MonoCell II, tenue de route époustouflante."},
+{m:"720S Spider",y:"2022",t:"supercar",hp:720,v:2.9,vmax:341,kg:1332,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"285 000 €",pn:285000,desc:"La 720S en cabriolet. Toit rigide rétractable, même performances, sensations au maximum."},
+{m:"GTS",y:"2024",t:"gt",hp:635,v:3.2,vmax:326,kg:1530,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"268 000 €",pn:268000,desc:"La McLaren GT ultime. Plus de confort, même ADN de légèreté. Pour les longs trajets."},
+{m:"Solus GT",y:"2023",t:"hypercar",hp:829,v:2.5,vmax:320,kg:994,eng:"V10 5.2L NA",box:"7-DCT RWD",price:"3 500 000 €",pn:3500000,desc:"25 exemplaires. Cockpit monoplaces, 25G en courbe. L'expérience la plus intense jamais produite."},
+{m:"Senna",y:"2022",t:"hypercar",hp:800,v:2.8,vmax:340,kg:1198,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"1 100 000 €",pn:1100000,desc:"Hommage à Ayrton Senna. 500 ex, 800 ch, 1198 kg. La plus radicale des McLaren de route."},
+{m:"Senna GTR",y:"2020",t:"hypercar",hp:825,v:2.8,vmax:340,kg:1188,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"1 600 000 €",pn:1600000,desc:"75 ex circuit uniquement. Senna portée à l'extrême, 75 kg de downforce en plus."},
+{m:"Elva",y:"2022",t:"hypercar",hp:815,v:2.8,vmax:300,kg:1148,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"1 800 000 €",pn:1800000,desc:"Le roadster sans pare-brise. 149 ex, 815 ch, le vent en pleine face. L'expérience ultime."},
+{m:"P1",y:"2015",t:"classic",hp:916,v:2.8,vmax:350,kg:1395,eng:"V8 3.8L Hybride",box:"7-DCT RWD",price:"2 500 000 €",pn:2500000,desc:"La trinité hypercar. V8 + hybride, 916 ch, 375 ex. McLaren a réinventé la supercar."},
+{m:"P1 GTR",y:"2016",t:"classic",hp:1000,v:2.4,vmax:340,kg:1198,eng:"V8 3.8L Hybride",box:"7-DCT RWD",price:"4 000 000 €",pn:4000000,desc:"58 ex, piste uniquement. 1000 ch, 132 kg d'appui. Le summum McLaren de l'ère moderne."},
+{m:"F1",y:"1998",t:"classic",hp:627,v:3.2,vmax:391,kg:1138,eng:"V12 6.1L NA BMW",box:"6-Man RWD",price:"25 000 000 €",pn:25000000,desc:"La voiture la plus emblématique de l'histoire. 3 places, V12 BMW, 391 km/h. Le chef-d'œuvre."},
+]},
+{id:"porsche",name:"Porsche",country:"Allemagne",city:"Stuttgart, Bade-Wurtemberg",yr:"1948",flag:"🇩🇪",color:"#DC2626",
+desc:"Porsche prouve que sportivité et quotidien ne s'opposent pas. La 911, inchangée dans l'âme depuis 1963, est la référence absolue de la conduite sportive. L'ingénierie Porsche recherche la perfection dans chaque détail.",
+tags:["911","Nürburgring","Flat-Six","Stuttgart"],
+cars:[
+{m:"911 GT3 RS",y:"2024",t:"supercar",hp:525,v:3.2,vmax:296,kg:1450,eng:"Flat-6 4.0L NA",box:"7-PDK RWD",price:"229 000 €",pn:229000,desc:"La 911 la plus extrême. Aérodynamique active PDCC, flat-six NA hurlant à 9000 tr/min."},
+{m:"911 GT3",y:"2024",t:"supercar",hp:510,v:3.4,vmax:318,kg:1418,eng:"Flat-6 4.0L NA",box:"7-PDK RWD",price:"175 000 €",pn:175000,desc:"La référence sportive. Flat-six NA 9000 tr/min, boîte manuelle disponible, pureté absolue."},
+{m:"911 GT2 RS",y:"2022",t:"supercar",hp:700,v:2.8,vmax:340,kg:1470,eng:"Flat-6 3.8L Bi-Turbo",box:"7-PDK RWD",price:"335 000 €",pn:335000,desc:"La 911 la plus puissante. 700 ch en propulsion — la bête blonde de Stuttgart."},
+{m:"911 Turbo S",y:"2024",t:"supercar",hp:650,v:2.7,vmax:330,kg:1640,eng:"Flat-6 3.8L Bi-Turbo",box:"8-PDK AWD",price:"238 000 €",pn:238000,desc:"La 911 ultime pour tous les jours. 650 ch, 4 roues motrices, utilisable en toutes conditions."},
+{m:"911 Carrera GTS",y:"2024",t:"sport",hp:543,v:3.0,vmax:311,kg:1545,eng:"Flat-6 3.0L Hybride",box:"8-PDK AWD",price:"150 000 €",pn:150000,desc:"La 911 hybride de série. T-Hybrid, 543 ch, efficience et sportivité réunies."},
+{m:"911 Dakar",y:"2024",t:"sport",hp:480,v:3.4,vmax:240,kg:1605,eng:"Flat-6 3.0L Bi-Turbo",box:"8-PDK AWD",price:"222 000 €",pn:222000,desc:"La 911 tout-terrain. Garde au sol réhaussée, mode Rally. Hommage à la victoire Dakar 1984."},
+{m:"Taycan Turbo GT",y:"2024",t:"sport",hp:1092,v:2.2,vmax:305,kg:2295,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"250 000 €",pn:250000,desc:"Berline électrique la plus rapide. 1092 ch, 0-100 en 2.2s, record Nürburgring en 7m07."},
+{m:"918 Spyder",y:"2015",t:"classic",hp:887,v:2.6,vmax:345,kg:1674,eng:"V8 4.6L + 2 Moteurs E",box:"7-PDK AWD",price:"1 200 000 €",pn:1200000,desc:"La trinité hypercar. V8 + hybride, 887 ch. Une Porsche qui a changé l'histoire automobile."},
+{m:"Cayenne Turbo GT",y:"2024",t:"sport",hp:659,v:3.3,vmax:305,kg:2005,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"195 000 €",pn:195000,desc:"SUV coupé le plus rapide au Ring. 659 ch, aérodynamique active, comportement de sportive."},
+{m:"Cayman GT4 RS",y:"2024",t:"sport",hp:500,v:3.4,vmax:315,kg:1415,eng:"Flat-6 4.0L NA",box:"7-PDK RWD",price:"135 000 €",pn:135000,desc:"Le flat-six NA de la GT3 dans le Cayman. 500 ch, 1415 kg, le mid-engine Porsche ultime."},
+{m:"Panamera Turbo S",y:"2024",t:"gt",hp:630,v:3.4,vmax:315,kg:2075,eng:"V8 4.0L Bi-Turbo",box:"8-PDK AWD",price:"215 000 €",pn:215000,desc:"La berline sport ultime. V8 630 ch, 5 places, 315 km/h. La GT 4 portes de référence."},
+]},
+{id:"audi",name:"Audi",country:"Allemagne",city:"Ingolstadt, Bavière",yr:"1909",flag:"🇩🇪",color:"#C0392B",
+desc:"Audi, fondée à Ingolstadt, incarne le progrès technique allemand. Quattro, Vorsprung durch Technik — l'avance par la technique. Depuis la révolution quattro en rallye dans les années 80, Audi est synonyme d'innovation.",
+tags:["Quattro","RS","Ingolstadt","Technik"],
+cars:[
+{m:"R8 GT RWD",y:"2023",t:"supercar",hp:620,v:3.1,vmax:328,kg:1595,eng:"V10 5.2L NA",box:"7-S tronic RWD",price:"185 000 €",pn:185000,desc:"Édition finale du R8. V10 NA 620 ch en propulsion pure. L'adieu au V10 Audi."},
+{m:"R8 V10 Performance",y:"2023",t:"supercar",hp:620,v:3.1,vmax:330,kg:1625,eng:"V10 5.2L NA",box:"7-S tronic AWD",price:"175 000 €",pn:175000,desc:"Le V10 atmosphérique dans sa forme la plus pure. Dernière génération avant l'électrification."},
+{m:"RS6 Avant Performance",y:"2024",t:"sport",hp:630,v:3.4,vmax:305,kg:2100,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"165 000 €",pn:165000,desc:"Le break le plus désiré du monde. V8 630 ch, quattro, 5 places et coffre. La perfection."},
+{m:"RS7 Performance",y:"2024",t:"gt",hp:630,v:3.4,vmax:305,kg:2050,eng:"V8 4.0L Bi-Turbo",box:"8-AT AWD",price:"175 000 €",pn:175000,desc:"Le fastback sport. RS6 habillé en berline fastback. Même V8 630 ch, silhouette plus sportive."},
+{m:"RS e-tron GT",y:"2024",t:"sport",hp:646,v:3.3,vmax:250,kg:2350,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"138 000 €",pn:138000,desc:"La berline électrique performance. 646 ch, technologie partagée avec la Porsche Taycan."},
+{m:"RS3 Sedan",y:"2024",t:"sport",hp:400,v:3.8,vmax:290,kg:1570,eng:"5cyl 2.5L Turbo",box:"7-S tronic AWD",price:"72 000 €",pn:72000,desc:"Le 5 cylindres unique au monde. Son guttural inimitable, 400 ch, compact sport absolu."},
+{m:"RS5 Coupé",y:"2024",t:"sport",hp:450,v:3.9,vmax:280,kg:1765,eng:"V6 2.9L Bi-Turbo",box:"8-AT AWD",price:"98 000 €",pn:98000,desc:"Le coupé sport Audi. V6 biturbo 450 ch, quattro, design sportif élégant. GT accessible."},
+{m:"TT RS Final Edition",y:"2023",t:"sport",hp:400,v:3.7,vmax:280,kg:1495,eng:"5cyl 2.5L Turbo",box:"7-S tronic AWD",price:"82 000 €",pn:82000,desc:"L'adieu du TT RS. 5cyl, 400 ch. Design iconique depuis 1998 — édition finale du coupé."},
+{m:"Q8 RS e-tron",y:"2024",t:"sport",hp:598,v:3.6,vmax:250,kg:2730,eng:"Électrique Tri-Motor",box:"Réducteur AWD",price:"135 000 €",pn:135000,desc:"Le SUV électrique performance Audi. 598 ch, 600 km d'autonomie, confort et performance."},
+{m:"Sport Quattro",y:"1985",t:"classic",hp:306,v:5.0,vmax:250,kg:1090,eng:"5cyl 2.1L Turbo",box:"5-Man AWD",price:"1 200 000 €",pn:1200000,desc:"La légende du Groupe B. 214 exemplaires, ancêtre de tous les quattro RS. Mythe du rallye."},
+]},
+{id:"mercedes",name:"Mercedes-AMG",country:"Allemagne",city:"Affalterbach, Bade-Wurtemberg",yr:"1967",flag:"🇩🇪",color:"#374151",
+desc:"AMG, fondé dans un moulin d'Affalterbach par Aufrecht et Melcher, est la division performance de Mercedes. One Man, One Engine : chaque moteur assemblé par un seul artisan qui signe son bloc à la main.",
+tags:["One Man One Engine","V8","Affalterbach","F1"],
+cars:[
+{m:"GT 63 S E Performance",y:"2024",t:"hypercar",hp:843,v:2.9,vmax:316,kg:2385,eng:"V8 4.0L + Moteur E",box:"9-AT AWD",price:"220 000 €",pn:220000,desc:"Hybride hypercar 4 portes. V8 AMG + moteur électrique F1, 843 ch. La fusion ultime."},
+{m:"SL 63 AMG",y:"2024",t:"gt",hp:585,v:3.5,vmax:315,kg:1990,eng:"V8 4.0L Bi-Turbo",box:"9-AT AWD",price:"195 000 €",pn:195000,desc:"Le roadster de luxe réinventé. V8 585 ch, 4 places, soft-top. ADN SL + brutalité AMG."},
+{m:"GT Black Series",y:"2022",t:"supercar",hp:730,v:3.2,vmax:325,kg:1700,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"340 000 €",pn:340000,desc:"Le graal AMG. 730 ch, aéro active, record Nürburgring. La GT dans son expression ultime."},
+{m:"GT R Pro",y:"2023",t:"supercar",hp:585,v:3.6,vmax:318,kg:1630,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"210 000 €",pn:210000,desc:"La Bête Verte. Réglages circuit, aérodynamique active. Le lien entre AMG et le Nürburgring."},
+{m:"C63 S E Performance",y:"2024",t:"sport",hp:680,v:3.4,vmax:280,kg:2110,eng:"4cyl 2.0L + Moteur E",box:"9-AT AWD",price:"107 000 €",pn:107000,desc:"La polémique incarnée. V8 remplacé par 4cyl hybride 680 ch. Performances supérieures."},
+{m:"E63 S AMG",y:"2024",t:"sport",hp:612,v:3.4,vmax:300,kg:2035,eng:"I4 2.0L Hybride",box:"9-AT AWD",price:"132 000 €",pn:132000,desc:"La berline famille qui joue dans la cour des supercars. 612 ch hybrides, 4 vraies portes."},
+{m:"EQS 53 AMG",y:"2024",t:"sport",hp:761,v:3.4,vmax:250,kg:2655,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"163 000 €",pn:163000,desc:"La grande berline électrique AMG. 761 ch, 770 km d'autonomie, silhouette fastback luxueuse."},
+{m:"AMG ONE",y:"2023",t:"hypercar",hp:1063,v:2.9,vmax:352,kg:1695,eng:"F1 1.6L V6 + 4 Moteurs E",box:"8-AMT AWD",price:"2 750 000 €",pn:2750000,desc:"Le moteur F1 de Lewis Hamilton pour la route. 275 ex, technologie F1 W08 directe. L'absolu."},
+{m:"GT3 AMG",y:"2024",t:"supercar",hp:510,v:3.6,vmax:310,kg:1435,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"230 000 €",pn:230000,desc:"La GT de circuit pour la route. Réglages AMG Customer Racing, aéro GT3 homologuée."},
+]},
+{id:"bmw",name:"BMW M",country:"Allemagne",city:"Munich, Bavière",yr:"1916",flag:"🇩🇪",color:"#1D4ED8",
+desc:"BMW M GmbH développe chaque modèle au Nürburgring. Sheer Driving Pleasure — le plaisir de conduire avant tout, sans compromis sur l'utilisabilité quotidienne. L'ingénierie sportive bavaroise depuis 1972.",
+tags:["Nürburgring","I6 Biturbo","Munich","Bavaria"],
+cars:[
+{m:"M4 CSL",y:"2024",t:"sport",hp:550,v:3.7,vmax:307,kg:1625,eng:"I6 3.0L Bi-Turbo",box:"8-AT RWD",price:"165 000 €",pn:165000,desc:"1000 ex, -100 kg vs M4. CSL = Coupé Sport Leichtbau. La M4 dans son état le plus pur."},
+{m:"M4 CSL Competition",y:"2024",t:"sport",hp:530,v:3.9,vmax:290,kg:1725,eng:"I6 3.0L Bi-Turbo",box:"8-AT AWD",price:"128 000 €",pn:128000,desc:"La M4 Competition la plus radicale. Pack M Carbon, réglages dynamiques affinés, 530 ch."},
+{m:"M5 Touring",y:"2024",t:"sport",hp:727,v:3.5,vmax:305,kg:2345,eng:"V8 4.4L Hybride",box:"8-AT AWD",price:"175 000 €",pn:175000,desc:"Le break le plus rapide du monde. V8 hybride 727 ch, M xDrive, 5 places et coffre immense."},
+{m:"M5 Berline",y:"2024",t:"sport",hp:727,v:3.5,vmax:305,kg:2325,eng:"V8 4.4L Hybride",box:"8-AT AWD",price:"162 000 €",pn:162000,desc:"La M5 en berline. V8 hybride 727 ch, hybride rechargeable. 50 km en tout électrique."},
+{m:"XM Label Red",y:"2024",t:"sport",hp:748,v:3.8,vmax:290,kg:2535,eng:"V8 4.4L Hybride",box:"8-AT AWD",price:"195 000 €",pn:195000,desc:"La BMW M la plus puissante. V8 hybride 748 ch. Design clivant, performances indiscutables."},
+{m:"M8 Gran Coupé",y:"2024",t:"gt",hp:625,v:3.2,vmax:305,kg:1950,eng:"V8 4.4L Bi-Turbo",box:"8-AT AWD",price:"175 000 €",pn:175000,desc:"L'ultime GT bavaroise. V8 625 ch, 4 portes luxueuses, 305 km/h. Meilleur des deux mondes."},
+{m:"M8 Competition Cabriolet",y:"2024",t:"gt",hp:625,v:3.2,vmax:305,kg:2075,eng:"V8 4.4L Bi-Turbo",box:"8-AT AWD",price:"195 000 €",pn:195000,desc:"La M8 à ciel ouvert. Toit souple, V8 625 ch, grand tourisme sous les étoiles bavaroises."},
+{m:"M2 CS",y:"2024",t:"sport",hp:480,v:4.0,vmax:302,kg:1625,eng:"I6 3.0L Bi-Turbo",box:"6-Man RWD",price:"105 000 €",pn:105000,desc:"La petite terreur M. Boîte manuelle optionnelle, propulsion, 480 ch. La plus pure des M."},
+{m:"iX M60",y:"2024",t:"sport",hp:619,v:3.8,vmax:250,kg:2585,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"140 000 €",pn:140000,desc:"Le SAV électrique M. 619 ch, 0-100 en 3.8s, 566 km d'autonomie. L'avenir de BMW M."},
+{m:"M3 CS",y:"2024",t:"sport",hp:550,v:3.4,vmax:307,kg:1620,eng:"I6 3.0L Bi-Turbo",box:"8-AT AWD",price:"145 000 €",pn:145000,desc:"La M3 ultime. 1000 ex, 550 ch, carbone généralisé. La berline sport la plus extrême de BMW."},
+]},
+{id:"koenigsegg",name:"Koenigsegg",country:"Suède",city:"Ängelholm, Scanie",yr:"1994",flag:"🇸🇪",color:"#7C3AED",
+desc:"Koenigsegg est le laboratoire de l'impossible. Fondée par Christian von Koenigsegg à 22 ans dans son garage, la marque suédoise détient plus de records du monde que tout autre constructeur.",
+tags:["Record Mondial","Megacar","Suède","Innovation"],
+cars:[
+{m:"Jesko Absolut",y:"2024",t:"hypercar",hp:1600,v:2.5,vmax:531,kg:1420,eng:"V8 5.0L Bi-Turbo",box:"9-LST RWD",price:"4 500 000 €",pn:4500000,desc:"La voiture la plus rapide jamais conçue. 531 km/h théorique, LST 9 rapports instantanés."},
+{m:"Jesko Attack",y:"2024",t:"hypercar",hp:1600,v:2.5,vmax:300,kg:1320,eng:"V8 5.0L Bi-Turbo",box:"9-LST AWD",price:"3 000 000 €",pn:3000000,desc:"Jesko orienté circuit. 1400 kg d'appui aérodynamique à 275 km/h. La tenue de route absolue."},
+{m:"Gemera",y:"2024",t:"hypercar",hp:2300,v:1.9,vmax:400,kg:1850,eng:"3cyl 2.0L + 3 Moteurs E",box:"Direct AWD",price:"1 900 000 €",pn:1900000,desc:"La méga-GT 4 places. 2300 ch hybrides, 4 vraies places. Le rapport poids/puissance le plus fou."},
+{m:"CC850",y:"2023",t:"hypercar",hp:1385,v:3.0,vmax:300,kg:1385,eng:"V8 5.0L Bi-Turbo",box:"6-ESC RWD",price:"3 650 000 €",pn:3650000,desc:"50 ex pour les 50 ans. Boîte manuelle ou automatique intelligente. L'art absolu Koenigsegg."},
+{m:"Regera",y:"2022",t:"hypercar",hp:1500,v:2.7,vmax:410,kg:1628,eng:"V8 5.0L + 3 Moteurs E",box:"Hydrocoupler AWD",price:"1 900 000 €",pn:1900000,desc:"Sans boîte de vitesses conventionnelle. V8 + 3 moteurs E, hydrocoupler unique. 80 ex."},
+{m:"One:1",y:"2015",t:"classic",hp:1360,v:2.8,vmax:450,kg:1360,eng:"V8 5.0L Bi-Turbo",box:"7-DCT RWD",price:"6 000 000 €",pn:6000000,desc:"Megacar. 1 ch par kilo. 7 ex seulement. A tenu 444 km/h — record non homologué."},
+]},
+{id:"pagani",name:"Pagani",country:"Italie",city:"San Cesario sul Panaro, Émilie",yr:"1992",flag:"🇮🇹",color:"#92400E",
+desc:"Pagani est l'artiste fou de l'automobile. Obsédé par le carbone et la beauté mécanique visible, Horacio Pagani crée des œuvres d'art roulantes. Chaque voiture représente 40 000 heures de travail artisanal irremplaçable.",
+tags:["Artisanal","Carbone-Titane","AMG V12","Émilie"],
+cars:[
+{m:"Utopia",y:"2024",t:"hypercar",hp:852,v:2.9,vmax:360,kg:1280,eng:"V12 6.0L Bi-Turbo AMG",box:"7-Seq RWD",price:"2 700 000 €",pn:2700000,desc:"La voiture de route Pagani. Carbone-titane, habitacle d'horlogerie mécanique visible."},
+{m:"Utopia Roadster",y:"2024",t:"hypercar",hp:852,v:2.9,vmax:350,kg:1350,eng:"V12 6.0L Bi-Turbo AMG",box:"7-Seq RWD",price:"3 400 000 €",pn:3400000,desc:"L'Utopia à ciel ouvert. 100 ex seulement. Carbone-titane, les éléments sur la peau."},
+{m:"Huayra R Evo",y:"2024",t:"hypercar",hp:900,v:2.7,vmax:370,kg:1050,eng:"V12 6.0L NA AMG",box:"6-Seq RWD",price:"3 400 000 €",pn:3400000,desc:"30 ex. V12 AMG atmosphérique, 900 ch, 1050 kg. Le circuit par Pagani."},
+{m:"Huayra BC",y:"2020",t:"hypercar",hp:800,v:2.8,vmax:380,kg:1218,eng:"V12 6.0L Bi-Turbo AMG",box:"7-Seq RWD",price:"2 500 000 €",pn:2500000,desc:"20 ex. Hommage à Benny Caiola, ami d'Horacio. La Huayra la plus aérodynamique."},
+{m:"Zonda F",y:"2006",t:"classic",hp:650,v:3.6,vmax:345,kg:1230,eng:"V12 7.3L NA AMG",box:"6-Man RWD",price:"3 000 000 €",pn:3000000,desc:"La Zonda qui a tout changé. V12 650 ch, le mythe Pagani dans son état de légende."},
+{m:"Zonda Barchetta",y:"2018",t:"hypercar",hp:800,v:3.0,vmax:350,kg:1050,eng:"V12 6.0L NA AMG",box:"6-Man RWD",price:"17 600 000 €",pn:17600000,desc:"3 exemplaires. La Pagani la plus rare — 17.6M€, la voiture de production la plus chère."},
+]},
+{id:"aston",name:"Aston Martin",country:"Angleterre",city:"Gaydon, Warwickshire",yr:"1913",flag:"🇬🇧",color:"#065F46",
+desc:"L'élégance britannique intemporelle. Voiture officielle de James Bond depuis 1964, Aston Martin incarne le raffinement du gentleman sportif anglais. Assemblage artisanal à Gaydon, matériaux nobles, lignes sculpturales.",
+tags:["James Bond","GT","Artisanat","Warwickshire"],
+cars:[
+{m:"DB12",y:"2024",t:"gt",hp:680,v:3.5,vmax:325,kg:1760,eng:"V8 4.0L Bi-Turbo",box:"8-AT RWD",price:"228 000 €",pn:228000,desc:"Le nouveau super tourer. V8 AMG 680 ch, intérieur entièrement repensé. GT sportive absolue."},
+{m:"DB12 Volante",y:"2024",t:"gt",hp:680,v:3.6,vmax:322,kg:1870,eng:"V8 4.0L Bi-Turbo",box:"8-AT RWD",price:"268 000 €",pn:268000,desc:"La DB12 à ciel ouvert. Cabriolet GT raffiné, V8 680 ch, l'élégance britannique au soleil."},
+{m:"DBS 770 Ultimate",y:"2023",t:"gt",hp:770,v:3.2,vmax:340,kg:1795,eng:"V12 5.2L Bi-Turbo",box:"8-AT RWD",price:"380 000 €",pn:380000,desc:"Chant du cygne du V12 Aston. 770 ch, 499 ex. La fin d'une époque avec panache."},
+{m:"Valkyrie",y:"2024",t:"hypercar",hp:1155,v:2.5,vmax:402,kg:1030,eng:"V12 6.5L + Hybride",box:"7-DCT RWD",price:"3 200 000 €",pn:3200000,desc:"Né avec Red Bull Racing F1. V12 Cosworth 11000 tr/min, 1155 ch, downforce de circuit."},
+{m:"Valhalla",y:"2025",t:"hypercar",hp:1079,v:2.5,vmax:330,kg:1550,eng:"V8 4.0L + 3 Moteurs E",box:"8-AT AWD",price:"768 000 €",pn:768000,desc:"L'hypercar hybride d'Aston. V8 + 3 moteurs électriques, 1079 ch, descendante de la Valkyrie."},
+{m:"Vantage",y:"2024",t:"sport",hp:665,v:3.5,vmax:325,kg:1605,eng:"V8 4.0L Bi-Turbo",box:"8-AT RWD",price:"165 000 €",pn:165000,desc:"La sportive pure d'Aston Martin. V8 665 ch propulsion, design affûté, la plus agressive."},
+{m:"DBX 707",y:"2024",t:"sport",hp:707,v:3.3,vmax:310,kg:2245,eng:"V8 4.0L Bi-Turbo",box:"9-AT AWD",price:"235 000 €",pn:235000,desc:"Le SUV le plus puissant d'Aston. 707 ch, châssis sport, l'agilité d'une sportive en SUV."},
+]},
+{id:"bentley",name:"Bentley",country:"Angleterre",city:"Crewe, Cheshire",yr:"1919",flag:"🇬🇧",color:"#14532D",
+desc:"Bentley définit le luxe automobile britannique depuis 1919. Cuir Nappa, placages de bois précieux et moteurs W12 de 600+ ch. Le raffinement ne proscrit pas la performance — la perfection pour les rares privilégiés.",
+tags:["Luxe","W12","Cuir Nappa","Crewe"],
+cars:[
+{m:"Continental GT Speed",y:"2024",t:"gt",hp:659,v:3.5,vmax:335,kg:2244,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"295 000 €",pn:295000,desc:"Le grand tourer ultime. W12 659 ch, 100 km de fibre de bois dans l'habitacle."},
+{m:"Continental GT Speed Convertible",y:"2024",t:"gt",hp:659,v:3.6,vmax:333,kg:2322,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"330 000 €",pn:330000,desc:"Le grand tourer cabriolet. W12 659 ch, ciel ouvert, luxe absolu dans un cabriolet GT."},
+{m:"Mulliner Batur",y:"2023",t:"hypercar",hp:740,v:3.2,vmax:320,kg:2195,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"2 000 000 €",pn:2000000,desc:"18 ex. Le summum Bentley Mulliner. Chaque voiture entièrement personnalisée sur mesure absolue."},
+{m:"Bentayga Speed",y:"2024",t:"sport",hp:626,v:3.8,vmax:306,kg:2395,eng:"W12 6.0L Bi-Turbo",box:"8-AT AWD",price:"270 000 €",pn:270000,desc:"Le SUV le plus rapide de Bentley. W12 626 ch. Vitesse sans sacrifice du luxe."},
+{m:"Flying Spur Speed",y:"2024",t:"gt",hp:626,v:4.0,vmax:333,kg:2435,eng:"W12 6.0L Bi-Turbo",box:"8-DCT AWD",price:"265 000 €",pn:265000,desc:"La berline GT. W12 626 ch, 5 places, luxe intérieur absolu. 333 km/h en berline."},
+]},
+{id:"rollsroyce",name:"Rolls-Royce",country:"Angleterre",city:"Goodwood, West Sussex",yr:"1906",flag:"🇬🇧",color:"#4C1D95",
+desc:"La meilleure voiture du monde selon son slogan. Rolls-Royce ne construit pas des voitures mais des expériences. Spirit of Ecstasy en proue, silence absolu, cuir pleine peau — la perfection a un prix.",
+tags:["Bespoke","Spirit of Ecstasy","Silence","Goodwood"],
+cars:[
+{m:"Spectre",y:"2024",t:"gt",hp:577,v:4.5,vmax:250,kg:2975,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"350 000 €",pn:350000,desc:"Première Rolls 100% électrique. 577 ch, silence de cathédrale, luxe sans concession."},
+{m:"Phantom VIII",y:"2024",t:"gt",hp:571,v:5.1,vmax:250,kg:2560,eng:"V12 6.75L Bi-Turbo",box:"8-AT AWD",price:"420 000 €",pn:420000,desc:"L'icône absolue. V12 en 5.76m de sérénité. Architecture of Luxury : étoiles au plafond."},
+{m:"Cullinan Black Badge",y:"2024",t:"sport",hp:600,v:4.9,vmax:250,kg:2660,eng:"V12 6.75L Bi-Turbo",box:"8-AT AWD",price:"395 000 €",pn:395000,desc:"Le SUV le plus luxueux en version sombre. Black Badge : Rolls-Royce sans compromis."},
+{m:"Wraith Black Badge",y:"2023",t:"gt",hp:632,v:4.4,vmax:250,kg:2360,eng:"V12 6.6L Bi-Turbo",box:"8-AT AWD",price:"380 000 €",pn:380000,desc:"Le grand tourer sombre. V12 632 ch, toit Starlight 1340 étoiles cousues à la main."},
+{m:"Dawn",y:"2022",t:"gt",hp:571,v:4.9,vmax:250,kg:2635,eng:"V12 6.6L Bi-Turbo",box:"8-AT AWD",price:"360 000 €",pn:360000,desc:"Le cabriolet Rolls-Royce. V12 571 ch, ciel ouvert silencieux. Le luxe sous les étoiles."},
+]},
+{id:"rimac",name:"Rimac",country:"Croatie",city:"Sveta Nedelja, Zagreb",yr:"2009",flag:"🇭🇷",color:"#0E7490",
+desc:"Rimac est la révolution électrique de l'hypercar. Fondé par Mate Rimac dans son garage à 18 ans, le constructeur croate détient tous les records de performance électrique et fournit sa technologie à Porsche, Bugatti et Aston Martin.",
+tags:["Électrique","Record Mondial","Zagreb","Technologie"],
+cars:[
+{m:"Nevera R",y:"2024",t:"hypercar",hp:2107,v:1.7,vmax:412,kg:2300,eng:"Électrique Quad Motor",box:"Direct AWD",price:"2 400 000 €",pn:2400000,desc:"La voiture de série la plus rapide de l'histoire. 2107 ch, 0-100 en 1.7s. 150 ex."},
+{m:"Nevera",y:"2023",t:"hypercar",hp:1914,v:1.97,vmax:412,kg:2150,eng:"Électrique Quad Motor",box:"Direct AWD",price:"2 000 000 €",pn:2000000,desc:"23 records du monde en une journée. La Nevera originale, hypercar électrique croate."},
+]},
+{id:"maserati",name:"Maserati",country:"Italie",city:"Modène, Émilie-Romagne",yr:"1914",flag:"🇮🇹",color:"#0369A1",
+desc:"Maserati, la marque au trident de Modène, est la GT italienne par excellence. Accessible que Ferrari mais tout aussi passionnée, Maserati propose l'alliance du luxe, du confort et d'un son d'échappement inoubliable.",
+tags:["Trident","GT","Modène","Son"],
+cars:[
+{m:"MC20",y:"2024",t:"supercar",hp:630,v:2.9,vmax:325,kg:1470,eng:"V6 3.0L Nettuno",box:"8-DCT RWD",price:"242 000 €",pn:242000,desc:"Le coupé mid-engine Maserati. V6 Nettuno bi-turbo pré-chambre F1, 630 ch, design épuré."},
+{m:"MC20 Cielo",y:"2024",t:"supercar",hp:630,v:2.9,vmax:325,kg:1520,eng:"V6 3.0L Nettuno",box:"8-DCT RWD",price:"275 000 €",pn:275000,desc:"Renaissance Maserati. Nettuno V6 630 ch à pré-chambre F1, toit vitré rétractable."},
+{m:"Granturismo Trofeo",y:"2024",t:"gt",hp:550,v:3.5,vmax:310,kg:1822,eng:"V6 3.0L Nettuno",box:"8-AT RWD",price:"198 000 €",pn:198000,desc:"Le grand tourisme Maserati. Nettuno V6, lignes sculpturales, son d'exception."},
+{m:"Grecale Trofeo",y:"2024",t:"sport",hp:530,v:3.8,vmax:285,kg:1930,eng:"V6 3.0L Nettuno",box:"8-AT AWD",price:"118 000 €",pn:118000,desc:"Le SUV Maserati compact. Nettuno V6 530 ch, design sculptural, le trident en SUV."},
+{m:"GranCabrio Trofeo",y:"2024",t:"gt",hp:550,v:3.6,vmax:302,kg:1885,eng:"V6 3.0L Nettuno",box:"8-AT RWD",price:"218 000 €",pn:218000,desc:"Le cabriolet GT Maserati. Nettuno V6, toit souple, 4 places, élégance italienne ciel ouvert."},
+]},
+{id:"alpine",name:"Alpine",country:"France",city:"Dieppe, Normandie",yr:"1955",flag:"🇫🇷",color:"#2563EB",
+desc:"Alpine est la sportive française par excellence. De Jean Rédélé à l'A110 moderne, Dieppe privilégie la légèreté sur la puissance brute. La philosophie sportive française : l'agilité comme dogme absolu.",
+tags:["Légèreté","Agilité","Dieppe","Normandie"],
+cars:[
+{m:"A110 R",y:"2024",t:"sport",hp:300,v:4.2,vmax:285,kg:1082,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"90 000 €",pn:90000,desc:"L'A110 dans son état le plus pur. 1082 kg, châssis sport, aéro circuit."},
+{m:"A110 R Turini",y:"2024",t:"sport",hp:320,v:3.9,vmax:280,kg:1082,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"105 000 €",pn:105000,desc:"L'A110 R édition Turini. 1082 kg, carbone, réglages circuit. La légèreté absolue."},
+{m:"A110 GT",y:"2024",t:"gt",hp:300,v:4.2,vmax:285,kg:1125,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"75 000 €",pn:75000,desc:"L'Alpine des longs trajets. Plus confortable, même légèreté iconique. GT rapide."},
+{m:"A290 GTS",y:"2024",t:"sport",hp:220,v:6.4,vmax:250,kg:1490,eng:"Électrique Mono-Motor",box:"Réducteur FWD",price:"42 000 €",pn:42000,desc:"La petite Alpine électrique. Héritière de la Clio Williams, agile et électrique."},
+{m:"A110 S",y:"2024",t:"sport",hp:300,v:4.2,vmax:285,kg:1114,eng:"4cyl 1.8L Turbo",box:"7-DCT RWD",price:"72 000 €",pn:72000,desc:"La version sportive de l'A110. Ressorts renforcés, barres anti-roulis plus fermes, 300 ch."},
+]},
+{id:"lotus",name:"Lotus",country:"Angleterre",city:"Hethel, Norfolk",yr:"1952",flag:"🇬🇧",color:"#15803D",
+desc:"Colin Chapman disait simplement ajouter de la légèreté. La marque de Norfolk, maintenant sous direction Geely, allie l'héritage F1 de Chapman à la technologie électrique la plus avancée du moment.",
+tags:["Légèreté","Chapman","F1","Norfolk"],
+cars:[
+{m:"Emira V6 First Edition",y:"2024",t:"sport",hp:400,v:4.3,vmax:290,kg:1405,eng:"V6 3.5L Superchargé",box:"6-AT RWD",price:"92 000 €",pn:92000,desc:"Dernière Lotus thermique. V6 superchargé Toyota, 1405 kg. Philosophie Lotus pure."},
+{m:"Emira I4",y:"2024",t:"sport",hp:360,v:4.5,vmax:275,kg:1405,eng:"4cyl 2.0L Turbo AMG",box:"7-DCT RWD",price:"78 000 €",pn:78000,desc:"L'Emira propulsée par le moteur AMG 4 cylindres. 360 ch, plus accessible, même purisme."},
+{m:"Eletre R",y:"2024",t:"sport",hp:918,v:2.8,vmax:265,kg:2580,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"185 000 €",pn:185000,desc:"Le SUV électrique hyperperformant. 918 ch, aérodynamique active inspirée de la F1."},
+{m:"Emeya R",y:"2024",t:"sport",hp:905,v:2.8,vmax:256,kg:2580,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"145 000 €",pn:145000,desc:"La berline électrique Lotus. 905 ch, design moderne épuré, technologie aéro circuit."},
+{m:"Evija",y:"2023",t:"hypercar",hp:2000,v:2.4,vmax:320,kg:1680,eng:"Électrique Quad Motor",box:"Direct AWD",price:"2 100 000 €",pn:2100000,desc:"130 ex. La Lotus hypercar électrique. 2000 ch, le passage de Lotus dans l'ère des megacars."},
+]},
+{id:"toyota",name:"Toyota GR",country:"Japon",city:"Toyota, Aichi",yr:"1937",flag:"🇯🇵",color:"#DC2626",
+desc:"Toyota Gazoo Racing développe des voitures sportives nées des circuits du Nürburgring et du Mans. La philosophie GR : des ingénieurs qui conduisent pour concevoir des voitures véritablement capables.",
+tags:["Gazoo Racing","Nürburgring","Japon","Accessibilité"],
+cars:[
+{m:"GR Yaris",y:"2024",t:"sport",hp:280,v:5.5,vmax:230,kg:1280,eng:"3cyl 1.6L Turbo",box:"6-Man AWD",price:"38 000 €",pn:38000,desc:"La bombe compacte japonaise. 3 cylindres 280 ch, GR-Four AWD, le rallye en version route."},
+{m:"GR Yaris Morizo RR",y:"2024",t:"sport",hp:304,v:4.9,vmax:250,kg:1260,eng:"3cyl 1.6L Turbo",box:"6-Man AWD",price:"65 000 €",pn:65000,desc:"Le GR Yaris ultime. 304 ch, 20 kg perdus, réglages Morizo. Le hot hatch de tous les rêves."},
+{m:"GR86",y:"2024",t:"sport",hp:234,v:6.3,vmax:226,kg:1270,eng:"Flat-4 2.4L NA",box:"6-Man RWD",price:"34 000 €",pn:34000,desc:"La sportive de pur plaisir. Boxer atmosphérique, propulsion. Légèreté et équilibre parfaits."},
+{m:"GR Supra",y:"2024",t:"sport",hp:387,v:3.9,vmax:250,kg:1520,eng:"I6 3.0L Bi-Turbo",box:"8-AT RWD",price:"65 000 €",pn:65000,desc:"Le retour du mythe. I6 BMW biturbo, propulsion, la ligne de sport japonaise légendaire."},
+{m:"GR Corolla Morizo",y:"2024",t:"sport",hp:304,v:5.0,vmax:270,kg:1350,eng:"3cyl 1.6L Turbo",box:"6-Man AWD",price:"52 000 €",pn:52000,desc:"La Corolla de course. Moteur GR Yaris, édition Morizo signée du PDG Toyota."},
+]},
+{id:"honda",name:"Honda",country:"Japon",city:"Tochigi, Honshu",yr:"1948",flag:"🇯🇵",color:"#B91C1C",
+desc:"Honda a redéfini la supercar accessible avec la NSX en 1990, dessinée avec Ayrton Senna. La philosophie Honda : des moteurs qui repoussent les limites, des régimes à 9000 tr/min, connexion humain-machine parfaite.",
+tags:["NSX","Hybride","Senna","Japon"],
+cars:[
+{m:"NSX Type S",y:"2022",t:"supercar",hp:600,v:3.0,vmax:308,kg:1794,eng:"V6 3.5L + 3 Moteurs E",box:"9-DCT AWD",price:"195 000 €",pn:195000,desc:"L'adieu de la NSX. 600 ch hybrides, 350 ex seulement. Le chant du cygne de la supercar Honda."},
+{m:"Civic Type R",y:"2024",t:"sport",hp:329,v:5.4,vmax:275,kg:1428,eng:"4cyl 2.0L Turbo",box:"6-Man FWD",price:"48 000 €",pn:48000,desc:"La référence compacte sportive. 329 ch, traction, manuelle, record Nürburgring en compact."},
+{m:"Integra Type S",y:"2024",t:"sport",hp:320,v:5.0,vmax:270,kg:1432,eng:"4cyl 2.0L Turbo",box:"6-Man FWD",price:"55 000 €",pn:55000,desc:"Le retour de l'Integra. 320 ch, manuelle, traction. L'ADN Type R dans une berline plus élégante."},
+{m:"S2000",y:"2009",t:"classic",hp:240,v:5.9,vmax:241,kg:1260,eng:"4cyl 2.0L NA",box:"6-Man RWD",price:"45 000 €",pn:45000,desc:"L'icône Honda. 4cyl NA 9000 tr/min, propulsion. La mécanique la plus pure jamais faite."},
+]},
+{id:"nissan",name:"Nissan / Nismo",country:"Japon",city:"Yokohama, Kanagawa",yr:"1933",flag:"🇯🇵",color:"#C2410C",
+desc:"Nissan Nismo est la division haute performance de Nissan. La GT-R, surnommée Godzilla, est la supercar japonaise la plus redoutée sur circuit. Née à Yokohama, capable de battre des Ferrari au double de son prix.",
+tags:["Godzilla","GT-R","Nismo","Yokohama"],
+cars:[
+{m:"GT-R Nismo 2024",y:"2024",t:"supercar",hp:600,v:2.6,vmax:315,kg:1725,eng:"V6 3.8L Bi-Turbo",box:"6-DCT AWD",price:"215 000 €",pn:215000,desc:"Godzilla version ultime. V6 biturbo 600 ch, boîte Nismo, freins carbone. La terreur de circuit."},
+{m:"GT-R R35 Premium",y:"2023",t:"supercar",hp:570,v:2.7,vmax:315,kg:1750,eng:"V6 3.8L Bi-Turbo",box:"6-DCT AWD",price:"120 000 €",pn:120000,desc:"Le monstre accessible. V6 biturbo 570 ch, AWD intelligent. Bat des Ferrari à la moitié du prix."},
+{m:"Z Nismo",y:"2024",t:"sport",hp:445,v:3.7,vmax:250,kg:1476,eng:"V6 3.0L Bi-Turbo",box:"6-Man RWD",price:"62 000 €",pn:62000,desc:"Le retour du Z en version Nismo. V6 biturbo 445 ch, propulsion. Hommage aux Z légendaires."},
+{m:"GT-R R34 V-Spec",y:"2002",t:"classic",hp:280,v:4.9,vmax:250,kg:1560,eng:"I6 2.6L Bi-Turbo",box:"6-Man AWD",price:"300 000 €",pn:300000,desc:"La GT-R légendaire de Fast & Furious. I6 RB26DETT bridé 280 ch officiellement. La mythique."},
+]},
+{id:"hennessey",name:"Hennessey",country:"USA",city:"Sealy, Texas",yr:"1991",flag:"🇺🇸",color:"#991B1B",
+desc:"Hennessey Performance Engineering, au Texas, est le roi de l'hypercar américaine artisanale. John Hennessey transforme des voitures ordinaires en monstres et construit ses propres hypercars qui défient les européens.",
+tags:["Texas","V8 Bi-Turbo","Record USA","Hypercar"],
+cars:[
+{m:"Venom F5 Revolution",y:"2024",t:"hypercar",hp:1817,v:2.4,vmax:484,kg:1360,eng:"V8 6.6L Bi-Turbo",box:"7-Seq RWD",price:"3 000 000 €",pn:3000000,desc:"L'hypercar texane qui défie les européens. 1817 ch, 484 km/h, carbone intégral."},
+{m:"Venom F5 Roadster",y:"2024",t:"hypercar",hp:1817,v:2.5,vmax:450,kg:1390,eng:"V8 6.6L Bi-Turbo",box:"7-Seq RWD",price:"3 500 000 €",pn:3500000,desc:"Le roadster F5. 30 ex, toit retiré, 1817 ch en plein air. L'expérience ultime au Texas."},
+{m:"Venom GT",y:"2014",t:"hypercar",hp:1244,v:2.7,vmax:435,kg:1244,eng:"V8 7.0L Bi-Turbo",box:"6-Man RWD",price:"1 200 000 €",pn:1200000,desc:"Le premier record Hennessey. 435 km/h sur piste NASA. La légende texane originale."},
+]},
+{id:"dodge",name:"Dodge",country:"USA",city:"Auburn Hills, Michigan",yr:"1900",flag:"🇺🇸",color:"#B91C1C",
+desc:"Dodge est la muscle car américaine dans toute sa démesure. Gros V8 Hellcat suralimenté, puissance brute, look agressif — Dodge ne s'embarrasse pas de subtilité. Le Challenger incarne l'Amérique sans complexes.",
+tags:["Muscle Car","Hellcat","V8 Superchargé","Michigan"],
+cars:[
+{m:"Challenger SRT Demon 170",y:"2023",t:"supercar",hp:1025,v:1.66,vmax:354,kg:1960,eng:"V8 6.2L Superchargé",box:"8-AT RWD",price:"98 000 €",pn:98000,desc:"La muscle car la plus puissante. 1025 ch, 0-100 en 1.66s sur E85. Homologuée route."},
+{m:"Challenger SRT Hellcat",y:"2023",t:"sport",hp:717,v:3.6,vmax:325,kg:1960,eng:"V8 6.2L Superchargé",box:"8-AT RWD",price:"65 000 €",pn:65000,desc:"L'original Hellcat. V8 suralimenté 717 ch, muscle car américaine pure. L'accessible."},
+{m:"Charger Daytona SRT",y:"2024",t:"sport",hp:670,v:3.3,vmax:248,kg:2150,eng:"Électrique Dual Motor",box:"Réducteur AWD",price:"75 000 €",pn:75000,desc:"La muscle car électrique. Son Fratzonic 126 dB, look Charger iconique. L'avenir a du caractère."},
+{m:"Viper ACR",y:"2017",t:"supercar",hp:645,v:3.5,vmax:330,kg:1521,eng:"V10 8.4L NA",box:"6-Man RWD",price:"145 000 €",pn:145000,desc:"Dernière Viper. V10 8.4L NA, 645 ch, manuelle uniquement. Le dinosaure magnifique."},
+]},
+{id:"corvette",name:"Corvette",country:"USA",city:"Bowling Green, Kentucky",yr:"1953",flag:"🇺🇸",color:"#C2410C",
+desc:"La Corvette est la supercar américaine par excellence depuis 1953. La C8 mid-engine a révolutionné la formule et humilié des européennes deux fois plus chères. La preuve que l'Amérique crée de vraies supercars accessibles.",
+tags:["Mid-Engine","V8","Kentucky","Stingray"],
+cars:[
+{m:"Z06",y:"2024",t:"supercar",hp:670,v:2.6,vmax:311,kg:1550,eng:"V8 5.5L NA Flat-Plane",box:"8-DCT RWD",price:"130 000 €",pn:130000,desc:"V8 flat-plane NA 8500 tr/min. L'américaine qui chante comme une Ferrari au prix d'une GT."},
+{m:"ZR1",y:"2025",t:"hypercar",hp:1064,v:2.4,vmax:346,kg:1590,eng:"V8 5.5L Bi-Turbo",box:"8-DCT RWD",price:"215 000 €",pn:215000,desc:"La Corvette ultime. V8 flat-plane + 2 turbos, 1064 ch, 346 km/h. La supercar américaine absolue."},
+{m:"E-Ray",y:"2024",t:"sport",hp:655,v:2.6,vmax:290,kg:1764,eng:"V8 6.2L + Moteur E",box:"8-DCT AWD",price:"115 000 €",pn:115000,desc:"La Corvette hybride 4 roues motrices. V8 LT2 + électrique à l'avant. Tout temps."},
+{m:"Stingray",y:"2024",t:"sport",hp:490,v:3.0,vmax:298,kg:1615,eng:"V8 6.2L NA",box:"8-DCT RWD",price:"72 000 €",pn:72000,desc:"La Corvette accessible. V8 6.2L LT2, 490 ch, design révolutionnaire C8 mid-engine."},
+{m:"C7 Z06",y:"2019",t:"supercar",hp:659,v:2.95,vmax:330,kg:1530,eng:"V8 6.2L Superchargé",box:"7-Man RWD",price:"85 000 €",pn:85000,desc:"La génération C7 au maximum. V8 suralimenté 659 ch, la Corvette américaine puriste."},
+]},
+{id:"brabus",name:"Brabus",country:"Allemagne",city:"Bottrop, Rhénanie du Nord",yr:"1977",flag:"🇩🇪",color:"#1F2937",
+desc:"Brabus est le plus célèbre préparateur automobile au monde. Fondé à Bottrop en 1977, il transforme des Mercedes et Maybach en monstres de puissance absolue. 900 ch dans une berline de luxe — Brabus l'a inventé.",
+tags:["Préparateur","900ch","Mercedes","Bottrop"],
+cars:[
+{m:"Brabus 900 Rocket",y:"2024",t:"hypercar",hp:900,v:3.0,vmax:350,kg:2450,eng:"V8 4.5L Bi-Turbo",box:"9-AT AWD",price:"680 000 €",pn:680000,desc:"900 ch dans une Mercedes-Maybach. La limousine la plus puissante jamais construite."},
+{m:"G V12 900",y:"2024",t:"sport",hp:900,v:4.2,vmax:240,kg:2700,eng:"V12 6.0L Bi-Turbo",box:"7-AT AWD",price:"750 000 €",pn:750000,desc:"Le G-Wagen le plus brutal. V12 Biturbo 900 ch dans le carré légendaire. Extravagance pure."},
+{m:"Brabus Supercar",y:"2024",t:"supercar",hp:789,v:2.8,vmax:320,kg:1485,eng:"V8 4.0L Bi-Turbo",box:"7-DCT RWD",price:"420 000 €",pn:420000,desc:"La supercar Brabus. Base AMG GT transformée en missile 789 ch. L'allemand sur la piste."},
+{m:"Brabus 800",y:"2024",t:"sport",hp:800,v:3.3,vmax:330,kg:2100,eng:"V8 4.0L Bi-Turbo",box:"9-AT AWD",price:"380 000 €",pn:380000,desc:"Basé sur la GT 63 AMG. 800 ch, Brabus Monoblock, intérieur Masterpiece. La puissance discrete."},
+]},
 ];
 
-let cur=B[0],flt='all',cmp=[],isDark=true;
-
-// COUNT
+// ── INIT ──────────────────────────────────────────────
+let cur=B[0], flt='all', cmp=[], dark=true;
 const tot=B.reduce((a,b)=>a+b.cars.length,0);
-document.getElementById('total-cars').textContent=tot;
-document.getElementById('f-total').textContent=tot;
+document.getElementById('hero-total').textContent=tot;
+document.getElementById('f-tot').textContent=tot;
 
 // THEME
-const themeBtn=document.getElementById('themeBtn');
-function setTheme(dark){
-  isDark=dark;
-  document.documentElement.setAttribute('data-theme',dark?'dark':'light');
-  themeBtn.textContent=dark?'🌙':'☀️';
-  document.querySelector('nav').style.background=dark?'rgba(8,8,8,.96)':'rgba(245,243,239,.96)';
+const thBtn=document.getElementById('themeBtn');
+function setTheme(d){
+  dark=d;
+  document.documentElement.setAttribute('data-theme',d?'dark':'light');
+  thBtn.textContent=d?'🌙':'☀️';
 }
-themeBtn.addEventListener('click',()=>setTheme(!isDark));
+thBtn.onclick=()=>setTheme(!dark);
 
-// DROPDOWN
+// REGIONS DROPDOWN
 const regions={
   '🇮🇹 Italie':['ferrari','lamborghini','pagani','maserati'],
   '🇫🇷 France':['bugatti','alpine'],
@@ -511,7 +652,7 @@ function buildDD(){
     m.innerHTML+=`<div class="dd-cat">${r}</div>`;
     ids.forEach(id=>{
       const b=B.find(x=>x.id===id);
-      if(b) m.innerHTML+=`<div class="dd-item${b.id===cur.id?' active':''}" onclick="selB('${b.id}')">${b.flag} ${b.name}<div class="dd-item-r"><span class="dd-cnt">${b.cars.length} mod.</span></div></div>`;
+      if(b) m.innerHTML+=`<div class="dd-item${b.id===cur.id?' active':''}" onclick="selB('${b.id}')">${b.flag} ${b.name}<span class="dd-cnt">${b.cars.length} mod.</span></div>`;
     });
   }
 }
@@ -522,77 +663,90 @@ function selB(id){
   cur=B.find(b=>b.id===id);
   document.getElementById('dd').classList.remove('open');
   document.getElementById('dd-label').textContent=cur.name;
-  updateBI();renderCars();buildDD();
+  buildDD(); updateBP(); renderCars();
   document.getElementById('main').scrollIntoView({behavior:'smooth'});
 }
 
-function updateBI(){
-  const bc=document.getElementById('bcard');
-  bc.style.setProperty('--bcolor',cur.color);
-  document.getElementById('bi-name').textContent=cur.name;
-  document.getElementById('bi-ctag').textContent=cur.flag+' '+cur.country;
-  document.getElementById('bi-where').textContent=cur.city+' · Fondée en '+cur.founded;
-  document.getElementById('bi-models').textContent=cur.cars.length;
-  document.getElementById('bi-founded').textContent=cur.founded;
-  document.getElementById('bi-flag').textContent=cur.flag;
-  document.getElementById('bi-desc').textContent=cur.desc;
-  document.getElementById('bi-ghost').textContent=cur.name[0];
-  document.getElementById('bi-tags').innerHTML=cur.tags.map(t=>`<span class="btag">${t}</span>`).join('');
+function updateBP(){
+  const p=document.getElementById('bpanel');
+  p.style.setProperty('--bc',cur.color);
+  document.getElementById('bp-name').textContent=cur.name;
+  document.getElementById('bp-fc').textContent=cur.flag+' '+cur.country;
+  document.getElementById('bp-city').textContent=cur.city+' · Fondée en '+cur.yr;
+  document.getElementById('bp-mod').textContent=cur.cars.length;
+  document.getElementById('bp-yr').textContent=cur.yr;
+  document.getElementById('bp-fl').textContent=cur.flag;
+  document.getElementById('bp-desc').textContent=cur.desc;
+  document.getElementById('bp-ghost').textContent=cur.name[0];
+  document.getElementById('bp-tags').innerHTML=cur.tags.map(t=>`<span class="bptag">${t}</span>`).join('');
   document.getElementById('sec-meta').textContent=cur.name+' · '+cur.cars.length+' modèles · '+cur.city;
 }
 
-// FILTER & SORT
-let curFlt='all';
+// FILTER
+let curF='all';
 function setF(f,btn){
-  curFlt=f;
-  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('active'));
-  btn.classList.add('active');
+  curF=f;
+  document.querySelectorAll('.f-btn').forEach(b=>b.classList.remove('on'));
+  btn.classList.add('on');
   renderCars();
 }
+function typeLbl(t){return{hypercar:'Hypercar',supercar:'Supercar',gt:'Grand Tourisme',sport:'Sport',classic:'Classique'}[t]||t}
 
-function typeLbl(t){return{hypercar:'Hypercar',supercar:'Supercar',gt:'Grand Tourisme',sport:'Sport'}[t]||t}
-
-function sorted(cars){
-  const s=document.getElementById('sort-sel').value;
+function getSorted(cars){
+  const v=document.getElementById('sortSel').value;
   const c=[...cars];
-  if(s==='price-asc') c.sort((a,b)=>a.pn-b.pn);
-  else if(s==='price-desc') c.sort((a,b)=>b.pn-a.pn);
-  else if(s==='hp-desc') c.sort((a,b)=>b.hp-a.hp);
-  else if(s==='v-asc') c.sort((a,b)=>a.v-b.v);
+  if(v==='pa') c.sort((a,b)=>a.pn-b.pn);
+  else if(v==='pd') c.sort((a,b)=>b.pn-a.pn);
+  else if(v==='hp') c.sort((a,b)=>b.hp-a.hp);
+  else if(v==='v') c.sort((a,b)=>a.v-b.v);
   return c;
 }
 
+// Hex to rgb for background
+function hexToRgb(hex){
+  const r=parseInt(hex.slice(1,3),16),g=parseInt(hex.slice(3,5),16),b=parseInt(hex.slice(5,7),16);
+  return`${r},${g},${b}`;
+}
+
 function renderCars(){
-  let cars=curFlt==='all'?cur.cars:cur.cars.filter(c=>c.type===curFlt);
-  cars=sorted(cars);
+  let cars=curF==='all'?cur.cars:cur.cars.filter(c=>c.t===curF);
+  cars=getSorted(cars);
   const grid=document.getElementById('cars-grid');
   if(!cars.length){grid.innerHTML='<div class="no-res">Aucun modèle dans cette catégorie</div>';return}
+  const rgb=hexToRgb(cur.color);
   grid.innerHTML=cars.map((c,i)=>{
-    const inC=cmp.find(x=>x.bid===cur.id&&x.model===c.model);
+    const inC=cmp.find(x=>x.bid===cur.id&&x.m===c.m);
     return`<div class="car-card">
-      <div class="car-img-wrap">
-        <img class="car-img" src="${c.img}" alt="${c.model}" loading="lazy" onerror="this.parentElement.style.background='var(--bg4)'">
-        <div class="car-img-ovl"></div>
-        <span class="car-num">${String(i+1).padStart(2,'0')}</span>
-        <span class="car-badge">${typeLbl(c.type)}</span>
+      <div class="car-visual" style="background:linear-gradient(135deg,rgba(${rgb},.18) 0%,rgba(${rgb},.04) 100%)">
+        <div class="cv-bg" style="background:var(--bg3)"></div>
+        <div class="cv-pattern"></div>
+        <span class="cv-type">${typeLbl(c.t)}</span>
+        <span class="cv-num">${String(i+1).padStart(2,'0')}</span>
+        <div class="cv-model-big">${c.m}</div>
+        <div class="cv-brand-small">${cur.name} · ${c.y}</div>
+        <div class="car-letter">${c.m[0]}</div>
+        <div class="cv-bar" style="background:linear-gradient(90deg,${cur.color},transparent)"></div>
       </div>
       <div class="car-body">
-        <div class="car-model">${c.model}</div>
+        <div class="car-model">${c.m}</div>
         <div class="car-sub">${cur.name} · ${c.y} · ${c.eng}</div>
-        <div class="car-specs">
+        <div class="specs-grid">
           <div class="sp"><span class="v">${c.hp}</span><span class="l">Chevaux</span></div>
           <div class="sp"><span class="v">${c.v}s</span><span class="l">0-100</span></div>
-          <div class="sp"><span class="v">${c.vmax}</span><span class="l">Vmax</span></div>
+          <div class="sp"><span class="v">${c.vmax}</span><span class="l">Vmax km/h</span></div>
         </div>
-        <div class="car-specs">
+        <div class="specs-grid">
           <div class="sp"><span class="v">${c.kg}</span><span class="l">Poids kg</span></div>
           <div class="sp"><span class="v">${c.box.split(' ')[0]}</span><span class="l">Boîte</span></div>
           <div class="sp"><span class="v">${c.price.split(' ')[0]}</span><span class="l">Prix €</span></div>
         </div>
         <p class="car-desc">${c.desc}</p>
         <div class="car-footer">
-          <div><div class="car-price">${c.price}</div><div class="car-price-lbl">Prix de départ</div></div>
-          <button class="car-btn${inC?' cmp':''}" onclick="toggleCmp('${cur.id}','${cur.name}','${c.model}',${c.hp},${c.v},${c.vmax},${c.kg},'${c.price}','${c.eng}',this)">
+          <div>
+            <div class="car-price">${c.price}</div>
+            <div class="car-price-lbl">Prix de départ</div>
+          </div>
+          <button class="car-btn${inC?' on':''}" onclick="toggleCmp('${cur.id}','${cur.name}','${c.m.replace(/'/g,"\\'")}',${c.hp},${c.v},${c.vmax},${c.kg},'${c.price}','${c.eng}',this)">
             ${inC?'✓ Comparé':'+ Comparer'}
           </button>
         </div>
@@ -603,93 +757,66 @@ function renderCars(){
 
 // COMPARE
 function toggleCmp(bid,bname,model,hp,v,vmax,kg,price,eng,btn){
-  const idx=cmp.findIndex(x=>x.bid===bid&&x.model===model);
-  if(idx>-1){cmp.splice(idx,1);btn.textContent='+ Comparer';btn.classList.remove('cmp')}
+  const idx=cmp.findIndex(x=>x.bid===bid&&x.m===model);
+  if(idx>-1){cmp.splice(idx,1);btn.textContent='+ Comparer';btn.classList.remove('on')}
   else{
-    if(cmp.length>=3){alert('Maximum 3 voitures à comparer simultanément');return}
-    cmp.push({bid,bname,model,hp,v,vmax,kg,price,eng});
-    btn.textContent='✓ Comparé';btn.classList.add('cmp');
-    toast(model+' ajoutée');
+    if(cmp.length>=3){alert('Max 3 voitures à comparer');return}
+    cmp.push({bid,bname,m:model,hp,v,vmax,kg,price,eng});
+    btn.textContent='✓ Comparé';btn.classList.add('on');
+    showToast(model+' ajoutée');
   }
   updateCbar();
 }
 function updateCbar(){
   const bar=document.getElementById('cbar');
-  document.getElementById('cbar-items').innerHTML=cmp.map(c=>`<div class="cchip">${c.bname} ${c.model}<button onclick="remCmp('${c.bid}','${c.model}')">×</button></div>`).join('');
+  document.getElementById('cbar-chips').innerHTML=cmp.map(c=>`<div class="chip">${c.bname} ${c.m}<button onclick="remCmp('${c.bid}','${c.m.replace(/'/g,"\\'")}')">×</button></div>`).join('');
   cmp.length?bar.classList.add('vis'):bar.classList.remove('vis');
 }
-function remCmp(bid,model){cmp=cmp.filter(x=>!(x.bid===bid&&x.model===model));updateCbar();renderCars()}
+function remCmp(bid,m){cmp=cmp.filter(x=>!(x.bid===bid&&x.m===m));updateCbar();renderCars()}
 function clearCmp(){cmp=[];updateCbar();renderCars()}
 function openModal(){
   if(!cmp.length)return;
-  const rows=[['Marque',...cmp.map(c=>c.bname)],['Modèle',...cmp.map(c=>c.model)],['Moteur',...cmp.map(c=>c.eng)],['Puissance',...cmp.map(c=>c.hp+' ch')],['0-100 km/h',...cmp.map(c=>c.v+'s')],['Vmax',...cmp.map(c=>c.vmax+' km/h')],['Poids',...cmp.map(c=>c.kg+' kg')],['Prix',...cmp.map(c=>c.price)]];
-  document.getElementById('modal-body').innerHTML=`<table class="ctable"><thead><tr><th></th>${cmp.map(c=>`<th>${c.bname}<br><span style="font-family:var(--fu);font-size:.8rem;color:var(--tm);font-weight:400">${c.model}</span></th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(cell=>`<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
+  const rows=[['Marque',...cmp.map(c=>c.bname)],['Modèle',...cmp.map(c=>c.m)],['Moteur',...cmp.map(c=>c.eng)],['Puissance',...cmp.map(c=>c.hp+' ch')],['0-100 km/h',...cmp.map(c=>c.v+'s')],['Vmax',...cmp.map(c=>c.vmax+' km/h')],['Poids',...cmp.map(c=>c.kg+' kg')],['Prix',...cmp.map(c=>c.price)]];
+  document.getElementById('modal-body').innerHTML=`<table class="ctab"><thead><tr><th></th>${cmp.map(c=>`<th>${c.bname}<br><span style="font-family:var(--fu);font-size:.78rem;color:var(--tm);font-weight:400">${c.m}</span></th>`).join('')}</tr></thead><tbody>${rows.map(r=>`<tr>${r.map(cell=>`<td>${cell}</td>`).join('')}</tr>`).join('')}</tbody></table>`;
   document.getElementById('cmodal').classList.add('open');
 }
 function closeModal(){document.getElementById('cmodal').classList.remove('open')}
 
 // SEARCH
-const searchEl=document.getElementById('search');
-const srDiv=document.getElementById('search-results');
+const srchEl=document.getElementById('search');
+const srDiv=document.getElementById('sr');
 const srList=document.getElementById('sr-list');
-const srHdr=document.getElementById('sr-header');
-
-searchEl.addEventListener('input',()=>{
-  const q=searchEl.value.trim().toLowerCase();
+const srHdr=document.getElementById('sr-hdr');
+srchEl.addEventListener('input',()=>{
+  const q=srchEl.value.trim().toLowerCase();
   if(!q){srDiv.classList.remove('vis');return}
-  const results=[];
-  B.forEach(b=>{
-    b.cars.forEach(c=>{
-      if(c.model.toLowerCase().includes(q)||b.name.toLowerCase().includes(q)||c.eng.toLowerCase().includes(q)||c.type.toLowerCase().includes(q)||b.country.toLowerCase().includes(q)){
-        results.push({brand:b,car:c});
-      }
-    });
-  });
-  if(!results.length){
-    srDiv.classList.add('vis');
-    srHdr.textContent='0 résultat pour "'+searchEl.value+'"';
-    srList.innerHTML='<div class="sr-none">Aucun modèle trouvé. Essayez un autre terme.</div>';
-    return;
-  }
-  srHdr.textContent=results.length+' résultat'+(results.length>1?'s':'')+' pour "'+searchEl.value+'"';
-  srList.innerHTML=results.slice(0,12).map(r=>`
-    <div class="sr-item" onclick="goToResult('${r.brand.id}')">
-      <div class="sr-left">
-        <div class="sr-model">${r.car.model}</div>
-        <div class="sr-brand">${r.brand.flag} ${r.brand.name} · ${r.brand.city} · ${r.car.y}</div>
-      </div>
-      <div class="sr-right">
-        <div class="sr-price">${r.car.price}</div>
-        <div class="sr-hp">${r.car.hp} ch · ${r.car.v}s</div>
-      </div>
-    </div>`).join('');
+  const res=[];
+  B.forEach(b=>b.cars.forEach(c=>{
+    if(c.m.toLowerCase().includes(q)||b.name.toLowerCase().includes(q)||c.eng.toLowerCase().includes(q)||c.t.toLowerCase().includes(q)||b.country.toLowerCase().includes(q)||b.city.toLowerCase().includes(q))
+      res.push({b,c});
+  }));
+  srHdr.textContent=res.length+' résultat'+(res.length>1?'s':'')+' pour "'+srchEl.value+'"';
+  srList.innerHTML=res.length?res.slice(0,14).map(r=>`
+    <div class="sr-item" onclick="goR('${r.b.id}')">
+      <div><div class="sr-model">${r.c.m}</div><div class="sr-brand">${r.b.flag} ${r.b.name} · ${r.b.city} · ${r.c.y}</div></div>
+      <div style="text-align:right"><div class="sr-price">${r.c.price}</div><div class="sr-hp">${r.c.hp} ch · ${r.c.v}s</div></div>
+    </div>`).join(''):'<div class="sr-empty">Aucun résultat trouvé.</div>';
   srDiv.classList.add('vis');
 });
-
-function goToResult(id){
-  searchEl.value='';srDiv.classList.remove('vis');
-  selB(id);
-}
-
-document.addEventListener('click',e=>{
-  if(!e.target.closest('#search-results')&&!e.target.closest('#search'))
-    srDiv.classList.remove('vis');
-});
-searchEl.addEventListener('keydown',e=>{if(e.key==='Escape'){searchEl.value='';srDiv.classList.remove('vis');}});
+function goR(id){srchEl.value='';srDiv.classList.remove('vis');selB(id)}
+document.addEventListener('click',e=>{if(!e.target.closest('#sr')&&!e.target.closest('#search'))srDiv.classList.remove('vis')});
+srchEl.addEventListener('keydown',e=>{if(e.key==='Escape'){srchEl.value='';srDiv.classList.remove('vis')}});
 
 // TOAST
-function toast(msg){
+function showToast(msg){
   const t=document.getElementById('toast');t.textContent=msg;t.style.opacity='1';
   setTimeout(()=>t.style.opacity='0',2000);
 }
 
 // NAV SCROLL
-window.addEventListener('scroll',()=>{
-  document.getElementById('nb').style.height=window.scrollY>60?'54px':'64px';
-});
+window.addEventListener('scroll',()=>{document.getElementById('nb').style.height=window.scrollY>50?'54px':'64px'});
 
-// INIT
-buildDD();updateBI();renderCars();
+buildDD();updateBP();renderCars();
 </script>
 </body>
 </html>
